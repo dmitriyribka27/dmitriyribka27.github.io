@@ -48,6 +48,22 @@
 .digital-showcase .dg-index-nav{grid-template-columns:repeat(5,minmax(0,1fr))}
 .digital-showcase .dg-index-nav a{min-width:0}
 .digital-showcase .dg-index-nav strong{overflow-wrap:anywhere}
+/* Editorial screenshots: based on real app views, with public-facing demo figures. */
+.mono-screens-block{margin:clamp(45px,6vw,95px) 0;padding:clamp(25px,4vw,58px);background:#1a211e;border:1px solid #455349;color:#eff5ed}
+.mono-screens-heading{display:grid;grid-template-columns:1fr 1fr;gap:10px 34px;align-items:end;margin-bottom:34px}
+.mono-screens-heading>span{grid-column:1/-1;color:#b4ec74;letter-spacing:.11em;font:10px/1.6 var(--mono)}
+.mono-screens-heading h3{font-size:clamp(30px,3.5vw,56px);letter-spacing:-.055em;line-height:1.12;margin:0}
+.mono-screens-heading p{font-size:clamp(13px,1.12vw,16px);line-height:1.8;color:#bcc9bc;margin:0;max-width:550px}
+.mono-screen-gallery{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(13px,2vw,28px)}
+.mono-screen-gallery figure{margin:0;min-width:0;background:#0d1110;border:1px solid #4b5b50;padding:clamp(9px,1.2vw,17px);display:flex;flex-direction:column}
+.mono-screen-gallery img{display:block;width:100%;height:auto;aspect-ratio:3/4;object-fit:contain;object-position:center;background:#0e0f0e}
+.mono-screen-gallery figcaption{display:flex;flex-direction:column;gap:8px;border-top:1px solid #3e4e42;margin-top:14px;padding:16px 4px 6px}
+.mono-screen-gallery figcaption span{color:#b4ef7b;font:10px/1.4 var(--mono);letter-spacing:.1em}
+.mono-screen-gallery figcaption strong{font-size:clamp(13px,1.1vw,17px);font-weight:650;color:#edf4e9}
+.case-real-screens{background:#171f1c;color:#eff5ed}
+.case-real-screens h2{font-size:clamp(40px,5.1vw,83px);letter-spacing:-.06em;line-height:1.06;margin:30px 0 20px}
+.case-real-screens h2 em{font-style:normal;color:#b3ec6e}
+.case-real-screens-intro{max-width:750px;color:#b8c9be;font-size:clamp(14px,1.3vw,19px);line-height:1.8;margin:0 0 46px}
 .dg-shkryum{background:#e5e7e0;color:#1b2420}
 .dg-shkryum .dg-case-meta{border-color:#adbbb0;color:#687a6e}
 .dg-shkryum .dg-chip{color:#b65143}
@@ -87,6 +103,8 @@
   .digital-showcase .dg-index-nav a:nth-child(3n){border-right:0}
 }
 @media(max-width:800px){
+  .mono-screens-heading{grid-template-columns:1fr}
+  .mono-screen-gallery{grid-template-columns:repeat(2,minmax(0,1fr))}
   .featured-projects{grid-template-columns:1fr}
   .featured-project{border-right:0;border-bottom:1px solid #bfc9c4;min-height:210px}
   .featured-project:last-child{border-bottom:0}
@@ -97,6 +115,11 @@
   .digital-showcase .dg-index-nav a:nth-child(2n){border-right:0}
 }
 @media(max-width:650px){
+  .mono-screens-block{padding:20px 15px;margin:45px 0}
+  .mono-screen-gallery{display:flex;overflow-x:auto;gap:12px;scroll-snap-type:x mandatory;overscroll-behavior-x:contain;padding-bottom:15px}
+  .mono-screen-gallery figure{flex:0 0 min(82vw,330px);scroll-snap-align:start}
+  .mono-screens-heading{margin-bottom:23px}
+  .case-real-screens-intro{margin-bottom:25px}
   .digital-showcase .dg-hero h1{letter-spacing:-.035em}
   .services-revamp-grid{grid-template-columns:1fr}
   .services-revamp h2{font-size:clamp(41px,10.5vw,58px)}

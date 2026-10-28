@@ -21,7 +21,7 @@
   <link rel="stylesheet" href="motion.css" />
   <link rel="stylesheet" href="portfolio-v2.css" />
   <link rel="stylesheet" href="digital-showcase-v9.css" />
-  <link rel="stylesheet" href="portfolio-revamp.css" />
+  <link rel="stylesheet" href="portfolio-revamp.css?v=20261028-mono-screens" />
   <script src="app.js?v=20261028-portfolio2" defer></script><script src="motion.js?v=20261028-portfolio2" defer></script><script src="portfolio-v2.js" defer></script><script src="digital-showcase-v9.js?v=20261028-portfolio2" defer></script>
 </head>
 <body class="digital-showcase">
@@ -135,6 +135,14 @@ const present = order => ({
           <span class="dg-mono-display-foot">MONO / FINANCIAL CLARITY / DEMO</span>
         </div>
         <div class="dg-mono-demo"><span>TRY THE LOGIC / 02</span><h3>Посчитайте свои<br />свободные деньги.</h3><p>Измените значения. Расчёт показывает остаток после резервов и обязательств — без смешивания разных валют.</p><div class="dg-finance-inputs"><label>На счетах, $<input id="mono-balance-input" type="number" min="0" max="10000000" step="50" inputmode="decimal" value="2400"/></label><label>В резерве, $<input id="mono-reserve-input" type="number" min="0" max="10000000" step="50" inputmode="decimal" value="400"/></label><label>Обязательные платежи, $<input id="mono-bills-input" type="number" min="0" max="10000000" step="50" inputmode="decimal" value="250"/></label></div><button type="button" id="mono-reset" class="dg-reset-button">Вернуть пример ↺</button><div class="dg-logic-note">Принцип: <strong>перевод между своими счетами — не доход</strong>, а резерв — не отдельный банковский счёт.</div></div>
+      </div>
+      <div class="mono-screens-block">
+        <div class="mono-screens-heading"><span>ACTUAL PRODUCT / SAFE PUBLIC VIEWS</span><h3>Как выглядит<br />работающее приложение.</h3><p>В основе — реальные экраны MONO Finance с iPhone. Для публикации личные суммы, категории и названия счетов заменены вымышленными; это обработанные публичные версии скриншотов, а не доступ к личной базе.</p></div>
+        <div class="mono-screen-gallery" aria-label="Обезличенные экраны MONO Finance">
+          <figure><img src="assets/digital/mono-home-sanitized.webp" alt="MONO Finance: быстрый ввод, мультивалютные остатки и доступные деньги; суммы вымышлены" width="1024" height="1536" loading="lazy" decoding="async"/><figcaption><span>01 / ГЛАВНАЯ</span><strong>Остатки и быстрые действия</strong></figcaption></figure>
+          <figure><img src="assets/digital/mono-analytics-sanitized.webp" alt="MONO Finance: аналитика расходов по категориям на демонстрационных значениях" width="1024" height="1536" loading="lazy" decoding="async"/><figcaption><span>02 / АНАЛИТИКА</span><strong>Структура расходов</strong></figcaption></figure>
+          <figure><img src="assets/digital/mono-operation-sanitized.webp" alt="MONO Finance: редактируемая форма новой операции без персональных данных" width="1190" height="1392" loading="lazy" decoding="async"/><figcaption><span>03 / ОПЕРАЦИЯ</span><strong>Контролируемый ввод</strong></figcaption></figure>
+        </div>
       </div>
       <div class="dg-three-takeaways"><div><span>01 / FAST ENTRY</span><strong>«15 лари магазин TBC»</strong><p>Правила разбора текста заполняют поля операции. Перед сохранением всё можно проверить.</p></div><div><span>02 / MULTI-CURRENCY</span><strong>GEL · USD · RUB</strong><p>Операции учитываются по валютам. Обмен не создаёт фиктивный доход или расход.</p></div><div><span>03 / PRIVATE BY DESIGN</span><strong>Без доступа к банку</strong><p>Локальное хранение и резервные копии. Банковская синхронизация не заявляется.</p></div></div>
       <p class="dg-mono-note">Само MONO Finance — завершённый работающий продукт. Этот интерактивный пример создан специально для портфолио на вымышленных данных; реальные личные операции и счета не публикуются. <a href="project.html?id=mono">Подробнее о готовом приложении ↗</a></p>
