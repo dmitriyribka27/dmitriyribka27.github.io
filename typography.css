@@ -1,0 +1,51 @@
+/* A quieter, more consistent typographic rhythm for Cyrillic and Latin text. */
+:root {
+  --tracking-display: -0.035em;
+  --tracking-heading: -0.025em;
+  --tracking-caption: 0.065em;
+}
+
+body {
+  font-kerning: normal;
+  font-variant-ligatures: common-ligatures;
+  text-rendering: optimizeLegibility;
+}
+
+.brand { letter-spacing: -0.035em; }
+.hero h1 { letter-spacing: var(--tracking-display); line-height: 1.12; }
+.section-heading h2,
+.about h2 { letter-spacing: var(--tracking-heading); line-height: 1.18; }
+.approach h2 { letter-spacing: -0.03em; line-height: 1.18; }
+.contact h2 { letter-spacing: -0.035em; line-height: 1.2; }
+.case-title { letter-spacing: var(--tracking-display); line-height: 1.14; }
+.case-explainer h2 { letter-spacing: var(--tracking-heading); }
+
+.project-caption h3,
+.service-item h3,
+.approach-steps h3 { letter-spacing: -0.015em; }
+
+.finance-amount,
+.phone-big-value,
+.case-screen-value { letter-spacing: -0.025em; }
+
+.eyebrow,
+.section-number,
+.hero-bottom,
+.project-visual-index,
+.card-floating-label,
+.window-bar,
+.preview-label,
+.mini-pill,
+.window-back-label,
+.case-eyebrow,
+.case-instruction,
+.case-screen-label,
+.case-label-watermark { letter-spacing: var(--tracking-caption); }
+
+@media (max-width: 650px) {
+  .hero h1 { letter-spacing: -0.028em; line-height: 1.13; }
+  .section-heading h2,
+  .about h2 { letter-spacing: -0.022em; }
+  .contact h2 { letter-spacing: -0.028em; }
+  .case-title { letter-spacing: -0.025em; }
+}

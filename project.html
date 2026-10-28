@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#f7f8f9" />
+    <meta name="description" content="Интерактивный разбор цифрового проекта Дмитрия Рыбки." />
+    <title>Проект — Dmitry Rybka</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="typography.css" />
+    <link rel="stylesheet" href="motion.css" />
+    <link rel="stylesheet" href="portfolio-v2.css" />
+    <script src="app.js" defer></script>
+    <script src="motion.js" defer></script>
+    <script src="portfolio-v2.js" defer></script>
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="site-header case-header"><a class="brand" href="index.html">dmitry<span class="brand-dot">.</span>rybka</a><nav class="discipline-tabs" aria-label="Портфолио по направлениям"><a href="digital.html" aria-current="page"><span>01</span> Digital <b>↗</b></a><a href="design.html"><span>02</span> Design <b>↗</b></a></nav><a class="case-nav-return" href="digital.html">← Все проекты</a></header>
+      <div class="mobile-direction-tabs"><a class="is-current" href="digital.html">01 / DIGITAL ↗</a><a href="design.html">02 / DESIGN ↗</a></div>
+      <div class="reading-progress" aria-hidden="true"><span class="reading-progress-bar"></span></div>
+      <main>
+        <div id="mono-case">
+          <section class="case-hero section-padding"><div class="case-eyebrow">01 / PERSONAL FINANCE / WEB APP</div><h1 class="case-title">MONO Finance<span class="punctuation">.</span></h1><p class="case-lead">Личное финансовое пространство: несколько валют, счета, обязательства, планирование и возможность видеть не просто баланс, а свободные средства.</p><div class="case-meta"><span>PRODUCT LOGIC</span><span>UX / UI</span><span>PWA</span><span>AI-ASSISTED BUILD</span></div></section>
+          <section class="case-showcase" aria-label="Интерактивный обзор функций MONO Finance">
+            <p class="case-instruction">ИНТЕРАКТИВНЫЙ ОБЗОР / ВЫБЕРИТЕ ФУНКЦИЮ, ЧТОБЫ УВИДЕТЬ ЕЁ В ЦЕНТРЕ</p>
+            <div class="case-tour">
+              <div class="tour-side"><button class="feature-button" type="button" data-feature="accounts" aria-pressed="false"><span class="feature-id">01 / ACCOUNTS</span><strong>Несколько валют</strong><small>Разные счета и остатки в одной системе</small></button><button class="feature-button" type="button" data-feature="reserves" aria-pressed="true"><span class="feature-id">02 / RESERVES</span><strong>Свободные деньги</strong><small>Учитывает обязательства и резервы</small></button></div>
+              <div class="case-phone" aria-live="polite"><div class="case-phone-title">MONO <span>FINANCE</span></div><div class="case-screen-panel"><div class="case-screen-label" data-screen-label>ДОСТУПНО К ТРАТАМ</div><div class="case-screen-value" data-screen-value>$1,750</div><div class="case-screen-detail" data-screen-detail>После учёта запланированных резервов</div></div><div class="case-screen-bars" data-chart-bars><span style="height:41%"></span><span style="height:58%"></span><span style="height:48%"></span><span style="height:78%"></span><span style="height:60%"></span><span style="height:88%"></span></div><div class="case-screen-bottom"><span>ОБЗОР</span><span>ПЛАНЫ</span><span>НАСТРОЙКИ</span></div></div>
+              <div class="tour-side"><button class="feature-button" type="button" data-feature="input" aria-pressed="false"><span class="feature-id">03 / QUICK INPUT</span><strong>Быстрый ввод</strong><small>Добавление расходов обычным текстом</small></button><button class="feature-button" type="button" data-feature="analytics" aria-pressed="false"><span class="feature-id">04 / INSIGHTS</span><strong>Аналитика расходов</strong><small>Структура трат и финансовая картина</small></button></div>
+            </div>
+            <div class="case-bottom-cta"><strong>Сейчас это интерактивный макет ключевых функций.</strong>В публичной версии здесь появятся настоящие экраны и отдельная безопасная демоверсия MONO без личных данных.</div>
+          </section>
+          <section class="case-explainer section-padding"><div class="section-number">ЗАЧЕМ ЭТО ПРИЛОЖЕНИЕ</div><div class="case-explainer-grid"><h2>Не просто записывать расходы. Понимать, сколько действительно свободно.</h2><p>MONO Finance вырос из личной потребности видеть счета, резервы и будущие обязательства в одном месте. В процессе работы я продумывал финансовую логику, пользовательские сценарии, структуру интерфейса, проверял поведение на iPhone и дорабатывал продукт итерациями. Полный доступ к демоверсии добавим после подготовки обезличенной сборки.</p></div></section>
+        </div>
+        <div id="bay-case" hidden>
+          <section class="case-hero section-padding"><div class="case-eyebrow">02 / INTERACTIVE EXPERIENCE / PERSONAL PROJECT</div><h1 class="case-title">Тихая бухта<span class="punctuation">.</span></h1><p class="case-lead">Небольшой интерактивный мир, в котором исследование, персонажи и детали превращают личную историю в игру.</p><div class="case-meta"><span>INTERACTIVE WORLD</span><span>VISUAL DESIGN</span><span>GAME LOGIC</span><span>MOBILE WEB</span></div></section>
+          <section class="case-showcase bay-showcase" aria-label="Иллюстративный обзор Тихой бухты"><p class="case-instruction">ВИЗУАЛЬНАЯ КОНЦЕПЦИЯ / РЕАЛЬНЫЕ ФРАГМЕНТЫ ДОБАВИМ ПОЗЖЕ</p><div class="bay-interactive-stage"><div class="bay-floating-feature">01 / Пространство для исследования</div><div class="bay-floating-feature">02 / Персонажи и события</div><div class="bay-floating-feature">03 / Атмосфера и детали</div><div class="bay-island"><div class="bay-beach"></div><div class="bay-green"></div><div class="bay-path"></div><div class="bay-cabin">⌂</div><div class="bay-trees">✳ <span>✳</span></div><div class="bay-pet">●<i></i></div></div></div><div class="case-label-watermark">ILLUSTRATIVE / CONCEPT</div></section>
+          <section class="case-explainer section-padding"><div class="section-number">О ПРОЕКТЕ</div><div class="case-explainer-grid"><h2>Когда интерфейс становится маленьким миром.</h2><p>Этот проект показывает другую сторону моей работы — интерактивность, композицию, поведение персонажей и создание настроения. Пока страница содержит условную иллюстрацию без личных деталей и спойлеров. Позже заменим её разрешёнными материалами из игры.</p></div></section>
+        </div>
+        <section class="contact section-padding"><div class="section-number light-index">ЕЩЁ НЕ ВСЁ</div><h2>Вернёмся<br /><em>к другим работам?</em></h2><p>Каждый проект — отдельный способ исследовать идею и проверить, как она работает в руках человека.</p><a href="digital.html" class="button button-light">Смотреть проекты <span>↗</span></a></section>
+      </main>
+      <footer class="footer"><a class="brand" href="index.html">dmitry<span class="brand-dot">.</span>rybka</a><span>© 2026 / MADE WITH INTENTION</span><a href="index.html">На главную ↑</a></footer>
+    </div>
+  </body>
+</html>
