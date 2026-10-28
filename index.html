@@ -4,11 +4,11 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#f3f3f0" />
-    <meta name="description" content="Дмитрий Рыбка — веб-приложения для учёта, расчётов и рабочих процессов. Посмотрите работающий пример и расскажите о своей задаче без готового ТЗ." />
+    <meta name="description" content="Дмитрий Рыбка — сайты для бизнеса, веб-приложения и автоматизация. Коммерческий опыт, реальные кейсы, интерактивные примеры и прямой контакт с разработчиком." />
     <meta property="og:type" content="website" />
     <meta property="og:locale" content="ru_RU" />
-    <meta property="og:title" content="Дмитрий Рыбка — меньше рутины, больше контроля" />
-    <meta property="og:description" content="Небольшие веб-инструменты под реальные задачи. Работающий пример, проекты и простой способ обсудить свою идею." />
+    <meta property="og:title" content="Дмитрий Рыбка — сайты и веб-приложения для бизнеса" />
+    <meta property="og:description" content="Меньше рутины. Больше контроля. Сайты, каталоги, веб-приложения и автоматизация — реальные кейсы и работающий пример." />
     <meta property="og:url" content="https://dmitriyribka27.github.io/" />
     <meta property="og:image" content="https://dmitriyribka27.github.io/og-cover.png" />
     <meta property="og:image:alt" content="Светлая графическая обложка с текстом «Меньше рутины. Больше контроля.» и интерфейсом финансового веб-приложения" />
@@ -17,7 +17,7 @@
     <meta name="twitter:card" content="summary_large_image" />
     <link rel="canonical" href="https://dmitriyribka27.github.io/" />
     <link rel="icon" type="image/svg+xml" href="favicon.svg" />
-    <title>Дмитрий Рыбка — веб-приложения и digital-инструменты</title>
+    <title>Дмитрий Рыбка — сайты и веб-приложения для бизнеса</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
@@ -30,6 +30,7 @@
     <link rel="stylesheet" href="interactive-v5.css" />
     <link rel="stylesheet" href="offer-v6.css" />
     <link rel="stylesheet" href="formats-v7.css" />
+    <link rel="stylesheet" href="portfolio-revamp.css" />
     <script src="app.js" defer></script>
     <script src="motion.js" defer></script>
     <script src="business-demo.js" defer></script>
@@ -46,46 +47,46 @@
         <button class="menu-button" aria-controls="mobile-nav" aria-expanded="false" aria-label="Открыть меню"><span></span><span></span></button>
       </header>
       <nav id="mobile-nav" class="mobile-nav" aria-label="Мобильная навигация" hidden>
-        <a href="digital.html">Digital — портфолио</a><a href="design.html">Design — портфолио</a><a href="#problems">Задачи</a><a href="#projects">Работы</a><a href="#about">Обо мне</a><a href="#contact">Связаться</a>
+        <a href="digital.html">Digital — портфолио</a><a href="design.html">Design — портфолио</a><a href="#services">Услуги</a><a href="#projects">Работы</a><a href="#about">Обо мне</a><a href="#contact">Связаться</a>
       </nav>
       <div class="mobile-direction-tabs"><a href="digital.html">01 / DIGITAL ↗</a><a href="design.html">02 / DESIGN ↗</a></div>
       <div class="reading-progress" aria-hidden="true"><span class="reading-progress-bar"></span></div>
-      <a class="chapter-jump" href="#problems" data-chapter-jump aria-label="Следующий раздел: задачи"><span class="chapter-jump-count" data-chapter-count>00 <small>/ 07</small></span><span class="chapter-jump-label" data-chapter-label>ДАЛЬШЕ: ЗАДАЧИ</span><span class="chapter-jump-arrow" aria-hidden="true">↓</span></a>
+      <a class="chapter-jump" href="#services" data-chapter-jump aria-label="Следующий раздел: услуги"><span class="chapter-jump-count" data-chapter-count>00 <small>/ 06</small></span><span class="chapter-jump-label" data-chapter-label>ДАЛЬШЕ: УСЛУГИ</span><span class="chapter-jump-arrow" aria-hidden="true">↓</span></a>
 
       <main>
         <section class="poster-hero" id="top">
-          <div class="poster-hero-topline"><span>СОЗДАЮ ПРИКЛАДНЫЕ WEB-ИНСТРУМЕНТЫ</span><span>BATUMI / WORKING REMOTELY</span><span>PORTFOLIO — 2026</span></div>
+          <div class="poster-hero-topline"><span>САЙТЫ ДЛЯ БИЗНЕСА · ВЕБ-ПРИЛОЖЕНИЯ</span><span>BATUMI / WORKING REMOTELY</span><span>PORTFOLIO — 2026</span></div>
           <div class="poster-hero-layout">
             <div class="poster-hero-copy">
-              <span class="poster-sticker">ВЕБ-ПРИЛОЖЕНИЯ ПОД КОНКРЕТНУЮ ЗАДАЧУ <b>✳</b></span>
+              <span class="poster-sticker">WEB DEVELOPMENT / UX / РАБОЧИЕ ПРОЦЕССЫ <b>✳</b></span>
               <h1>МЕНЬШЕ<br /><span class="poster-word">РУТИНЫ<span class="poster-scribble" aria-hidden="true"></span></span><span class="poster-dot">.</span><br />БОЛЬШЕ<br />КОНТРОЛЯ<span class="poster-dot">.</span></h1>
-              <p class="poster-lead">Когда учёт разбросан по таблицам и чатам, а расчёты отнимают время, я собираю понятный веб-инструмент под ваш процесс. Он открывается с телефона и компьютера — без громоздкой системы.</p>
+              <p class="poster-lead">Я Дмитрий Рыбка. Разрабатываю сайты для бизнеса и веб-приложения под реальные задачи: от презентации услуг и каталога до учёта, расчётов и автоматизации. Проектирую с пониманием того, как работает бизнес.</p>
               <div class="poster-actions"><a class="poster-primary" href="https://t.me/ribka_27" target="_blank" rel="noopener noreferrer">Рассказать о задаче <span>↗</span></a><a class="poster-secondary" href="#live-demo">Попробовать демо <span>↓</span></a></div>
-              <p class="poster-low-friction">Можно без технического задания. Хватит двух предложений о том, что сейчас неудобно.</p>
+              <p class="poster-low-friction">Работаю напрямую: обсуждаем задачу, согласуем объём и проверяем результат.</p>
               <div class="poster-offers" aria-label="Какие инструменты можно заказать">
                 <div class="poster-offers-heading"><span>ЧТО МОЖНО ЗАКАЗАТЬ</span><span>ПРИМЕРЫ ЗАДАЧ ↓</span></div>
                 <div class="poster-offers-grid">
-                  <a class="poster-offer-card" href="#services" aria-label="Подробнее об инструментах для учёта и рабочих процессов">
-                    <span class="poster-offer-meta"><span>01 / WEB-ИНСТРУМЕНТ</span><b aria-hidden="true">↗</b></span>
-                    <strong>Учёт и процессы</strong>
-                    <small>Заказы, остатки, статусы — в одном месте.</small>
+                  <a class="poster-offer-card" href="#site-work" aria-label="Подробнее о создании сайтов для бизнеса">
+                    <span class="poster-offer-meta"><span>01 / САЙТЫ</span><b aria-hidden="true">↗</b></span>
+                    <strong>Сайты для бизнеса</strong>
+                    <small>Лендинги, визитки, каталоги, многостраничные сайты.</small>
                   </a>
-                  <a class="poster-offer-card" href="#services" aria-label="Подробнее о калькуляторах и дашбордах">
-                    <span class="poster-offer-meta"><span>02 / WEB-ИНСТРУМЕНТ</span><b aria-hidden="true">↗</b></span>
-                    <strong>Расчёты и дашборды</strong>
-                    <small>Себестоимость, прибыль, планы — без ручных формул.</small>
+                  <a class="poster-offer-card" href="#web-app-work" aria-label="Подробнее о веб-приложениях и автоматизации">
+                    <span class="poster-offer-meta"><span>02 / WEB-APPS</span><b aria-hidden="true">↗</b></span>
+                    <strong>Веб-приложения</strong>
+                    <small>Учёт, калькуляторы, панели управления и автоматизация.</small>
                   </a>
                 </div>
                 <div class="poster-extra-formats" aria-label="Другие форматы работы">
                   <span>А ЕЩЁ</span>
                   <div>
-                    <a href="#site-work">Сайты-визитки ↗</a>
+                    <a href="project.html?id=shkryum">Коммерческий сайт-каталог ↗</a>
                     <a href="#game-gifts">Мини-игры в подарок ↗</a>
                     <a href="#prototypes">Прототипы приложений и игр ↗</a>
                   </div>
                 </div>
               </div>
-              <div class="poster-signoff"><span class="poster-asterisk">✳</span><span>Я Дмитрий Рыбка. Работаю с операционными процессами<br />и превращаю повторяющиеся задачи в цифровые инструменты.</span></div>
+              <div class="poster-signoff"><span class="poster-asterisk">✳</span><span>Операционный опыт + разработка.<br />От структуры сайта до логики внутренних систем.</span></div>
             </div>
             <div class="poster-stage" aria-label="Иллюстративная композиция с MONO Finance">
               <div class="poster-stage-grid"></div>
@@ -99,25 +100,43 @@
               <div class="poster-stage-corner">DESIGN × FUNCTION</div>
             </div>
           </div>
-          <a class="poster-scroll" href="#problems"><span>НИЖЕ — ЗАДАЧИ, РАБОТАЮЩИЙ ПРИМЕР И МОИ ПРОЕКТЫ</span><span>↓</span></a>
+          <a class="poster-scroll" href="#services"><span>НИЖЕ — УСЛУГИ, РЕАЛЬНЫЕ КЕЙСЫ И РАБОТАЮЩЕЕ ДЕМО</span><span>↓</span></a>
         </section>
 
         <div class="trust-ribbon" aria-label="Мой опыт и формат работы"><span>ОПЫТ В ОПЕРАЦИОННОМ УПРАВЛЕНИИ</span><i aria-hidden="true">✳</i><span>ПРЯМОЙ КОНТАКТ С ИСПОЛНИТЕЛЕМ</span><i aria-hidden="true">✳</i><span>НЕБОЛЬШИЕ ПРОЕКТЫ БЕЗ ЛИШНИХ ФУНКЦИЙ</span></div>
 
-        <section class="problem-section section-padding" id="problems">
-          <div class="poster-section-label"><span>01 / ЗНАКОМАЯ СИТУАЦИЯ?</span><span>НЕ БОЛЬШАЯ СИСТЕМА. НУЖНЫЙ ИНСТРУМЕНТ.</span></div>
-          <h2>Небольшая задача<br />не должна превращаться<br /><em>в большую проблему.</em></h2>
-          <div class="problem-grid">
-            <article class="problem-card"><span>01 / ДАННЫЕ</span><h3>Всё в разных местах</h3><p>Счета, остатки, списки и планы приходится собирать вручную.</p><div><s>Пять вкладок и переписка</s><b>Один понятный экран ↗</b></div></article>
-            <article class="problem-card"><span>02 / РАСЧЁТЫ</span><h3>Одно и то же по кругу</h3><p>Формулы и проверки повторяются каждый день или каждую неделю.</p><div><s>Снова считать вручную</s><b>Инструмент с нужной логикой ↗</b></div></article>
-            <article class="problem-card"><span>03 / ИДЕЯ</span><h3>Сложно показать, что нужно</h3><p>Есть идея приложения или игры, но пока только описание и набор примеров.</p><div><s>Обсуждать на словах</s><b>Рабочий прототип ↗</b></div></article>
+        <section class="services-v3 section-padding services-revamp" id="services">
+          <div class="poster-section-label"><span>01 / ЧТО Я РАЗРАБАТЫВАЮ</span><span>ДВА ОСНОВНЫХ НАПРАВЛЕНИЯ</span></div>
+          <h2>САЙТЫ.<br /><em>И ПРИЛОЖЕНИЯ.</em></h2>
+          <p class="services-revamp-intro">Одна задача — рассказать о бизнесе и собрать обращения. Другая — упростить работу команды. Для обеих нужен понятный интерфейс и продуманный сценарий.</p>
+          <div class="services-revamp-grid">
+            <article id="site-work" class="service-main-card">
+              <span>01 / COMMERCIAL WEB</span>
+              <h3>Сайты<br />для бизнеса</h3>
+              <p>Лендинги, сайты-визитки, небольшие многостраничные сайты, каталоги и презентационные страницы.</p>
+              <ul><li>Структура и логика страниц</li><li>Адаптивная сборка и базовые SEO-настройки</li><li>Формы, контакты, подключение заявок — по задаче</li></ul>
+              <div><a href="project.html?id=shkryum">Кейс: «Пасека Шкрюм» ↗</a><a href="#contact">Обсудить сайт ↗</a></div>
+            </article>
+            <article id="web-app-work" class="service-main-card">
+              <span>02 / TOOLS & AUTOMATION</span>
+              <h3>Веб-приложения<br />и автоматизация</h3>
+              <p>Калькуляторы, панели управления, системы учёта, интерактивные инструменты и небольшие бизнес-сервисы.</p>
+              <ul><li>Рабочие сценарии и UX/UI</li><li>Логика данных, проверки и интеграции по необходимости</li><li>Тестирование на согласованных сценариях</li></ul>
+              <div><a href="digital.html#ops">Кейс: OPS Sea Livery ↗</a><a href="#live-demo">Попробовать расчёт ↗</a></div>
+            </article>
           </div>
-          <p class="problem-footnote">Это примеры задач, с которыми можно обратиться, а не обещание универсального решения для любого бизнеса.</p>
+          <div class="services-revamp-extra"><span>ДОПОЛНИТЕЛЬНО</span><a id="prototypes" href="digital.html#base">Прототипы и нестандартные интерфейсы ↗</a><a id="game-gifts" href="project.html?id=bay">Персональные интерактивные игры ↗</a></div>
         </section>
 
         <section class="proof-section section-padding" id="projects">
           <div class="poster-section-label"><span>02 / МОИ РАБОТЫ</span><span>ПОСМОТРЕТЬ → ПОПРОБОВАТЬ → ОЦЕНИТЬ</span></div>
-          <div class="proof-heading"><h2>Не обещания.<br /><em>Рабочий пример.</em></h2><p>Небольшой инструмент можно оценить за минуту. Измените значения в демонстрационном калькуляторе — расчёт обновится сразу. Ниже покажу личный PWA-проект.</p></div>
+          <div class="proof-heading"><h2>Разные задачи.<br /><em>Реальные проекты.</em></h2><p>Коммерческий сайт, личное финансовое PWA и операционная система для бизнеса. У каждого проекта — своя задача, моя роль и честно обозначенный статус.</p></div>
+          <div class="featured-projects" aria-label="Избранные проекты">
+            <a class="featured-project" href="project.html?id=shkryum"><span>01 / КОММЕРЧЕСКИЙ САЙТ</span><strong>Пасека Шкрюм</strong><p>Многостраничный каталог на Tilda и настройка CRM с каналами заявок.</p><small>ВЫПОЛНЕННЫЙ ПРОЕКТ <b>↗</b></small></a>
+            <a class="featured-project" href="project.html?id=mono"><span>02 / ЛИЧНЫЙ ПРОДУКТ</span><strong>MONO Finance</strong><p>Полностью разработанное и работающее PWA для учёта личных финансов.</p><small>РАБОТАЮЩЕЕ ПРИЛОЖЕНИЕ <b>↗</b></small></a>
+            <a class="featured-project" href="digital.html#ops"><span>03 / БИЗНЕС-ПРИЛОЖЕНИЕ</span><strong>OPS Sea Livery</strong><p>Мобильная система заказов, склада и финансов. Рабочий тестовый прототип.</p><small>ТЕСТОВЫЙ КОНТУР <b>↗</b></small></a>
+          </div>
+          <div class="proof-demo-heading"><span>ИНТЕРАКТИВНЫЙ ПРИМЕР · 01</span><h3>Попробуйте расчёт сами.</h3><p>Этот независимый демонстрационный калькулятор работает прямо на странице. Значения вымышлены.</p></div>
           <div class="ops-demo" id="live-demo">
             <div class="ops-demo-story">
               <span class="ops-demo-index">01 / РАБОТАЮЩЕЕ ДЕМО · ОПЕРАЦИОННЫЕ РАСЧЁТЫ</span>
@@ -145,63 +164,39 @@
               <p class="ops-tool-disclaimer">Условная модель на день. Прибыль рассчитана до налогов; точка безубыточности зависит от введённых расходов. Измените любое поле.</p>
             </div>
           </div>
-          <div class="personal-proof-heading"><span>02 / ЛИЧНЫЙ ПРОЕКТ</span><h3>А вот инструмент, который я делал для себя.</h3></div>
+          <details class="mono-more-demo"><summary>Ещё один интерактивный пример — логика MONO Finance <span aria-hidden="true">＋</span></summary>
+          <div class="personal-proof-heading"><span>02 / ДЕМО НА СИНТЕТИЧЕСКИХ ДАННЫХ</span><h3>Расчёт свободных средств из идеи MONO Finance.</h3></div>
           <div class="project-grid personal-project-grid">
             <a class="project-card card-mono" href="project.html?id=mono" aria-label="Открыть интерактивный обзор MONO Finance"><div class="project-visual mono-card-art"><div class="project-visual-index">01 / PERSONAL FINANCE · PWA</div><div class="mock-phone mono-card-phone"><div class="phone-notch"></div><div class="phone-display"><div class="phone-kicker">MONO <span>FINANCE</span></div><div class="phone-small-label">Свободные средства</div><div class="phone-big-value" data-mono-phone-value>$1,750.00</div><div class="phone-stat-grid"><div><small>СЧЕТА</small><strong>04</strong></div><div><small>РЕЗЕРВЫ</small><strong data-mono-phone-reserve>$250</strong></div></div><div class="phone-mini-list"><i></i><i></i><i></i></div></div></div><div class="card-floating-label">ОТКРЫТЬ ПРОЕКТ <span>↗</span></div></div><div class="project-caption"><div><h3>MONO Finance</h3><p>Учёт, планирование и свободные средства</p></div><span class="project-arrow">↗</span></div></a>
             <div class="personal-project-story"><span>MONO FINANCE / PWA</span><h3>Сколько денег действительно свободно?</h3><p>Попробуйте поменять суммы. Результат пересчитается прямо здесь и в макете приложения — так устроена ключевая идея моего финансового инструмента.</p><div class="mono-live-panel" data-mono-calculator><div class="mono-live-heading"><span><i aria-hidden="true"></i> MINI DEMO / 002</span><b>ПОПРОБУЙТЕ САМИ</b></div><div class="mono-live-fields"><label for="mono-balance">На счетах, $ <input id="mono-balance" data-mono-input="balance" type="number" min="0" max="100000000" step="50" value="2400" inputmode="decimal" /></label><label for="mono-obligations">Обязательные платежи, $ <input id="mono-obligations" data-mono-input="obligations" type="number" min="0" max="100000000" step="50" value="400" inputmode="decimal" /></label><label for="mono-reserve">Резерв на цели, $ <input id="mono-reserve" data-mono-input="reserve" type="number" min="0" max="100000000" step="50" value="250" inputmode="decimal" /></label></div><div class="mono-live-total"><span>СВОБОДНО ПОСЛЕ ПЛАНОВ</span><output aria-live="polite" data-mono-result>$1,750</output><div class="mono-allocation" aria-label="Распределение денег"><i data-mono-segment="obligations"></i><i data-mono-segment="reserve"></i><i data-mono-segment="available"></i></div><small data-mono-status>Оставшаяся сумма после обязательств и резерва</small></div><p>Только пример расчёта: суммы никуда не отправляются и не сохраняются.</p></div><a href="project.html?id=mono">Посмотреть MONO Finance <b>↗</b></a></div>
           </div>
+          </details>
           <a class="poster-outline-link" href="digital.html"><span>Все digital-проекты, включая интерактивные эксперименты</span><b>↗</b></a>
         </section>
 
-        <section class="services-v3 section-padding" id="services">
-          <div class="poster-section-label"><span>03 / ЧТО МОЖНО ЗАКАЗАТЬ</span><span>СНАЧАЛА ЗАДАЧА, ПОТОМ ОБЪЁМ РАБОТЫ</span></div>
-          <h2>Не обязательно<br />начинать <em>с большого.</em></h2>
-          <div class="services-v3-list">
-            <article><span>01</span><div><h3>Учёт и рабочие процессы</h3><p>Панель заказов, трекер задач, списки и статусы. Чтобы видеть картину целиком, а не искать данные в чатах.</p><small>ПРИМЕР: УЧЁТ ЗАКАЗОВ И ИХ СТАТУСОВ</small></div><a href="#contact" aria-label="Обсудить инструмент для учёта">↗</a></article>
-            <article><span>02</span><div><h3>Расчёты и автоматизация</h3><p>Калькуляторы тарифов, себестоимости, выплат и других повторяющихся вычислений.</p><small>ПРИМЕР: КАЛЬКУЛЯТОР С ОБНОВЛЕНИЕМ РЕЗУЛЬТАТА</small></div><a href="#contact" aria-label="Обсудить инструмент для расчётов">↗</a></article>
-            <article id="prototypes"><span>03</span><div><h3>Прототипы приложений и игр</h3><p>Кликабельные экраны и ключевой интерактивный сценарий, чтобы проверить задумку до полноценной разработки.</p><small>ПРИМЕР: ПРОТОТИП ВЕБ-СЕРВИСА ИЛИ ИГРОВОЙ МЕХАНИКИ</small></div><a href="#contact" aria-label="Обсудить прототип приложения или игры">↗</a></article>
-          </div>
-          <div class="service-more-heading"><span>ЕЩЁ ДВА ФОРМАТА</span><p>Не каждая задача связана с учётом. Иногда нужен небольшой сайт или интерактивная история для близкого человека.</p></div>
-          <div class="service-more-grid" aria-label="Дополнительные digital-услуги">
-            <article id="site-work" class="service-more-card">
-              <span>04 / САЙТ</span>
-              <h3>Сайт-визитка<br />или лендинг</h3>
-              <p>Страница для специалиста, услуги или небольшого бизнеса: что предлагаете, примеры работ и понятный способ связаться.</p>
-              <a href="#contact">Обсудить сайт <b aria-hidden="true">↗</b></a>
-            </article>
-            <article id="game-gifts" class="service-more-card service-more-play">
-              <span>05 / ИНТЕРАКТИВ</span>
-              <h3>Мини-игра<br />в подарок</h3>
-              <p>Персональный квест, игровая открытка или маленькая история с персонажами. Можно открыть по ссылке на телефоне.</p>
-              <div class="service-more-links"><a href="project.html?id=bay">Мой пример: «Тихая бухта» <b aria-hidden="true">↗</b></a><a href="#contact">Обсудить идею <b aria-hidden="true">↗</b></a></div>
-            </article>
-          </div>
-          <div class="services-v3-note"><b>НЕТ ГОТОВОГО ТЗ?</b><span>Можно начать с описания проблемы. Сначала согласуем подход, состав первой версии и бюджет.</span><a href="#contact">Как начать →</a></div>
-        </section>
-
         <section class="approach-v3 section-padding" id="approach">
-          <div class="poster-section-label"><span>04 / КАК ПРОХОДИТ РАБОТА</span><span>ПРОЗРАЧНО И ПО ШАГАМ</span></div>
+          <div class="poster-section-label"><span>03 / КАК ПРОХОДИТ РАБОТА</span><span>ПРОЗРАЧНО И ПО ШАГАМ</span></div>
           <h2>Сначала понять.<br /><em>Потом собрать.</em></h2>
-          <div class="approach-v3-grid"><div><span>01 / КОРОТКИЙ РАЗГОВОР</span><h3>Что нужно решить?</h3><p>Вы описываете проблему своими словами. Я уточняю сценарий и предлагаю формат, который действительно нужен.</p></div><div><span>02 / ДОГОВАРИВАЕМСЯ</span><h3>Что входит в работу?</h3><p>До старта фиксируем основные функции, стоимость, сроки и то, как проверяем результат.</p></div><div><span>03 / СОБИРАЕМ И ПРОВЕРЯЕМ</span><h3>Удобно ли пользоваться?</h3><p>Разрабатываем первую версию, тестируем на устройствах и исправляем то, что мешает работе.</p></div></div>
+          <div class="approach-v3-grid"><div><span>01 / ЗНАКОМСТВО</span><h3>Определяем задачу</h3><p>Обсуждаем аудиторию, цель и нужный формат: сайт, каталог или веб-приложение.</p></div><div><span>02 / ОБЪЁМ И СТОИМОСТЬ</span><h3>Фиксируем договорённости</h3><p>Согласовываем страницы или функции, материалы, бюджет, этапы и критерии приёмки до разработки.</p></div><div><span>03 / РАЗРАБОТКА И ПРОВЕРКА</span><h3>Смотрим в действии</h3><p>Показываю рабочую версию, проверяем на телефоне и компьютере, исправляем замечания.</p></div><div><span>04 / ПЕРЕДАЧА И ПОДДЕРЖКА</span><h3>Проект остаётся у вас</h3><p>Передаю результат, доступы и нужные инструкции. Обновления и дальнейшую поддержку обсуждаем отдельно.</p></div></div>
         </section>
 
         <section class="about-v3 section-padding" id="about">
-          <div class="poster-section-label"><span>05 / КТО ЗА ЭТИМ СТОИТ</span><span>ONE PERSON / DIRECT CONTACT</span></div>
-          <div class="about-v3-grid"><div class="about-v3-name"><small>ПРИВЕТ, Я</small><h2>ДМИТРИЙ<br /><em>РЫБКА.</em></h2><div class="about-v3-mark" aria-hidden="true">DR<span>✳</span></div></div><div class="about-v3-text"><span class="about-v3-role">ОПЕРАЦИОННЫЙ ДИРЕКТОР · DIGITAL-РАЗРАБОТКА</span><p>В основной работе я — операционный директор Sea Livery. Компания привозит в Грузию морские деликатесы со всего мира: норвежскую сёмгу, финскую икру, чилийские мидии и другие продукты. Я отвечаю за операционные процессы и знаю, как быстро работа обрастает таблицами, проверками и переписками.</p><p>Поэтому, создавая веб-инструменты, я сначала разбираюсь в рабочем сценарии, а потом проектирую интерфейс. В разработке использую AI-инструменты и лично проверяю логику, удобство и результат. Работаю напрямую, без агентства и лишних посредников.</p><div><span>OPERATIONS</span><span>WEB APPS</span><span>UX / UI</span><span>AI-ASSISTED</span></div></div></div>
+          <div class="poster-section-label"><span>04 / КТО ЗА ЭТИМ СТОИТ</span><span>ONE PERSON / DIRECT CONTACT</span></div>
+          <div class="about-v3-grid"><div class="about-v3-name"><small>ПРИВЕТ, Я</small><h2>ДМИТРИЙ<br /><em>РЫБКА.</em></h2><div class="about-v3-mark" aria-hidden="true">DR<span>✳</span></div></div><div class="about-v3-text"><span class="about-v3-role">ОПЕРАЦИОННЫЙ ДИРЕКТОР · САЙТЫ И ВЕБ-ПРИЛОЖЕНИЯ</span><p>Я совмещаю разработку с операционным управлением. В Sea Livery — компании, которая привозит в Грузию норвежскую сёмгу, финскую икру, чилийские мидии и другие морские деликатесы, — отвечаю за рабочие процессы. Поэтому понимаю бизнес-задачи не только по описанию в брифе.</p><p>Создавал многостраничный сайт-каталог «Пасека Шкрюм» на Tilda и настраивал CRM с подключением каналов заявок. Ещё в 2018 году собирал сайт салона маникюра на WordPress, работал с HTML, CSS и PHP. Использую Figma, аналитику и инструменты автоматизации.</p><p>Сегодня проектирую сайты и веб-приложения, организую разработку, в том числе с помощью ИИ, и лично проверяю сценарии и результат. Работаю напрямую с заказчиком.</p><div><span>BUSINESS OPERATIONS</span><span>WEBSITES</span><span>WEB APPS</span><span>UX / UI</span></div></div></div>
         </section>
 
         <section class="design-v3 section-padding" id="design">
-          <div class="poster-section-label"><span>06 / ЕЩЁ ОДНО НАПРАВЛЕНИЕ</span><span>GRAPHIC & VISUAL DESIGN</span></div>
+          <div class="poster-section-label"><span>05 / ЕЩЁ ОДНО НАПРАВЛЕНИЕ</span><span>GRAPHIC & VISUAL DESIGN</span></div>
           <div class="design-v3-layout"><div><h2>ДИЗАЙН.<br /><em>ДРУГАЯ</em><br />СТОРОНА<br />РАБОТЫ.</h2><p>Карточки для маркетплейсов, предметные AI-визуалы, афиши и айдентика. Это отдельное направление — с настоящими работами, которые можно рассмотреть в деталях.</p><a href="design.html" class="poster-primary">Открыть дизайн-портфолио <span>↗</span></a><div class="design-v5-tags"><span>МАРКЕТПЛЕЙСЫ</span><span>ПРЕДМЕТНЫЕ ВИЗУАЛЫ</span><span>ТИПОГРАФИКА</span></div></div><a class="design-v5-collage" href="design.html" aria-label="Посмотреть реальные дизайнерские работы Дмитрия Рыбки"><span class="design-collage-top">02 / SELECTED WORKS</span><span class="design-collage-word" aria-hidden="true">DESIGN</span><figure class="design-collage-frame design-frame-a"><img src="assets/design/carstyle-belt.webp" loading="lazy" decoding="async" alt="Товарная инфографика: сумка-кроссбоди" /><figcaption>PRODUCT / 01</figcaption></figure><figure class="design-collage-frame design-frame-b"><img src="assets/design/cognitio-sign.webp" loading="lazy" decoding="async" alt="Вывеска книжной лавки CognitioVerum" /><figcaption>COGNITIOVERUM / 02</figcaption></figure><figure class="design-collage-frame design-frame-c"><img src="assets/design/food-rolls.webp" loading="lazy" decoding="async" alt="Фуд-визуал: три ролла на голубом фоне" /><figcaption>FOOD VISUAL / 03</figcaption></figure><span class="design-collage-stamp">VIEW<br />WORKS <b>↗</b></span><span class="design-collage-foot">РЕАЛЬНЫЕ РАБОТЫ · ОТДЕЛЬНОЕ ПОРТФОЛИО</span></a></div>
         </section>
 
         <section class="contact-v3 section-padding" id="contact">
-          <div class="poster-section-label"><span>07 / СВЯЗАТЬСЯ</span><span>НАЧНИТЕ С ДВУХ ПРЕДЛОЖЕНИЙ</span></div>
-          <h2>НЕ НУЖНО<br /><em>ГОТОВОЕ ТЗ.</em></h2>
-          <p>Расскажите, что сейчас неудобно и что хотите упростить. Я уточню детали, предложу формат первой версии и до начала работы согласую с вами объём, стоимость и срок.</p>
-          <div class="contact-v3-prompts" aria-label="Что написать в первом сообщении"><div><span>01</span><b>Что сейчас неудобно?</b><small>«Заказы ведём в таблице и чате»</small></div><div><span>02</span><b>Что хотите изменить?</b><small>«Нужен один экран со статусами»</small></div></div>
+          <div class="poster-section-label"><span>06 / СВЯЗАТЬСЯ</span><span>НАЧНИТЕ С ДВУХ ПРЕДЛОЖЕНИЙ</span></div>
+          <h2>ОБСУДИМ<br /><em>ВАШ ПРОЕКТ.</em></h2>
+          <p>Нужен сайт компании, каталог или удобный веб-инструмент? Расскажите, для кого проект и что он должен делать. Я помогу определить объём, а стоимость и этапы согласуем до старта.</p>
+          <div class="contact-v3-prompts" aria-label="Что написать в первом сообщении"><div><span>01</span><b>Что хотите создать?</b><small>«Нужен сайт-каталог для бизнеса»</small></div><div><span>02</span><b>Что важно посетителю?</b><small>«Найти товар и оставить заявку»</small></div></div>
           <div class="contact-v3-actions"><a class="poster-primary" href="https://t.me/ribka_27" target="_blank" rel="noopener noreferrer">Написать в Telegram <span>↗</span></a><a href="mailto:dmitriy.ribka.02@gmail.com">dmitriy.ribka.02@gmail.com</a></div>
-          <p class="contact-v3-note">Можно без готового задания, схем и специальных терминов. Достаточно описать задачу своими словами.</p>
+          <p class="contact-v3-note">Можно написать без технического задания — достаточно кратко описать идею и желаемый результат.</p>
         </section>
       </main>
       <footer class="footer home-v3-footer"><a class="brand" href="#top">dmitry<span class="brand-dot">.</span>rybka</a><span>© 2026 / DIGITAL & DESIGN</span><a href="#top">Наверх ↑</a></footer>

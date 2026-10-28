@@ -4,8 +4,13 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#f7f8f9" />
-    <meta name="description" content="Интерактивный разбор цифрового проекта Дмитрия Рыбки." />
+    <meta name="description" content="Кейсы Дмитрия Рыбки: готовое приложение MONO Finance, коммерческий сайт «Пасека Шкрюм» и интерактивные проекты. Реализация и статус без вымышленных результатов." />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Кейсы Дмитрия Рыбки — сайты и веб-приложения" />
+    <meta property="og:description" content="Как устроены цифровые проекты: задачи, решения, технологии и честный статус." />
+    <meta property="og:image" content="https://dmitriyribka27.github.io/og-cover.png" />
     <title>Проект — Dmitry Rybka</title>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
@@ -13,6 +18,7 @@
     <link rel="stylesheet" href="typography.css" />
     <link rel="stylesheet" href="motion.css" />
     <link rel="stylesheet" href="portfolio-v2.css" />
+    <link rel="stylesheet" href="portfolio-revamp.css" />
     <script src="app.js" defer></script>
     <script src="motion.js" defer></script>
     <script src="portfolio-v2.js" defer></script>
@@ -24,17 +30,22 @@
       <div class="reading-progress" aria-hidden="true"><span class="reading-progress-bar"></span></div>
       <main>
         <div id="mono-case">
-          <section class="case-hero section-padding"><div class="case-eyebrow">01 / PERSONAL FINANCE / WEB APP</div><h1 class="case-title">MONO Finance<span class="punctuation">.</span></h1><p class="case-lead">Личное финансовое пространство: несколько валют, счета, обязательства, планирование и возможность видеть не просто баланс, а свободные средства.</p><div class="case-meta"><span>PRODUCT LOGIC</span><span>UX / UI</span><span>PWA</span><span>AI-ASSISTED BUILD</span></div></section>
+          <section class="case-hero section-padding"><div class="case-eyebrow">01 / PERSONAL FINANCE / ГОТОВОЕ PWA</div><h1 class="case-title">MONO Finance<span class="punctuation">.</span></h1><p class="case-lead">Полностью разработанное и работающее PWA для личных финансов: счета в разных валютах, резервы, обязательные платежи, планирование, быстрый ввод и аналитика.</p><div class="case-meta"><span>РАБОТАЮЩИЙ ПРОДУКТ</span><span>UX / UI</span><span>JAVASCRIPT</span><span>LOCAL-FIRST PWA</span></div></section>
           <section class="case-showcase" aria-label="Интерактивный обзор функций MONO Finance">
-            <p class="case-instruction">ИНТЕРАКТИВНЫЙ ОБЗОР / ВЫБЕРИТЕ ФУНКЦИЮ, ЧТОБЫ УВИДЕТЬ ЕЁ В ЦЕНТРЕ</p>
+            <p class="case-instruction">ПУБЛИЧНАЯ ДЕМОНСТРАЦИЯ / МАКЕТ НА УСЛОВНЫХ ДАННЫХ — ЛИЧНОЕ ПРИЛОЖЕНИЕ РАБОТАЕТ ОТДЕЛЬНО</p>
             <div class="case-tour">
               <div class="tour-side"><button class="feature-button" type="button" data-feature="accounts" aria-pressed="false"><span class="feature-id">01 / ACCOUNTS</span><strong>Несколько валют</strong><small>Разные счета и остатки в одной системе</small></button><button class="feature-button" type="button" data-feature="reserves" aria-pressed="true"><span class="feature-id">02 / RESERVES</span><strong>Свободные деньги</strong><small>Учитывает обязательства и резервы</small></button></div>
               <div class="case-phone" aria-live="polite"><div class="case-phone-title">MONO <span>FINANCE</span></div><div class="case-screen-panel"><div class="case-screen-label" data-screen-label>ДОСТУПНО К ТРАТАМ</div><div class="case-screen-value" data-screen-value>$1,750</div><div class="case-screen-detail" data-screen-detail>После учёта запланированных резервов</div></div><div class="case-screen-bars" data-chart-bars><span style="height:41%"></span><span style="height:58%"></span><span style="height:48%"></span><span style="height:78%"></span><span style="height:60%"></span><span style="height:88%"></span></div><div class="case-screen-bottom"><span>ОБЗОР</span><span>ПЛАНЫ</span><span>НАСТРОЙКИ</span></div></div>
               <div class="tour-side"><button class="feature-button" type="button" data-feature="input" aria-pressed="false"><span class="feature-id">03 / QUICK INPUT</span><strong>Быстрый ввод</strong><small>Добавление расходов обычным текстом</small></button><button class="feature-button" type="button" data-feature="analytics" aria-pressed="false"><span class="feature-id">04 / INSIGHTS</span><strong>Аналитика расходов</strong><small>Структура трат и финансовая картина</small></button></div>
             </div>
-            <div class="case-bottom-cta"><strong>Сейчас это интерактивный макет ключевых функций.</strong>В публичной версии здесь появятся настоящие экраны и отдельная безопасная демоверсия MONO без личных данных.</div>
+            <div class="case-bottom-cta"><strong>MONO Finance готово и используется как самостоятельное PWA.</strong>На этой странице показана безопасная интерактивная иллюстрация его логики — не подключение к реальным счетам, записям или личной базе данных.</div>
           </section>
-          <section class="case-explainer section-padding"><div class="section-number">ЗАЧЕМ ЭТО ПРИЛОЖЕНИЕ</div><div class="case-explainer-grid"><h2>Не просто записывать расходы. Понимать, сколько действительно свободно.</h2><p>MONO Finance вырос из личной потребности видеть счета, резервы и будущие обязательства в одном месте. В процессе работы я продумывал финансовую логику, пользовательские сценарии, структуру интерфейса, проверял поведение на iPhone и дорабатывал продукт итерациями. Полный доступ к демоверсии добавим после подготовки обезличенной сборки.</p></div></section>
+          <section class="case-explainer section-padding"><div class="section-number">ЗАДАЧА / РЕШЕНИЕ / СТАТУС</div><div class="case-explainer-grid"><h2>Не просто записывать расходы. Понимать, сколько действительно свободно.</h2><div><p>MONO Finance вырос из личной потребности видеть остатки, резервы и будущие обязательства в одном месте. Я спроектировал сценарии, интерфейс и финансовую логику, организовал AI-assisted разработку и проверял работу на iPhone.</p><p>Реализованы учёт по валютам, операции между счетами, планы платежей, финансовые цели, быстрый ввод и аналитика. Приложение работает локально, без доступа к банковским аккаунтам. Публичный макет выше использует только вымышленные значения.</p></div></div></section>
+        </div>
+        <div id="shkryum-case" hidden>
+          <section class="case-hero section-padding"><div class="case-eyebrow">02 / COMMERCIAL WEB / ВЫПОЛНЕННЫЙ ПРОЕКТ</div><h1 class="case-title">Пасека Шкрюм<span class="punctuation">.</span></h1><p class="case-lead">Многостраничный сайт-каталог на Tilda и настройка CRM с подключением каналов заявок.</p><div class="case-meta"><span>TILDA</span><span>WEB CATALOG</span><span>CRM</span><span>LEAD CHANNELS</span></div></section>
+          <section class="case-showcase commercial-project-showcase" aria-label="Обзор коммерческого сайта Пасека Шкрюм"><div class="commercial-project-title"><span>РЕАЛЬНЫЙ КОММЕРЧЕСКИЙ КЕЙС</span><strong>ПАСЕКА<br />ШКРЮМ<span>.</span></strong><p>Типографическое представление проекта. Это не скриншот сайта и не демонстрация вымышленных результатов.</p></div><div class="commercial-project-stages"><div><span>01 / ЗАДАЧА</span><p>Представить ассортимент в формате многостраничного каталога и организовать поступление обращений.</p></div><div><span>02 / МОЯ РАБОТА</span><p>Создание сайта-каталога на Tilda, настройка CRM и подключение каналов заявок.</p></div><div><span>03 / ТЕКУЩИЙ СТАТУС</span><p>Проект выполнен. Актуальную публичную ссылку, скриншоты и доступность CRM перед публикацией дополнительных материалов нужно подтвердить.</p></div></div></section>
+          <section class="case-explainer section-padding"><div class="section-number">ЧЕМ ПОЛЕЗЕН ЭТОТ ОПЫТ</div><div class="case-explainer-grid"><h2>Сайт — только начало клиентского пути.</h2><div><p>Для коммерческого проекта важно не только оформить страницы, но и продумать, куда попадёт заявка и как с ней будет работать команда. Здесь я занимался и веб-частью, и настройкой CRM с подключением каналов обращений.</p><p>Результаты в цифрах, отзывы и изображения заказчика не публикую без подтверждения. Пример показывает мой практический опыт работы с сайтами для бизнеса.</p></div></div></section>
         </div>
         <div id="bay-case" hidden>
           <section class="case-hero section-padding"><div class="case-eyebrow">02 / INTERACTIVE EXPERIENCE / PERSONAL PROJECT</div><h1 class="case-title">Тихая бухта<span class="punctuation">.</span></h1><p class="case-lead">Небольшой интерактивный мир, в котором исследование, персонажи и детали превращают личную историю в игру.</p><div class="case-meta"><span>INTERACTIVE WORLD</span><span>VISUAL DESIGN</span><span>GAME LOGIC</span><span>MOBILE WEB</span></div></section>

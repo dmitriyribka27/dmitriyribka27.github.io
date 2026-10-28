@@ -8,9 +8,8 @@
 
   const chapters = [
     ['top', 'НАЧАЛО'],
-    ['problems', 'ЗАДАЧИ'],
+    ['services', 'НАПРАВЛЕНИЯ'],
     ['projects', 'ПРОЕКТЫ'],
-    ['services', 'УСЛУГИ'],
     ['approach', 'ПОДХОД'],
     ['about', 'ОБО МНЕ'],
     ['design', 'ДИЗАЙН'],
@@ -59,8 +58,8 @@
       '.capability-grid > article', '.design-feature-card', '.design-case-tile',
       '.design-result-note', '.design-category-card', '.design-process-grid',
       '.portfolio-next-copy',
-      '.problem-section h2', '.problem-card', '.proof-heading',
-      '.services-v3 h2', '.services-v3-list article',
+      '.proof-heading', '.featured-projects', '.proof-demo-heading',
+      '.services-v3 h2', '.services-revamp-grid',
       '.approach-v3 h2', '.approach-v3-grid > div',
       '.about-v3-grid', '.design-v3-layout',
       '.contact-v3 h2', '.contact-v3 > p', '.contact-v3-actions',

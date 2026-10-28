@@ -2,17 +2,24 @@
   const menuButton = document.querySelector('.menu-button');
   const mobileNav = document.querySelector('#mobile-nav');
   if (menuButton && mobileNav) {
+    const closeMenu = () => {
+      mobileNav.hidden = true;
+      menuButton.setAttribute('aria-expanded', 'false');
+      menuButton.setAttribute('aria-label', 'Открыть меню');
+    };
     menuButton.addEventListener('click', () => {
       const willOpen = mobileNav.hidden;
       mobileNav.hidden = !willOpen;
       menuButton.setAttribute('aria-expanded', String(willOpen));
       menuButton.setAttribute('aria-label', willOpen ? 'Закрыть меню' : 'Открыть меню');
     });
-    mobileNav.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
-      mobileNav.hidden = true;
-      menuButton.setAttribute('aria-expanded', 'false');
-      menuButton.setAttribute('aria-label', 'Открыть меню');
-    }));
+    mobileNav.querySelectorAll('a').forEach(a => a.addEventListener('click', closeMenu));
+    document.addEventListener('keydown', event => {
+      if (event.key === 'Escape' && !mobileNav.hidden) {
+        closeMenu();
+        menuButton.focus();
+      }
+    });
   }
 
   const reveal = document.querySelector('[data-contact-reveal]');
@@ -21,15 +28,19 @@
 
   const monoCase = document.getElementById('mono-case');
   const bayCase = document.getElementById('bay-case');
-  if (monoCase && bayCase) {
-    const isBay = new URLSearchParams(window.location.search).get('id') === 'bay';
-    monoCase.hidden = isBay;
-    bayCase.hidden = !isBay;
-    document.title = `${isBay ? 'Тихая бухта' : 'MONO Finance'} — Dmitry Rybka`;
+  const shkryumCase = document.getElementById('shkryum-case');
+  if (monoCase && bayCase && shkryumCase) {
+    const requested = new URLSearchParams(window.location.search).get('id');
+    const active = requested === 'bay' || requested === 'shkryum' ? requested : 'mono';
+    monoCase.hidden = active !== 'mono';
+    bayCase.hidden = active !== 'bay';
+    shkryumCase.hidden = active !== 'shkryum';
+    const titles = { mono: 'MONO Finance', bay: 'Тихая бухта', shkryum: 'Пасека Шкрюм' };
+    document.title = `${titles[active]} — Дмитрий Рыбка`;
   }
 
   const features = {
-    accounts: { label: 'СЧЕТА И ВАЛЮТЫ', value: '4 счёта', detail: 'USD · GEL · EUR — условные данные', bars: [34, 66, 48, 85, 55, 72] },
+    accounts: { label: 'СЧЕТА И ВАЛЮТЫ', value: '4 счёта', detail: 'USD · GEL · RUB — условные данные', bars: [34, 66, 48, 85, 55, 72] },
     reserves: { label: 'ДОСТУПНО К ТРАТАМ', value: '$1,750', detail: 'После учёта запланированных резервов', bars: [41, 58, 48, 78, 60, 88] },
     input: { label: 'БЫСТРЫЙ ВВОД', value: 'Кофе 12 GEL', detail: 'Пример записи обычным текстом', bars: [45, 52, 74, 40, 63, 82] },
     analytics: { label: 'АНАЛИТИКА РАСХОДОВ', value: '₾ 1,285', detail: 'Пример суммы трат за период', bars: [76, 42, 61, 49, 86, 66] }

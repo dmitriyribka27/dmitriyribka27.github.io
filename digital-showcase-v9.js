@@ -126,6 +126,7 @@
   const lightboxCrop = $('#dg-lightbox-crop');
   const lightboxCaption = $('#dg-lightbox-caption');
   const closeButton = $('#dg-lightbox-close');
+  let lightboxTrigger = null;
   $$('[data-dg-image]').forEach((trigger) => {
     trigger.addEventListener('click', () => {
       if (!lightbox || !lightboxImage || typeof lightbox.showModal !== 'function') return;
@@ -134,11 +135,15 @@
       lightboxImage.src = trigger.dataset.dgImage;
       lightboxImage.alt = trigger.querySelector('img')?.alt || '';
       lightboxCaption.textContent = trigger.dataset.dgCaption || '';
+      lightboxTrigger = trigger;
       lightbox.showModal();
     });
   });
   closeButton?.addEventListener('click', () => lightbox?.close());
   lightbox?.addEventListener('click', (event) => {
     if (event.target === lightbox) lightbox.close();
+  });
+  lightbox?.addEventListener('close', () => {
+    lightboxTrigger?.focus();
   });
 })();
