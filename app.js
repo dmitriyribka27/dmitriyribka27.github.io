@@ -28,14 +28,16 @@
 
   const monoCase = document.getElementById('mono-case');
   const bayCase = document.getElementById('bay-case');
-  const shkryumCase = document.getElementById('shkryum-case');
-  if (monoCase && bayCase && shkryumCase) {
+  if (monoCase && bayCase) {
     const requested = new URLSearchParams(window.location.search).get('id');
-    const active = requested === 'bay' || requested === 'shkryum' ? requested : 'mono';
+    if (requested && requested !== 'mono' && requested !== 'bay') {
+      window.location.replace('digital.html');
+      return;
+    }
+    const active = requested === 'bay' ? 'bay' : 'mono';
     monoCase.hidden = active !== 'mono';
     bayCase.hidden = active !== 'bay';
-    shkryumCase.hidden = active !== 'shkryum';
-    const titles = { mono: 'MONO Finance', bay: 'Тихая бухта', shkryum: 'Пасека Шкрюм' };
+    const titles = { mono: 'MONO Finance', bay: 'Тихая бухта' };
     document.title = `${titles[active]} — Дмитрий Рыбка`;
   }
 

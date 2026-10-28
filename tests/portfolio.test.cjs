@@ -46,8 +46,10 @@ test('services and commercial experience are first-class, honest parts of the po
   assert.match(home, /Sea Livery/);
   assert.match(home, /WordPress/);
   assert.match(home, /Поддержк|поддержк/);
-  assert.match(digital, /Пасека Шкрюм/);
-  assert.match(source('project.html'), /Типографическое представление проекта. Это не скриншот/);
+  assert.equal((digital.match(/class="dg-case dg-/g) || []).length, 4);
+  const indexNav = digital.split('<nav class="dg-index-nav"')[1].split('</nav>')[0];
+  assert.equal((indexNav.match(/href="#(?:ops|mono|base|bay)"/g) || []).length, 4);
+  assert.match(digital, /Смотреть 4 проекта/);
   assert.doesNotMatch(home, /Sea Delivery|сервис доставки Sea Livery/);
 });
 

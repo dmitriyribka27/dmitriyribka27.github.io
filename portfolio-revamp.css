@@ -43,9 +43,9 @@
 .home-v3 .approach-v3-grid{grid-template-columns:repeat(4,minmax(0,1fr));gap:21px}
 .home-v3 .approach-v3-grid h3{font-size:clamp(20px,1.7vw,27px)}
 
-/* The fifth Digital project has equal prominence without breaking navigation. */
+/* Four project links have equal prominence in the Digital index. */
 .digital-showcase .dg-hero h1{letter-spacing:-.055em}
-.digital-showcase .dg-index-nav{grid-template-columns:repeat(5,minmax(0,1fr))}
+.digital-showcase .dg-index-nav{grid-template-columns:repeat(4,minmax(0,1fr))}
 .digital-showcase .dg-index-nav a{min-width:0}
 .digital-showcase .dg-index-nav strong{overflow-wrap:anywhere}
 /* Editorial screenshots: based on real app views, with public-facing demo figures. */
@@ -64,36 +64,8 @@
 .case-real-screens h2{font-size:clamp(40px,5.1vw,83px);letter-spacing:-.06em;line-height:1.06;margin:30px 0 20px}
 .case-real-screens h2 em{font-style:normal;color:#b3ec6e}
 .case-real-screens-intro{max-width:750px;color:#b8c9be;font-size:clamp(14px,1.3vw,19px);line-height:1.8;margin:0 0 46px}
-.dg-shkryum{background:#e5e7e0;color:#1b2420}
-.dg-shkryum .dg-case-meta{border-color:#adbbb0;color:#687a6e}
-.dg-shkryum .dg-chip{color:#b65143}
-.dg-shkryum h2 em{color:#be5444}
-.dg-shkryum .dg-tags span{border-color:#a4b6aa;color:#58715e}
-.commercial-case-panel{display:grid;grid-template-columns:1.07fr .93fr;border:1px solid #a6b7ae;background:#f2f1e9;min-width:0}
-.commercial-case-wordmark{display:flex;flex-direction:column;min-width:0;min-height:460px;padding:clamp(28px,4vw,65px);background:#1c2724;color:#f5f2e7;justify-content:space-between;position:relative;overflow:hidden}
-.commercial-case-wordmark:before{content:'';position:absolute;inset:0;background-image:linear-gradient(#f6f8f00c 1px,transparent 1px),linear-gradient(90deg,#f6f8f00c 1px,transparent 1px);background-size:38px 38px}
-.commercial-case-wordmark>span,.commercial-case-wordmark>small{position:relative;z-index:1;color:#b6beb0;font:10px/1.6 var(--mono);letter-spacing:.11em}
-.commercial-case-wordmark>strong{position:relative;z-index:1;font-size:clamp(45px,5vw,90px);line-height:1.05;letter-spacing:-.08em}
-.commercial-period{color:#dd6550}
-.commercial-case-facts{padding:clamp(27px,4vw,57px);display:flex;flex-direction:column;justify-content:space-between;gap:18px}
-.commercial-case-facts>div{border-bottom:1px solid #b6c3b8;padding-bottom:20px}
-.commercial-case-facts>div span{font:10px var(--mono);color:#b85245;letter-spacing:.08em}
-.commercial-case-facts>div p{font-size:clamp(14px,1.3vw,19px);line-height:1.75;margin:12px 0 0;color:#40564c}
-.commercial-case-facts>a{align-self:flex-start;border-bottom:2px solid #b85548;padding-bottom:8px;font-weight:800;font-size:14px;color:#1e312a}
-
-/* Commercial case page: honest case study without invented customer visuals. */
-.commercial-project-showcase{display:grid;grid-template-columns:1.05fr .95fr;gap:45px;align-items:center;background:#1d2926}
-.commercial-project-title,.commercial-project-stages{position:relative;z-index:1;min-width:0}
-.commercial-project-title>span,.commercial-project-stages span{font:10px var(--mono);letter-spacing:.13em;color:#d2917f}
-.commercial-project-title>strong{display:block;margin:40px 0 27px;font-size:clamp(45px,5.3vw,90px);letter-spacing:-.075em;line-height:1.05}
-.commercial-project-title>strong span{color:#ce6652}
-.commercial-project-title p{font-size:12px;max-width:385px;line-height:1.8;color:#a7b9b3}
-.commercial-project-stages{display:grid;gap:16px}
-.commercial-project-stages>div{border-top:1px solid #53675d;padding:22px 0 8px}
-.commercial-project-stages p{color:#d0ddd4;line-height:1.75;font-size:15px;margin:12px 0 0}
-
 /* Focus is visible on all newly introduced keyboard targets. */
-.services-revamp a:focus-visible,.featured-project:focus-visible,.mono-more-demo>summary:focus-visible,.commercial-case-facts>a:focus-visible{outline:3px solid #cf765f;outline-offset:5px}
+.services-revamp a:focus-visible,.featured-project:focus-visible,.mono-more-demo>summary:focus-visible{outline:3px solid #cf765f;outline-offset:5px}
 
 @media(max-width:1100px){
   .home-v3 .approach-v3-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
@@ -108,8 +80,6 @@
   .featured-projects{grid-template-columns:1fr}
   .featured-project{border-right:0;border-bottom:1px solid #bfc9c4;min-height:210px}
   .featured-project:last-child{border-bottom:0}
-  .commercial-case-panel,.commercial-project-showcase{grid-template-columns:1fr}
-  .commercial-case-wordmark{min-height:345px}
   .digital-showcase .dg-index-nav{grid-template-columns:repeat(2,minmax(0,1fr))}
   .digital-showcase .dg-index-nav a:nth-child(n){padding:19px 12px;border-right:1px solid #bfc8bd;border-bottom:1px solid #bfc8bd}
   .digital-showcase .dg-index-nav a:nth-child(2n){border-right:0}
@@ -128,9 +98,5 @@
   .service-main-card h3{font-size:clamp(32px,9vw,46px);margin-top:23px}
   .home-v3 .approach-v3-grid{grid-template-columns:1fr}
   .mono-more-demo>summary{font-size:15px;line-height:1.5}
-  .commercial-project-showcase{gap:10px}
-  .commercial-project-title>strong{font-size:clamp(40px,11vw,65px)}
-  .commercial-case-wordmark{min-height:285px}
-  .commercial-case-wordmark>strong{font-size:clamp(42px,11vw,70px)}
   .digital-showcase .dg-index-nav strong{font-size:14px}
 }
