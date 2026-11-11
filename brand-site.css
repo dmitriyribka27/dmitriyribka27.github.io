@@ -5,3 +5,57 @@
 @media(max-width:620px){.header{gap:8px}.wordmark{font-size:11px;gap:6px}.wordmark img{height:29px;width:29px}.nav{gap:12px}.nav a{font-size:11px}.header-contact{font-size:0}.header-contact span{font-size:18px;padding:0}.section{padding:65px 6%}.hero{min-height:640px;padding-top:75px}.hero .eyebrow{font-size:9px;letter-spacing:.03em}.eyebrow-end{display:none}.hero h1{font-size:clamp(37px,9.25vw,58px);margin:40px 0 25px;overflow-wrap:anywhere}.hero-desc{font-size:16px}.hero-foot{margin-top:80px;font-size:9px}.hero-foot span:last-child{display:none}.mesh{width:130%;right:-76%;top:-23%;opacity:.37}.section-top{font-size:9px;gap:10px}.section-top span:last-child{max-width:48%;text-align:right}.section-head{margin:36px 0}.section-head h2,.about-copy h2,.contact-panel h2,.page-hero h1{font-size:clamp(35px,9vw,50px)}.service{grid-template-columns:35px 1fr 22px;padding:24px 0;gap:9px}.service h3{font-size:21px}.service p{font-size:13px}.service-symbol{font-size:21px}.work-grid{grid-template-columns:1fr;gap:15px}.work-card{min-height:300px;padding:23px}.card-graphic{height:160px}.work-card strong{font-size:28px}.about-layout{grid-template-columns:1fr}.about-picture{aspect-ratio:4/3.7}.about-copy{padding-top:16px}.steps{gap:15px;margin-bottom:45px}.steps li span{margin-bottom:20px}.steps strong{font-size:17px}.steps p{font-size:12px}.contact-panel{padding:28px;display:block}.contact-panel .btn{margin-top:18px;width:100%}.footer{padding:28px 6%;flex-wrap:wrap;font-size:9px}.footer span{order:3;width:100%}.case{grid-template-columns:1fr}.case-visual{order:-1;height:240px}.case-copy{padding:25px}.gallery,.design-gallery,.simple-card-grid{grid-template-columns:1fr 1fr}.gallery img{height:190px}.design-gallery img{aspect-ratio:3/4}.page-hero{min-height:390px}.btn{gap:20px;font-size:13px;padding:13px 17px}.case h2{font-size:32px}}
 @media(max-width:400px){.gallery,.design-gallery,.simple-card-grid{grid-template-columns:1fr}.hero h1{font-size:36px}.nav a{font-size:10px}.nav{gap:9px}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{transition:none!important;animation:none!important}}
+/* Refinement: clear language, tighter rhythm and a visible brand grid. */
+body{background-color:#0b0d11;background-image:linear-gradient(rgba(229,255,54,.065) 1px,transparent 1px),linear-gradient(90deg,rgba(229,255,54,.065) 1px,transparent 1px);background-size:48px 48px}
+.section-top,.hero-foot,.work-label,.picture-caption,.about-facts,.case-meta,.visual-sub{display:none!important}
+.eyebrow{font-family:Onest,Manrope,sans-serif;letter-spacing:0;font-size:13px;font-weight:600;text-transform:none}
+.hero .eyebrow,.page-hero>.eyebrow{display:none}
+.hero{min-height:unset;padding-top:76px;padding-bottom:72px}
+.hero h1{margin:0 0 22px;font-size:clamp(48px,6vw,86px);line-height:1.1}
+.hero-desc{max-width:610px;line-height:1.55}
+.hero .actions{margin-top:28px}
+.section{padding-top:72px;padding-bottom:72px}
+.section-head{margin:0 0 30px;gap:28px}
+.services .service{padding-top:23px;padding-bottom:23px}
+.work-card{min-height:310px}
+.card-graphic{height:155px}
+.work-links{padding-top:48px}
+.about-layout{margin-top:0}
+.about-picture{aspect-ratio:4/4}
+.about-copy .eyebrow{margin:0}
+.about-copy h2{margin:13px 0}
+.about-copy>p:not(.eyebrow){line-height:1.6}
+.steps{margin-bottom:40px}
+.steps li span{margin-bottom:14px}
+.contact-panel{padding:35px}
+.contact-panel h2{margin:15px 0}
+.mesh{opacity:.85;background:repeating-radial-gradient(ellipse at 80% 25%,transparent 0 23px,rgba(229,255,54,.30) 24px,transparent 25px);mask-image:linear-gradient(to left,#000,transparent 95%)}
+.hero:before,.page-hero:before{content:'';pointer-events:none;position:absolute;inset:0;background:linear-gradient(rgba(229,255,54,.16) 1px,transparent 1px),linear-gradient(90deg,rgba(229,255,54,.16) 1px,transparent 1px);background-size:44px 44px;transform:perspective(500px) rotateX(57deg) scale(1.2);transform-origin:70% 0;mask-image:linear-gradient(90deg,transparent 20%,#000 100%);opacity:.6}
+.page-hero{min-height:340px}
+.case-stack{margin-top:10px}
+.case-copy{padding:32px}
+.case h2{margin:0 0 15px}
+.project-status{letter-spacing:0;font:500 12px Onest,sans-serif;color:var(--steel)}
+.footer{font-family:Onest,Manrope,sans-serif;letter-spacing:0}
+@media(max-width:620px){
+ .header{height:64px}.section{padding-top:45px;padding-bottom:45px}
+ .hero{min-height:unset;padding-top:53px;padding-bottom:48px}
+ .hero h1{font-size:clamp(35px,9vw,49px);margin:0 0 20px;line-height:1.12}
+ .hero-desc{font-size:15px;line-height:1.55;margin:0}
+ .hero .actions{margin-top:23px;gap:10px}
+ .hero .btn{min-height:48px;padding:11px 15px}
+ .section-head{margin:0 0 24px}
+ .section-head h2,.about-copy h2,.contact-panel h2{font-size:clamp(34px,8.5vw,46px)}
+ .section-head p{margin-top:13px;font-size:14px;line-height:1.55}
+ .work-card{min-height:250px}.card-graphic{height:110px}
+ .about-picture{aspect-ratio:4/3.7}
+ .about-copy{padding-top:3px}.about-copy h2{margin:12px 0}
+ .about-copy>p:not(.eyebrow){line-height:1.6;font-size:14px}
+ .steps{grid-template-columns:repeat(2,1fr);gap:18px;margin-bottom:28px}
+ .steps li span{margin-bottom:10px}
+ .contact-panel{padding:25px}
+ .page-hero{min-height:300px}.page-hero h1{margin:0 0 15px}
+ .page-hero p:not(.eyebrow){font-size:15px;margin:0}
+ .case-copy{padding:24px}
+ .hero:before,.page-hero:before{background-size:32px 32px;opacity:.8;mask-image:linear-gradient(90deg,transparent 5%,#000 100%)}
+}
