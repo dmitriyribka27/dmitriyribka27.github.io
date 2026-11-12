@@ -53,6 +53,55 @@ function render(project,id){
  document.getElementById('panel-'+id).innerHTML=html;
 }
 
+
+function renderOps(){
+ const p=data.ops;
+ const screens=[
+  {name:'Главная',file:'assets/digital/ops-home.webp',hint:'Обзор смены, заказов и показателей'},
+  {name:'Производство',file:'assets/digital/ops-production.webp',hint:'Выпуск продукции и расход сырья'},
+  {name:'Финансы',file:'assets/digital/ops-finance.webp',hint:'Маржа, затраты и движение средств'}
+ ];
+ const icon=(type)=>({
+  stock:'<path d="m12 2 9 5-9 5-9-5 9-5Zm-9 5v10l9 5 9-5V7M12 12v10"/>',
+  factory:'<path d="M3 21V9l6 4V9l6 4V4h6v17H3Zm4-4h2m4 0h2m3 0h1"/>',
+  money:'<ellipse cx="12" cy="6" rx="9" ry="3"/><path d="M3 6v12c0 4 18 4 18 0V6M3 12c0 4 18 4 18 0"/>',
+  check:'<path d="M4 12l5 5L20 6"/>',
+  flow:'<path d="M4 7h16m-4-4 4 4-4 4M20 17H4m4-4-4 4 4 4"/>',
+  scale:'<path d="M12 3v17M4 7h16M6 7l-3 7h6L6 7Zm12 0-3 7h6l-3-7ZM8 21h8"/>'
+ }[type]||'');
+ const svg=(type)=>'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">'+icon(type)+'</svg>';
+ const tiles=[
+  {type:'stock',title:'Склад',text:'Приёмка, остатки, движение и инвентаризация.'},
+  {type:'factory',title:'Производство',text:'Выпуск, рецептуры, потери и себестоимость.'},
+  {type:'money',title:'Финансы',text:'Выручка, расходы, маржа и денежные операции.'}
+ ];
+ const steps=tiles.map((x,i)=>'<div class="ops-flow-item"><span class="ops-flow-icon">'+svg(x.type)+'</span><strong>'+x.title+'</strong><p>'+x.text+'</p><span class="ops-flow-sequence" aria-hidden="true">'+(i===2?'✓':'→')+'</span></div>').join('');
+ const slides=screens.map((item,i)=>'<li class="ops-slide" id="ops-shot-'+i+'"><div class="ops-shot-frame"><img src="'+escapeHtml(item.file)+'" alt="'+escapeHtml(item.name+' — интерфейс SEA LIVERY OPS')+'" loading="lazy" onerror="this.hidden=true;this.parentElement.classList.add(\'ops-missing\')"><div class="ops-shot-placeholder"><span>'+svg(i===0?'stock':i===1?'factory':'money')+'</span><strong>Место для скриншота</strong><small>'+escapeHtml(item.name)+'</small></div></div><div class="ops-shot-caption"><strong>'+escapeHtml(item.name)+'</strong><span>'+escapeHtml(item.hint)+'</span></div></li>').join('');
+ const info=[
+  ['Двойной учёт','Штуки и килограммы внутри товарной карточки.'],
+  ['История операций','Поступления, списания, инвентаризация и производство.'],
+  ['Проверка остатков','Фактическое количество и причины расхождений.'],
+  ['Расчёт выпуска','Исходное сырьё, выход, потери и упаковка.']
+ ].map((x,i)=>'<article class="ops-feature"><span>'+svg(['scale','flow','check','factory'][i])+'</span><h4>'+x[0]+'</h4><p>'+x[1]+'</p></article>').join('');
+ document.getElementById('panel-ops').innerHTML=
+ '<div class="ops-page"><section class="ops-intro"><div class="ops-eyebrow"><span class="ops-live-dot"></span> Управление операциями</div><div class="ops-intro-main"><div><h2>SEA LIVERY <em>OPS.</em></h2><p>'+escapeHtml(p.lead)+'</p><div class="ops-tags"><span>PWA</span><span>48 SKU</span><span>Склад</span><span>Производство</span><span>Финансы</span></div></div><div class="ops-hero-mark" aria-hidden="true">'+svg('flow')+'<span>OPS</span></div></div><div class="ops-flow" aria-label="Связанные процессы: склад, производство и финансы">'+steps+'</div></section>'+
+ '<section class="ops-section"><div class="ops-heading"><h3>Где теряется <em>точность.</em></h3><p>Склад работает с весом и количеством, производство — с выходом и потерями, финансы — с себестоимостью. Эти данные связаны между собой.</p></div><div class="ops-problems">'+p.problems.map((x,i)=>'<article><span class="ops-problem-index">0'+(i+1)+'</span><h4>'+escapeHtml(x.title)+'</h4><p>'+escapeHtml(x.text)+'</p></article>').join('')+'</div></section>'+
+ '<section class="ops-section"><div class="ops-heading"><h3>Сырьё. Выпуск. <em>Остаток.</em></h3><p>Пример движения партии: количество уменьшается при переработке, а на выходе появляется готовая продукция.</p></div><div class="ops-production"><div class="ops-production-top"><span>Демонстрация расчёта</span><span class="ops-production-icon">'+svg('factory')+'</span></div><div class="ops-production-metrics"><div><small>Исходное сырьё</small><strong>1,500 <span>кг</span></strong></div><div class="ops-production-arrow" aria-hidden="true">→</div><div><small>Готовая продукция</small><strong>1,200 <span>кг</span></strong></div></div><div class="ops-loss"><span>Технологические потери</span><strong>0,300 кг</strong></div><div class="ops-mass-bar" role="img" aria-label="Из 1,5 кг сырья получается 1,2 кг продукции и 0,3 кг потерь"><span></span><i></i></div><div class="ops-production-foot"><span><i class="ops-key ops-key-good"></i> Выход 80%</span><span><i class="ops-key ops-key-loss"></i> Потери 20%</span></div><p>Цифры иллюстрируют принцип расчёта, а не фактическую производственную партию.</p></div></section>'+
+ '<section class="ops-section"><div class="ops-heading"><h3>Что умеет <em>система.</em></h3><p>Функции, с которыми сотрудники работают в течение смены.</p></div><div class="ops-features">'+info+'</div></section>'+
+ '<section class="ops-section ops-gallery-section"><div class="ops-heading"><h3>Рабочие <em>экраны.</em></h3><p>Три ключевых раздела. Листайте в сторону или выбирайте экран ниже.</p></div><div class="ops-gallery"><ul class="ops-slides" id="ops-slides" aria-label="Скриншоты SEA LIVERY OPS">'+slides+'</ul><div class="ops-gallery-nav"><button type="button" class="ops-gallery-prev" aria-label="Предыдущий экран">←</button><div class="ops-gallery-dots" role="group" aria-label="Выбрать экран">'+screens.map((x,i)=>'<button type="button" aria-label="Экран '+escapeHtml(x.name)+'" aria-pressed="'+(i===0?'true':'false')+'" data-ops-slide="'+i+'"></button>').join('')+'</div><button type="button" class="ops-gallery-next" aria-label="Следующий экран">→</button></div></div></section>'+
+ '<section class="ops-section"><div class="ops-heading"><h3>Моя работа над <em>OPS.</em></h3><p>'+escapeHtml(p.contribution)+'</p></div><div class="ops-contribution"><div><span>'+svg('stock')+'</span><strong>Учёт склада</strong><p>Номенклатура, движения, двойные единицы, инвентаризация.</p></div><div><span>'+svg('factory')+'</span><strong>Производственные расчёты</strong><p>Выход продукции, нормы, потери и себестоимость.</p></div><div><span>'+svg('money')+'</span><strong>Финансовая структура</strong><p>Показатели смены, денежные операции и контроль затрат.</p></div></div></section>'+
+ '<section class="ops-section"><div class="ops-heading"><h3>Техническая <em>основа.</em></h3><p>PWA с бизнес-логикой для связанных операций.</p></div><div class="ops-tech">'+p.tech.map(t=>'<span>'+escapeHtml(t)+'</span>').join('')+'</div><div class="ops-architecture">'+p.architecture.map((t,i)=>'<div><span>'+svg(['flow','factory','scale'][i])+'</span><p>'+escapeHtml(t)+'</p></div>').join('')+'</div></section>'+
+ '<div class="ops-ending"><span class="ops-ending-symbol" aria-hidden="true">'+svg('flow')+'</span><h3>Учёт начинается<br>с <em>точного движения.</em></h3><p>'+escapeHtml(p.ending)+'</p></div></div>';
+ const viewport=document.querySelector('#panel-ops .ops-slides');
+ const dots=[...document.querySelectorAll('#panel-ops [data-ops-slide]')];
+ const sync=()=>{const index=Math.max(0,Math.min(2,Math.round(viewport.scrollLeft/Math.max(1,viewport.clientWidth))));dots.forEach((dot,i)=>dot.setAttribute('aria-pressed',String(i===index)));};
+ const move=index=>{const next=Math.max(0,Math.min(2,index));viewport.scrollTo({left:viewport.clientWidth*next,behavior:reduced.matches?'instant':'smooth'});dots.forEach((dot,i)=>dot.setAttribute('aria-pressed',String(i===next)));};
+ dots.forEach((dot,i)=>dot.addEventListener('click',()=>move(i)));
+ document.querySelector('#panel-ops .ops-gallery-prev').addEventListener('click',()=>move(Math.round(viewport.scrollLeft/Math.max(1,viewport.clientWidth))-1));
+ document.querySelector('#panel-ops .ops-gallery-next').addEventListener('click',()=>move(Math.round(viewport.scrollLeft/Math.max(1,viewport.clientWidth))+1));
+ viewport.addEventListener('scroll',sync,{passive:true});
+}
+
 function renderDoit(){
 const screen=(heading,rows,extra='')=>'<div class="di-screen '+extra+'"><div class="di-island"></div><div class="di-screen-top"><b>DO IT</b><span>✦</span></div><h4>'+heading+'</h4>'+rows.map((row,i)=>'<div class="di-screen-item '+(i===1?'chosen':'')+'"><i></i><span>'+row+'</span></div>').join('')+'<div class="di-screen-nav">⌂　　 ▦　　 ✧</div></div>';
 const heroPhone=(type)=>{
@@ -156,7 +205,7 @@ document.getElementById('panel-doit').innerHTML=parts.join('');
 
 }
 
-ids.forEach(id=>id==='doit'?renderDoit():render(data[id],id));
+ids.forEach(id=>id==='doit'?renderDoit():id==='ops'?renderOps():render(data[id],id));
 
 /* Contribution explorer: lightweight, fully client-side and keyboard accessible. */
 const contribution=document.querySelector('#panel-doit .di-contribution');
