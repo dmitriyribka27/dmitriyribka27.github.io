@@ -10,7 +10,7 @@
 .design-hint{font:500 11px 'IBM Plex Mono',monospace;color:#9399a3;letter-spacing:.05em;margin:30px 0 0}
 .hint-mobile{display:none}
 .design-work{position:relative}
-.design-work::before{content:"";position:absolute;inset:0;pointer-events:none;background-image:linear-gradient(#e5ff3610 1px,transparent 1px),linear-gradient(90deg,#e5ff3610 1px,transparent 1px);background-size:110px 110px}
+.design-work::before{content:none}
 .design-work-inner{position:relative;max-width:1440px;margin:auto;padding:26px 5.6% 85px}
 .design-track{display:flex;gap:42px;overflow-x:auto;overscroll-behavior-inline:contain;scroll-snap-type:x mandatory;scrollbar-width:none;scroll-behavior:smooth;padding:12px 0 22px;touch-action:pan-x;outline-offset:5px;cursor:grab}
 .design-track:active{cursor:grabbing}
@@ -38,7 +38,7 @@
  .design-lead{font-size:15px}
  .design-hint{margin-top:20px}
  .hint-desktop{display:none}.hint-mobile{display:inline}
- .design-work::before{background-size:75px 75px}
+
  .design-work-inner{padding:16px 6% 30px}
  .design-track{display:flex;flex-direction:column;overflow:visible;gap:33px;padding:0;cursor:auto;touch-action:auto;scroll-snap-type:none}
  .design-case{flex:none;width:100%}
@@ -54,7 +54,7 @@
 
 
 /* CognitioVerum — фотографии без подложек и рамок */
-.design-case--cognitio .design-case-body{background:transparent;border:0;border-radius:0;overflow:visible}
+.design-case--cognitio .design-case-body{background:#141821;border:1px solid #262d37;border-radius:20px;overflow:hidden;padding:12px}
 .design-visual--cognitio{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));grid-template-rows:auto auto auto;gap:12px;background:transparent;aspect-ratio:auto;padding:0}
 .design-visual--cognitio .design-image-slot{grid-row:auto;min-width:0;min-height:0;padding:0;border:0;border-radius:20px;background:none;box-shadow:none;overflow:hidden}
 .design-visual--cognitio .design-image-slot img{display:block;width:100%;height:100%;object-fit:cover;border-radius:20px}
@@ -64,9 +64,9 @@
 .design-visual--cognitio .design-cognitio-back{aspect-ratio:763/429}
 .design-visual--cognitio .design-cognitio-print{grid-column:1/-1;justify-self:center;width:min(45%,310px);aspect-ratio:1}
 .design-visual--cognitio .design-cognitio-print img{object-fit:cover;object-position:center}
-.design-case--cognitio .design-case-caption{padding:16px 1px 0;min-height:0;color:#e0e3e8}
+.design-case--cognitio .design-case-caption{padding:18px 5px 5px;min-height:0;color:#e0e3e8}
 @media(max-width:767px){
  .design-visual--cognitio{gap:8px;padding:0;aspect-ratio:auto}
  .design-visual--cognitio .design-cognitio-print{width:46%}
- .design-case--cognitio .design-case-caption{padding:14px 1px 0}
+ .design-case--cognitio .design-case-body{padding:9px}\n .design-case--cognitio .design-case-caption{padding:15px 5px 5px}
 }
