@@ -15,7 +15,7 @@
 .design-track{display:flex;gap:42px;overflow-x:auto;overscroll-behavior-inline:contain;scroll-snap-type:x mandatory;scrollbar-width:none;scroll-behavior:smooth;padding:12px 0 22px;touch-action:pan-x;outline-offset:5px;cursor:grab}
 .design-track:active{cursor:grabbing}
 .design-track::-webkit-scrollbar{display:none}
-.design-case{flex:0 0 min(510px,calc(100vw - 12%));min-width:0;scroll-snap-align:start}
+.design-case{flex:0 0 min(760px,calc(100vw - 12%));min-width:0;scroll-snap-align:start}
 .design-case h2{font:800 clamp(27px,3vw,41px)/1.16 Manrope,sans-serif;letter-spacing:-.045em;margin:0 0 22px}
 .design-case h2 em{font-style:normal;color:var(--lime)}
 .design-case-body{background:#141821;border:1px solid #262d37;border-radius:12px;overflow:hidden}
@@ -52,7 +52,15 @@
 }
 @media(prefers-reduced-motion:reduce){.design-track{scroll-behavior:auto}.design-progress span,.design-track-controls button{transition:none}}
 
-.design-case--cognitio{flex-basis:min(560px,calc(100vw - 12%))}
-.design-visual--four{grid-template-columns:1fr 1fr;grid-template-rows:1fr 1fr;aspect-ratio:1.36}
-.design-visual--four .design-image-slot{grid-row:auto!important}
-@media(max-width:767px){.design-case--cognitio{flex-basis:auto}.design-visual--four{aspect-ratio:1.25}}
+
+/* CognitioVerum: banner 5:1, two landscape business cards, compact square print photo */
+.design-visual--cognitio{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));grid-template-rows:auto auto auto;gap:8px;aspect-ratio:auto;padding:8px}
+.design-visual--cognitio .design-image-slot{grid-row:auto;min-height:0}
+.design-cognitio-sign{grid-column:1/-1;aspect-ratio:5 / 1;background:linear-gradient(135deg,#34391a,#1d2414)}
+.design-cognitio-front,.design-cognitio-back{aspect-ratio:763 / 429;background:linear-gradient(135deg,#313819,#171e16)}
+.design-cognitio-print{grid-column:1/-1;justify-self:center;width:min(41%,230px);aspect-ratio:1;background:linear-gradient(135deg,#303728,#181d1a)}
+@media(max-width:767px){
+ .design-visual--cognitio{gap:5px;padding:5px}
+ .design-cognitio-print{width:min(46%,190px)}
+ .design-visual--cognitio .design-image-slot{font-size:clamp(8px,2.1vw,10px);letter-spacing:0}
+}
