@@ -88,15 +88,18 @@ document.addEventListener('keydown',event=>{if(event.key==='Escape')close()});
 })();
 
 
-// Shared language picker. EN/KA remain disabled until translated content is ready.
+// Flag-only language picker. Translation files are not yet deployed.
 (()=>{
   const root=document.querySelector('.language-switcher');
   if(!root)return;
   const trigger=root.querySelector('.language-trigger');
   const menu=root.querySelector('.language-menu');
   const setOpen=open=>{menu.hidden=!open;trigger.setAttribute('aria-expanded',String(open))};
-  trigger.addEventListener('click',()=>setOpen(menu.hidden));
-  root.querySelector('[data-lang="ru"]')?.addEventListener('click',()=>setOpen(false));
-  document.addEventListener('pointerdown',event=>{if(!root.contains(event.target))setOpen(false)});
+  trigger.addEventListener('click',event=>{event.stopPropagation();setOpen(menu.hidden)});
+  menu.querySelectorAll('[data-lang]').forEach(button=>button.addEventListener('click',()=>{
+    // Keep Russian content until the selected language is actually translated.
+    setOpen(false);
+  }));
+  document.addEventListener('click',event=>{if(!root.contains(event.target))setOpen(false)});
   document.addEventListener('keydown',event=>{if(event.key==='Escape'&&!menu.hidden){setOpen(false);trigger.focus()}});
 })();

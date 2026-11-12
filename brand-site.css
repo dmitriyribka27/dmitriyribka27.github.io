@@ -178,19 +178,17 @@ body > .header::before{content:"";position:absolute;top:0;bottom:0;left:50%;widt
 @media(prefers-reduced-motion:reduce){.privacy-notice{transition:none;transform:none}}
 
 
-/* Header language switcher — translations will be activated separately */
-.language-switcher{position:relative;flex:0 0 auto;z-index:40}
-.language-trigger{display:inline-flex;align-items:center;justify-content:center;gap:7px;min-height:38px;padding:7px 10px;border:1px solid #343943;border-radius:10px;background:#151a20;color:#f2f3f5;cursor:pointer;font:700 12px Manrope,sans-serif;white-space:nowrap}
-.language-trigger:hover,.language-trigger[aria-expanded="true"]{border-color:#e5ff36}
-.language-trigger-flag{font-size:20px;line-height:1}
-.language-chevron{font-size:18px;color:#a4a8b1;line-height:1;margin-left:2px}
-.language-menu{position:absolute;top:calc(100% + 9px);right:0;width:205px;padding:7px;background:#171c23;border:1px solid #3a424c;border-radius:13px;box-shadow:0 16px 40px #0009}
-.language-menu[hidden]{display:none}
-.language-option{width:100%;display:flex;align-items:center;gap:10px;padding:11px 10px;background:transparent;border:0;border-radius:8px;color:#f2f3f5;text-align:left;font:600 13px Onest,Manrope,sans-serif;cursor:pointer}
-.language-option>span:first-child{font-size:19px}
-.language-option small{margin-left:auto;font-size:10px;color:#a4a8b1;font-weight:500}
-.language-option.is-active{background:#e5ff361b;color:#e5ff36}
-.language-option:disabled{opacity:.55;cursor:not-allowed}
-.language-trigger:focus-visible,.language-option:focus-visible{outline:2px solid #e5ff36;outline-offset:3px}
-@media(max-width:620px){.language-trigger{padding:5px 7px;gap:3px;min-height:34px;border-radius:8px}.language-trigger-flag{font-size:18px}.language-trigger-code{font-size:10px}.language-chevron{font-size:14px;margin-left:0}.language-menu{width:185px}.header{gap:6px}.wordmark{flex-shrink:0}}
-@media(max-width:380px){.language-trigger-code{display:none}.wordmark{font-size:10px}.nav{gap:7px}}
+/* Compact lime flag-only language switcher; dropdown stacks above page content. */
+body > .header{z-index:100;overflow:visible}
+.language-switcher{position:relative;z-index:101;flex:0 0 auto}
+.language-trigger{appearance:none;-webkit-appearance:none;display:grid;place-items:center;width:44px;height:42px;padding:0;border:1px solid #e5ff36;border-radius:13px;background:#e5ff36;color:#0b0d11;cursor:pointer;touch-action:manipulation}
+.language-trigger-flag{font-size:25px;line-height:1;pointer-events:none}
+.language-menu{position:absolute;top:calc(100% + 6px);left:0;width:44px;display:flex;flex-direction:column;gap:6px;padding:6px 0 0;background:transparent;z-index:102}
+.language-menu[hidden]{display:none!important}
+.language-option{appearance:none;-webkit-appearance:none;display:grid;place-items:center;width:44px;height:42px;padding:0;background:#171d24;border:1px solid #434a50;border-radius:13px;color:#fff;cursor:pointer;touch-action:manipulation;box-shadow:0 6px 18px #0008;transition:background .2s,border-color .2s,transform .2s}
+.language-option span{font-size:25px;line-height:1;pointer-events:none}
+.language-option:hover,.language-option:focus-visible{background:#29321c;border-color:#e5ff36}
+.language-trigger:focus-visible{outline:2px solid #fff;outline-offset:3px}
+@media(max-width:620px){.header{gap:6px}.wordmark{flex-shrink:0}.language-trigger,.language-option{width:38px;height:38px;border-radius:11px}.language-menu{width:38px}.language-trigger-flag,.language-option span{font-size:23px}}
+@media(max-width:380px){.wordmark{font-size:10px}.nav{gap:7px}}
+@media(prefers-reduced-motion:reduce){.language-option{transition:none}}
