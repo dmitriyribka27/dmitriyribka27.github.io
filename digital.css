@@ -574,3 +574,34 @@ button.media-box{color:inherit;cursor:zoom-in;text-align:left;font:inherit}
 .di-showcase-home{height:2px;bottom:3px}
 }
 @media(prefers-reduced-motion:reduce){.di-showcase-phone{animation:none!important}}
+
+
+/* Actual DO IT screenshots in the final project showcase */
+.di-three-phones.di-real-screens{
+ display:grid!important;
+ grid-template-columns:repeat(3,minmax(0,1fr))!important;
+ align-items:start!important;
+ gap:clamp(6px,1.4vw,18px)!important;
+ width:100%!important;
+ max-width:980px!important;
+ height:auto!important;
+ min-height:0!important;
+ margin:0 auto!important;
+ padding:18px 0 12px!important;
+ transform:none!important;
+ background:none!important;
+ overflow:visible!important;
+}
+.di-three-phones.di-real-screens img{
+ width:100%;
+ height:auto;
+ max-width:100%;
+ display:block;
+ border-radius:clamp(8px,1.5vw,18px);
+ object-fit:contain;
+ box-shadow:0 15px 30px rgba(0,0,0,.27);
+}
+@media(max-width:540px){
+ .di-three-phones.di-real-screens{gap:5px!important;padding:10px 0 8px!important}
+ .di-three-phones.di-real-screens img{border-radius:7px}
+}
