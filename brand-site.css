@@ -59,3 +59,21 @@ body{background-color:#0b0d11;background-image:linear-gradient(rgba(229,255,54,.
  .case-copy{padding:24px}
  .hero:before,.page-hero:before{background-size:32px 32px;opacity:.8;mask-image:linear-gradient(90deg,transparent 5%,#000 100%)}
 }
+
+/* v2.2 — focused visual refinements */
+.mesh,.hero-mesh{display:none!important}
+.hero:before,.page-hero:before{display:none!important}
+.nav a{font-weight:700;color:#d5d8dc;letter-spacing:.005em}
+.nav .active{color:var(--lime)}
+.nav a:hover{color:var(--lime)}
+.wordmark img{border-radius:50%;object-fit:cover}
+.design-graphic .design-icon{position:relative;display:block;width:105px;height:105px;transform:rotate(-12deg)}
+.design-icon i{position:absolute;display:block;width:78px;height:78px;left:13px;top:13px;border:2px solid var(--lime);border-radius:15px;transform:rotate(0deg)}
+.design-icon i:nth-child(2){left:20px;top:6px;border-color:#f2f3f5;opacity:.8}
+.design-icon i:nth-child(3){left:6px;top:20px;border-color:var(--lime);opacity:.65}
+.contact-actions{display:flex;align-items:stretch;justify-content:flex-end;flex-wrap:wrap;gap:12px}
+.contact-panel .contact-actions .btn{margin:0}
+.btn-whatsapp{color:var(--text);border:1px solid #798477;background:#171d1a}
+.btn-whatsapp:hover{border-color:var(--lime);background:#1e2921}
+@media(max-width:900px){.contact-actions{justify-content:flex-start}}
+@media(max-width:620px){.nav a{font-weight:700;font-size:12px}.design-graphic .design-icon{transform:rotate(-12deg) scale(.86)}.contact-actions{display:grid;grid-template-columns:1fr;width:100%}.contact-panel .contact-actions .btn{width:100%;margin-top:0}.contact-panel .contact-actions{margin-top:20px}}
