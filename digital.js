@@ -146,22 +146,12 @@ highlighted(data.doit.code),
 '<img src="assets/digital/doit-screen-calendar.webp" alt="DO IT — экран Календарь: расписание, встречи и события" loading="lazy" decoding="async">',
 '<img src="assets/digital/doit-screen-assistant.webp" alt="DO IT — экран Ассистент: планирование задач в чате" loading="lazy" decoding="async">',
 '</div><p class="di-note">Экраны приложения DO IT.</p></section>',
-'<section class="di-ending"><h3>Меньше хаоса.<br><em>Больше действия.</em></h3><div class="di-infinity" aria-hidden="true"><i></i><i></i></div><p>DO IT.</p></section>',
+'<section class="di-ending"><h3>Меньше хаоса.<br><em>Больше действия.</em></h3><div class="di-infinity di-infinity-flow" aria-hidden="true"><svg viewBox="0 0 600 260" xmlns="http://www.w3.org/2000/svg" focusable="false"><defs><linearGradient id="doit-infinity-gradient" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#e5ff36"/><stop offset="48%" stop-color="#f6ff9b"/><stop offset="100%" stop-color="#b6d817"/></linearGradient></defs><path class="di-infinity-glow" d="M300 130 C212 39 153 28 90 63 C0 114 55 229 155 214 C220 204 255 156 300 130 C366 78 418 40 479 52 C579 70 570 202 480 216 C407 227 351 175 300 130 Z"/><path class="di-infinity-line" d="M300 130 C212 39 153 28 90 63 C0 114 55 229 155 214 C220 204 255 156 300 130 C366 78 418 40 479 52 C579 70 570 202 480 216 C407 227 351 175 300 130 Z"/></svg></div><p>DO IT.</p></section>',
 '</div>'
 ];
 
 document.getElementById('panel-doit').innerHTML=parts.join('');
-// Optional pixel-faithful assets exported from the approved presentation.
-// The CSS fallback remains functional until the corresponding files are available.
-[
- ['.di-infinity','assets/digital/doit-infinity.webp']
-].forEach(([selector,url])=>{
- const el=document.querySelector('#panel-doit '+selector);
- if(!el)return;
- const img=new Image();
- img.onload=()=>el.classList.add('di-has-asset');
- img.src=url;
-});
+
 
 }
 
