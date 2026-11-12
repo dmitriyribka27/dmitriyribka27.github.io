@@ -374,3 +374,26 @@ button.media-box{color:inherit;cursor:zoom-in;text-align:left;font:inherit}
 .di-hero-device-today{transform:translate(-56px,12px) rotate(-11deg)}
 .di-hero-device-calendar{transform:translate(54px,-9px) rotate(8deg)}
 }
+
+
+/* DO IT v3.5 — accurate CSS status bar on hero phone mockups */
+.di-device-status{height:16px;display:flex;align-items:center;justify-content:space-between;padding:0 3px;position:relative;gap:6px;white-space:nowrap}
+.di-status-time{font:750 10px/1 Manrope,sans-serif;letter-spacing:-.035em;color:#f7f8fa}
+.di-status-icons{display:flex;align-items:center;gap:4px;color:#f6f8fb;height:12px}
+.di-cellular{height:11px;width:14px;display:flex;gap:1.5px;align-items:flex-end}
+.di-cellular i{display:block;width:2.3px;border-radius:1px 1px 0 0;background:currentColor}
+.di-cellular i:nth-child(1){height:4px}
+.di-cellular i:nth-child(2){height:6px}
+.di-cellular i:nth-child(3){height:8px}
+.di-cellular i:nth-child(4){height:10px}
+.di-status-wifi{width:15px;height:12px;display:block;flex:none}
+.di-battery{width:18px;height:9px;border:1px solid #f5f7fb;border-radius:2.5px;display:block;padding:1px;position:relative;box-sizing:border-box;flex:none}
+.di-battery:after{content:"";position:absolute;right:-3px;top:2.5px;width:2px;height:3px;background:#f5f7fb;border-radius:0 1px 1px 0}
+.di-battery-fill{height:100%;width:82%;border-radius:1px;background:#f5f7fb;display:block}
+.di-device-island{z-index:2;top:-6px}
+@media(max-width:540px){
+ .di-device-status{height:13px;padding:0 2px}
+ .di-status-time{font-size:8px}
+ .di-status-icons{gap:3px;transform:scale(.78);transform-origin:right center}
+ .di-device-island{top:-5px}
+}
