@@ -77,6 +77,22 @@ return '<div class="di-hero-device '+(today?'di-hero-device-today':'di-hero-devi
 '<div class="di-device-list">'+items.map(([label,meta,mode])=>'<div class="di-device-task '+mode+'"><span class="di-device-check">'+(mode==='done'?'✓':'')+'</span><div><strong>'+label+'</strong><small>'+meta+'</small></div></div>').join('')+'</div>'+
 '<div class="di-device-bottom"><span>⌂</span><span>▦</span><span>✧</span><span>♙</span></div><div class="di-device-home"></div></div></div></div>'
 };
+const calendarStagePhone=()=>{
+const rows=[
+ ['09:00','Планирование','10:00–10:30',''],
+ ['11:00','Встреча с командой','12:00–12:45',''],
+ ['14:00','Работа над проектом','15:00–16:00','focus'],
+ ['17:00','Свободное окно','17:00–18:00','free']
+];
+return '<div class="di-calendar-device" role="img" aria-label="Макет календаря DO IT: неделя ноября, планирование, встреча, работа над проектом и свободное время">'+
+'<div class="di-device-rim"><div class="di-device-screen">'+
+'<div class="di-device-status"><span class="di-status-time">9:41</span><span class="di-device-island"></span><span class="di-status-icons" aria-hidden="true"><span class="di-cellular"><i></i><i></i><i></i><i></i></span><svg class="di-status-wifi" viewBox="0 0 18 14"><path d="M1 4.2Q9 -2.2 17 4.2M4 7.4Q9 3.4 14 7.4M7 10.5Q9 9 11 10.5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><circle cx="9" cy="12" r="1.4" fill="currentColor"/></svg><span class="di-battery"><span class="di-battery-fill"></span></span></span></div>'+
+'<div class="di-calendar-header"><span>‹</span><strong>Ноябрь</strong><span class="di-calendar-header-action">▦</span></div>'+
+'<div class="di-calendar-week"><span>Пн<b>9</b></span><span>Вт<b>10</b></span><span>Ср<b>11</b></span><span class="selected">Чт<b>12</b></span><span>Пт<b>13</b></span><span>Сб<b>14</b></span><span>Вс<b>15</b></span></div>'+
+'<div class="di-calendar-summary"><span>Четверг, 12 ноября</span><span>3 события</span></div>'+
+'<div class="di-calendar-timeline">'+rows.map(([time,label,meta,mode])=>'<div class="di-calendar-timeline-row"><time>'+time+'</time><div class="di-calendar-event '+mode+'"><strong>'+label+'</strong><small>'+meta+'</small></div></div>').join('')+'</div>'+
+'<div class="di-device-bottom"><span>⌂</span><span class="selected">▦</span><span>✧</span><span>♙</span></div><div class="di-device-home"></div></div></div></div>'
+};
 const parts=[
 '<div class="di-page">',
 '<section class="di-hero"><span class="di-star di-hero-star" aria-hidden="true"></span><div class="di-hero-copy"><h2>DO <span>IT.</span></h2><h3>Твоё <em>время.</em><br>Твои правила.</h3><p>Планировщик для задач, встреч и договорённостей. Собирает их в понятное расписание.</p></div>',
@@ -88,7 +104,7 @@ heroPhone('calendar'),
 '<section class="di-section"><div class="di-head"><h3>Одна мысль.<br><em>Три задачи.</em></h3><p>Разбор голосового запроса на действия с датами и сроками.</p></div><div class="di-voice"><span class="di-microphone">♩</span><span class="di-equalizer" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></span></div><blockquote class="di-quote">«Завтра в 12 встреча с Русланом, до пятницы закончить презентацию, вечером позвонить Белле»</blockquote><div class="di-flow-arrow">↓</div><div class="di-task-list"><div>✓ <span>Встреча с Русланом — завтра в 12:00</span></div><div>✓ <span>Закончить презентацию — до пятницы</span></div><div>✓ <span>Позвонить Белле — вечером</span></div></div><p class="di-statement">Из одной фразы — готовый список действий.</p></section>',
 '<section class="di-section"><div class="di-head"><h3>Контекст.<br><em>Подтверждение.</em></h3><p>Перед изменением данных система показывает предлагаемое действие. Решение остаётся за пользователем.</p></div><div class="di-dialogue"><div class="di-bubble di-user-bubble">Подготовить отчёт в четверг в 15:00</div><div class="di-bubble di-agent-bubble"><span class="di-star di-mini-star" aria-hidden="true"></span><span>На это время назначена встреча. Перенести работу над отчётом на 17:00?</span></div><div class="di-confirm"><span>Подтвердить</span><span>Изменить</span></div></div></section>',
 '<section class="di-section"><div class="di-head"><h3>Время под <em>контролем.</em></h3><p>Задачи и события видны в расписании. Время работы можно планировать отдельно от срока выполнения.</p></div><div class="di-calendar-stage">',
-screen('Ноябрь',['10:00 Планирование','12:00 Встреча','15:00 Работа над проектом','17:00 Свободное время'],'di-calendar-phone'),
+calendarStagePhone(),
 '<div class="di-calendar-lines" aria-hidden="true"></div></div><p class="di-statement">Планируй работу. Учитывай свободное время.</p></section>',
 '<section class="di-section"><div class="di-head"><h3>Одна команда.<br><em>Общий план.</em></h3><p>Роли, поручения и проверка результата в едином рабочем пространстве.</p></div><div class="di-team"><div class="di-team-project"><span>↗</span><strong>Проект<br>«Запуск»</strong></div><div class="di-team-roles"><div><b>Руководитель</b><span>Назначает</span></div><div><b>Исполнитель</b><span>Выполняет</span></div><div><b>Руководитель</b><span>Принимает</span></div></div></div><div class="di-result">✓　Результат принят</div></section>',
 '<section class="di-section"><div class="di-head"><h3>Инженерная <em>часть.</em></h3><p>PostgreSQL, серверные проверки доступа и отдельная обработка пользовательских команд.</p></div><div class="di-tech-grid"><div><b>Клиент</b><span>PWA и JavaScript</span></div><div><b>Серверная логика</b><span>Supabase Edge Functions</span></div><div><b>База данных</b><span>PostgreSQL</span></div><div><b>Разработка</b><span>GitHub и Cloudflare Pages</span></div></div><div class="code-card di-code"><div class="code-card-head">supabase/functions/ai-command/index.ts</div><pre tabindex="0" aria-label="Фрагмент кода"><code>',
@@ -107,7 +123,6 @@ document.getElementById('panel-doit').innerHTML=parts.join('');
 // Optional pixel-faithful assets exported from the approved presentation.
 // The CSS fallback remains functional until the corresponding files are available.
 [
- ['.di-calendar-stage','assets/digital/doit-calendar.webp'],
  ['.di-three-phones','assets/digital/doit-phones.webp'],
  ['.di-infinity','assets/digital/doit-infinity.webp']
 ].forEach(([selector,url])=>{
