@@ -52,7 +52,38 @@ function render(project,id){
  +'<div class="project-ending"><strong>'+escapeHtml(project.ending)+'</strong>'+additional+'</div></div>';
  document.getElementById('panel-'+id).innerHTML=html;
 }
-ids.forEach(id=>render(data[id],id));
+
+function renderDoit(){
+const screen=(heading,rows,extra='')=>'<div class="di-screen '+extra+'"><div class="di-island"></div><div class="di-screen-top"><b>DO IT</b><span>✦</span></div><h4>'+heading+'</h4>'+rows.map((row,i)=>'<div class="di-screen-item '+(i===1?'chosen':'')+'"><i></i><span>'+row+'</span></div>').join('')+'<div class="di-screen-nav">⌂　　 ▦　　 ✧</div></div>';
+const parts=[
+'<div class="di-page">',
+'<section class="di-hero"><div class="di-hero-copy"><span class="di-star di-hero-star" aria-hidden="true"></span><h2>DO <span>IT.</span></h2><h3>Твоё <em>время.</em><br>Твои правила.</h3><p>Планировщик для задач, встреч и договорённостей. Собирает их в понятное расписание.</p></div>',
+'<div class="di-hero-art">',
+screen('Сегодня',['Разобрать запросы','Подготовить план','Созвон с командой'],'di-phone-back'),
+screen('Календарь',['10:00 Планирование','12:00 Задачи','15:00 Встреча'],'di-phone-front'),
+'<div class="di-wave" aria-hidden="true"></div></div></section>',
+'<section class="di-section"><div class="di-head"><h3>Задач много.<br>Порядка <em>мало.</em></h3><p>Заметки, календарь, переписки и идеи оказываются в разных местах.</p></div><div class="di-floating-tasks"><div class="di-float-card a">Позвонить клиенту</div><div class="di-float-card b">Проект до пятницы</div><div class="di-float-card c">Встреча в 14:30</div><div class="di-float-card d">Не забыть оплатить</div></div><p class="di-statement">Планирование становится отдельной работой.</p></section>',
+'<section class="di-section"><div class="di-head"><h3>Одна мысль.<br><em>Три задачи.</em></h3><p>Разбор голосового запроса на действия с датами и сроками.</p></div><div class="di-voice"><span class="di-microphone">♩</span><span class="di-equalizer" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></span></div><blockquote class="di-quote">«Завтра в 12 встреча с Русланом, до пятницы закончить презентацию, вечером позвонить Белле»</blockquote><div class="di-flow-arrow">↓</div><div class="di-task-list"><div>✓ <span>Встреча с Русланом — завтра в 12:00</span></div><div>✓ <span>Закончить презентацию — до пятницы</span></div><div>✓ <span>Позвонить Белле — вечером</span></div></div><p class="di-statement">Из одной фразы — готовый список действий.</p></section>',
+'<section class="di-section"><div class="di-head"><h3>Контекст.<br><em>Подтверждение.</em></h3><p>Перед изменением данных система показывает предлагаемое действие. Решение остаётся за пользователем.</p></div><div class="di-dialogue"><div class="di-bubble di-user-bubble">Подготовить отчёт в четверг в 15:00</div><div class="di-bubble di-agent-bubble"><span class="di-star di-mini-star" aria-hidden="true"></span><span>На это время назначена встреча. Перенести работу над отчётом на 17:00?</span></div><div class="di-confirm"><span>Подтвердить</span><span>Изменить</span></div></div></section>',
+'<section class="di-section"><div class="di-head"><h3>Время под <em>контролем.</em></h3><p>Задачи и события видны в расписании. Время работы можно планировать отдельно от срока выполнения.</p></div><div class="di-calendar-stage">',
+screen('Ноябрь',['10:00 Планирование','12:00 Встреча','15:00 Работа над проектом','17:00 Свободное время'],'di-calendar-phone'),
+'<div class="di-calendar-lines" aria-hidden="true"></div></div><p class="di-statement">Планируй работу. Учитывай свободное время.</p></section>',
+'<section class="di-section"><div class="di-head"><h3>Одна команда.<br><em>Общий план.</em></h3><p>Роли, поручения и проверка результата в едином рабочем пространстве.</p></div><div class="di-team"><div class="di-team-project"><span>↗</span><strong>Проект<br>«Запуск»</strong></div><div class="di-team-roles"><div><b>Руководитель</b><span>Назначает</span></div><div><b>Исполнитель</b><span>Выполняет</span></div><div><b>Руководитель</b><span>Принимает</span></div></div></div><div class="di-result">✓　Результат принят</div></section>',
+'<section class="di-section"><div class="di-head"><h3>Инженерная <em>часть.</em></h3><p>PostgreSQL, серверные проверки доступа и отдельная обработка пользовательских команд.</p></div><div class="di-tech-grid"><div><b>Клиент</b><span>PWA и JavaScript</span></div><div><b>Серверная логика</b><span>Supabase Edge Functions</span></div><div><b>База данных</b><span>PostgreSQL</span></div><div><b>Разработка</b><span>GitHub и Cloudflare Pages</span></div></div><div class="code-card di-code"><div class="code-card-head">supabase/functions/ai-command/index.ts</div><pre tabindex="0" aria-label="Фрагмент кода"><code>',
+highlighted(data.doit.code),
+'</code></pre></div><p class="di-note">Фрагмент реального исходного кода: проверка сообщения перед разбором команды.</p></section>',
+'<section class="di-section"><div class="di-head"><h3>Сложное внутри.<br><em>Простое снаружи.</em></h3><p>Задачи, календарь и ассистент связаны общей навигацией.</p></div><div class="di-three-phones">',
+screen('Сегодня',['Разобрать запросы','Подготовить план','Созвон с командой']),
+screen('Календарь',['10:00 Стендап','12:00 Задачи','15:00 Демо']),
+screen('Ассистент',['Собери план дня','Предложение готово','Подтвердить действие']),
+'</div><p class="di-note">Иллюстрации интерфейса, не фактические скриншоты.</p></section>',
+'<section class="di-ending"><h3>Меньше хаоса.<br><em>Больше действия.</em></h3><div class="di-infinity" aria-hidden="true"><i></i><i></i></div><p>DO IT.</p></section>',
+'</div>'
+];
+document.getElementById('panel-doit').innerHTML=parts.join('');
+}
+
+ids.forEach(id=>id==='doit'?renderDoit():render(data[id],id));
 let active=0;
 let scrollTimer=0;
 let switching=false;
