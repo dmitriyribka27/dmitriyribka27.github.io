@@ -68,7 +68,8 @@
 @media(max-width:767px){
  .design-visual--cognitio{gap:8px;padding:0;aspect-ratio:auto}
  .design-visual--cognitio .design-cognitio-print{width:46%}
- .design-case--cognitio .design-case-body{padding:9px}\n .design-case--cognitio .design-case-caption{padding:15px 5px 5px}
+ .design-case--cognitio .design-case-body{padding:9px}
+ .design-case--cognitio .design-case-caption{padding:15px 5px 5px}
 }
 
 /* Case 02 — Kimbap: original print layouts without cropping text */
