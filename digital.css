@@ -725,3 +725,53 @@ button.media-box{color:inherit;cursor:zoom-in;text-align:left;font:inherit}
   .di-voice .di-equalizer i::before{animation:none!important;will-change:auto!important}
   .di-voice .di-equalizer i::before{transform:scaleY(.7);opacity:1}
 }
+
+
+/* DO IT v3.6 — four independently floating task cards.
+   Each retains its original angle; restrained offsets avoid collisions. */
+.di-floating-tasks .di-float-card{
+  transform-origin:50% 50%;
+  will-change:transform;
+  backface-visibility:hidden;
+}
+.di-floating-tasks .di-float-card.a{
+  animation:diChaosA 6.8s ease-in-out infinite;
+}
+.di-floating-tasks .di-float-card.b{
+  animation:diChaosB 8.1s ease-in-out infinite;
+}
+.di-floating-tasks .di-float-card.c{
+  animation:diChaosC 7.4s ease-in-out infinite;
+}
+.di-floating-tasks .di-float-card.d{
+  animation:diChaosD 9.2s ease-in-out infinite;
+}
+@keyframes diChaosA{
+  0%,100%{transform:translate3d(0,0,0) rotate(-9deg)}
+  48%{transform:translate3d(5px,-12px,0) rotate(-6deg)}
+}
+@keyframes diChaosB{
+  0%,100%{transform:translate3d(0,0,0) rotate(7deg)}
+  54%{transform:translate3d(-6px,10px,0) rotate(10deg)}
+}
+@keyframes diChaosC{
+  0%,100%{transform:translate3d(0,0,0) rotate(5deg)}
+  46%{transform:translate3d(7px,9px,0) rotate(2deg)}
+}
+@keyframes diChaosD{
+  0%,100%{transform:translate3d(0,0,0) rotate(-6deg)}
+  52%{transform:translate3d(-5px,-11px,0) rotate(-9deg)}
+}
+@media(max-width:540px){
+  .di-floating-tasks .di-float-card.a{animation-name:diChaosMobileA}
+  .di-floating-tasks .di-float-card.b{animation-name:diChaosMobileB}
+  .di-floating-tasks .di-float-card.c{animation-name:diChaosMobileC}
+  .di-floating-tasks .di-float-card.d{animation-name:diChaosMobileD}
+}
+@keyframes diChaosMobileA{0%,100%{transform:translate3d(0,0,0) rotate(-9deg)}50%{transform:translate3d(2px,-7px,0) rotate(-7deg)}}
+@keyframes diChaosMobileB{0%,100%{transform:translate3d(0,0,0) rotate(7deg)}50%{transform:translate3d(-3px,6px,0) rotate(9deg)}}
+@keyframes diChaosMobileC{0%,100%{transform:translate3d(0,0,0) rotate(5deg)}50%{transform:translate3d(3px,6px,0) rotate(3deg)}}
+@keyframes diChaosMobileD{0%,100%{transform:translate3d(0,0,0) rotate(-6deg)}50%{transform:translate3d(-2px,-7px,0) rotate(-8deg)}}
+@media(prefers-reduced-motion:reduce){
+  .di-floating-tasks .di-float-card{animation:none!important;will-change:auto!important}
+}
