@@ -665,3 +665,63 @@ button.media-box{color:inherit;cursor:zoom-in;text-align:left;font:inherit}
 /* WhatsApp uses the secondary dark treatment, matching the homepage. */
 .digital-contact .digital-contact-actions .btn:nth-child(2){background:#171d1a;color:#f2f3f5;border:1px solid #798477}
 .digital-contact .digital-contact-actions .btn:nth-child(2):hover{background:#1e2921;border-color:#e5ff36}
+
+
+/* DO IT — looping voice capture animation (CSS only, v3.5).
+   Static, accessible presentation when reduced motion is requested. */
+.di-voice .di-microphone{
+  will-change:transform;
+  animation:diMicFloat 3.4s ease-in-out infinite;
+}
+@keyframes diMicFloat{
+  0%,100%{transform:translate3d(0,0,0)}
+  50%{transform:translate3d(0,-10px,0)}
+}
+.di-voice .di-equalizer i{
+  position:relative;
+  overflow:hidden;
+  flex:none;
+  background:#323b35;
+  box-shadow:none;
+  transform-origin:center;
+  animation:diVoicePulse 1.9s ease-in-out infinite;
+}
+.di-voice .di-equalizer i::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  border-radius:inherit;
+  background:#e5ff36;
+  box-shadow:0 0 11px rgba(229,255,54,.55);
+  transform:scaleY(.02);
+  transform-origin:bottom;
+  animation:diVoiceFill 4.4s ease-in-out infinite both;
+  animation-delay:calc(var(--di-bar-index, 0) * .19s);
+}
+.di-voice .di-equalizer i:nth-child(1){--di-bar-index:0}
+.di-voice .di-equalizer i:nth-child(2){--di-bar-index:1}
+.di-voice .di-equalizer i:nth-child(3){--di-bar-index:2}
+.di-voice .di-equalizer i:nth-child(4){--di-bar-index:3}
+.di-voice .di-equalizer i:nth-child(5){--di-bar-index:4}
+.di-voice .di-equalizer i:nth-child(6){--di-bar-index:5}
+.di-voice .di-equalizer i:nth-child(7){--di-bar-index:6}
+.di-voice .di-equalizer i:nth-child(8){--di-bar-index:7}
+.di-voice .di-equalizer i:nth-child(9){--di-bar-index:8}
+.di-voice .di-equalizer i:nth-child(10){--di-bar-index:9}
+.di-voice .di-equalizer i:nth-child(11){--di-bar-index:10}
+.di-voice .di-equalizer i:nth-child(12){--di-bar-index:11}
+@keyframes diVoiceFill{
+  0%,8%{transform:scaleY(.02);opacity:.5}
+  25%,66%{transform:scaleY(1);opacity:1}
+  86%,100%{transform:scaleY(.02);opacity:.5}
+}
+@keyframes diVoicePulse{
+  0%,100%{filter:brightness(.9)}
+  50%{filter:brightness(1.15)}
+}
+@media(prefers-reduced-motion:reduce){
+  .di-voice .di-microphone,
+  .di-voice .di-equalizer i,
+  .di-voice .di-equalizer i::before{animation:none!important;will-change:auto!important}
+  .di-voice .di-equalizer i::before{transform:scaleY(.7);opacity:1}
+}
