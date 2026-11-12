@@ -77,12 +77,3 @@ body{background-color:#0b0d11;background-image:linear-gradient(rgba(229,255,54,.
 .btn-whatsapp:hover{border-color:var(--lime);background:#1e2921}
 @media(max-width:900px){.contact-actions{justify-content:flex-start}}
 @media(max-width:620px){.nav a{font-weight:700;font-size:12px}.design-graphic .design-icon{transform:rotate(-12deg) scale(.86)}.contact-actions{display:grid;grid-template-columns:1fr;width:100%}.contact-panel .contact-actions .btn{width:100%;margin-top:0}.contact-panel .contact-actions{margin-top:20px}}
-
-/* Equal prominence for Telegram and WhatsApp on Design. */
-.contact-panel .contact-actions .btn-whatsapp{
- background:var(--lime);
- color:var(--bg);
- border:1px solid var(--lime);
- font-weight:700;
-}
-.contact-panel .contact-actions .btn-whatsapp:hover{background:#f0ff88;border-color:#f0ff88}
