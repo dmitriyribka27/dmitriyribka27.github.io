@@ -93,6 +93,37 @@ return '<div class="di-calendar-device" role="img" aria-label="Макет кал
 '<div class="di-calendar-timeline">'+rows.map(([time,label,meta,mode])=>'<div class="di-calendar-timeline-row"><time>'+time+'</time><div class="di-calendar-event '+mode+'"><strong>'+label+'</strong><small>'+meta+'</small></div></div>').join('')+'</div>'+
 '<div class="di-device-bottom"><span>⌂</span><span class="selected">▦</span><span>✧</span><span>♙</span></div><div class="di-device-home"></div></div></div></div>'
 };
+const showcasePhone=(kind)=>{
+const titleText=kind==='today'?'Сегодня':kind==='calendar'?'Календарь':'Ассистент';
+const icon=kind==='today'?'⌂':kind==='calendar'?'▦':'✧';
+const status='<div class="di-showcase-status"><span>9:41</span><span class="di-showcase-island"></span><span class="di-showcase-signal" aria-hidden="true"><i></i><i></i><i></i><i></i></span><svg viewBox="0 0 18 14" aria-hidden="true"><path d="M1 4Q9 -2 17 4M4 7Q9 3 14 7M7 10Q9 9 11 10" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><circle cx="9" cy="12" r="1.5" fill="currentColor"/></svg><span class="di-showcase-battery"><i></i></span></div>';
+const nav='<div class="di-showcase-nav"><span class="'+(kind==='today'?'active':'')+'">⌂</span><span class="'+(kind==='calendar'?'active':'')+'">▦</span><span class="'+(kind==='assistant'?'active':'')+'">✧</span></div><span class="di-showcase-home"></span>';
+const task=(name,time,mode='')=>'<div class="di-showcase-task '+mode+'"><span class="di-showcase-check">'+(mode==='done'?'✓':'')+'</span><div><strong>'+name+'</strong><small>'+time+'</small></div></div>';
+let body='';
+if(kind==='today'){
+body='<div class="di-showcase-date">Четверг, 12 ноября</div><div class="di-showcase-progress"><span>2 из 4 задач</span><b>50%</b></div><div class="di-showcase-progress-line"><i></i></div>'+
+'<div class="di-showcase-subhead">Мои задачи <b>＋</b></div>'+
+task('Разобрать запросы','10:00 · 30 мин','done')+
+task('Подготовить план','До 12:00','highlight')+
+task('Созвон с командой','15:00 · 45 мин')+
+task('Проверить отчёт','До 18:00')+
+'<div class="di-showcase-tip"><span>✦</span> Сегодня ещё 2 задачи</div>';
+}else if(kind==='calendar'){
+body='<div class="di-showcase-month"><span>‹</span><strong>Ноябрь</strong><span>▦</span></div>'+
+'<div class="di-showcase-days"><span>Пн<b>9</b></span><span>Вт<b>10</b></span><span>Ср<b>11</b></span><span class="current">Чт<b>12</b></span><span>Пт<b>13</b></span></div>'+
+'<div class="di-showcase-subhead">Расписание <b>＋</b></div>'+
+'<div class="di-showcase-events"><div><time>10:00</time><section><strong>Планирование</strong><small>10:00–10:30</small></section></div><div><time>12:00</time><section class="selected"><strong>Работа над задачами</strong><small>12:00–13:30</small></section></div><div><time>15:00</time><section><strong>Встреча</strong><small>15:00–15:45</small></section></div></div>'+
+'<div class="di-showcase-free">17:00 · Свободное окно</div>';
+}else{
+body='<div class="di-showcase-assistant-label"><span>✦</span> План на сегодня</div>'+
+'<div class="di-showcase-chat user">Помоги распределить задачи на день.</div>'+
+'<div class="di-showcase-chat assistant"><span>✦</span><div>Предлагаю такой порядок:</div></div>'+
+'<div class="di-showcase-suggest"><div><b>10:00</b><span>Разобрать запросы</span></div><div><b>12:00</b><span>Подготовить план</span></div><div><b>15:00</b><span>Созвон с командой</span></div></div>'+
+'<div class="di-showcase-apply">✓ Подтвердить план</div>'+
+'<div class="di-showcase-compose"><span>Написать...</span><b>➤</b></div>';
+}
+return '<div class="di-showcase-phone di-showcase-'+kind+'" role="img" aria-label="Иллюстрация экрана DO IT: '+titleText+'"><div class="di-showcase-rim"><div class="di-showcase-glass">'+status+'<header class="di-showcase-brand"><span>DO IT</span><b>✦</b></header><h4>'+titleText+'</h4>'+body+nav+'</div></div></div>';
+};
 const parts=[
 '<div class="di-page">',
 '<section class="di-hero"><span class="di-star di-hero-star" aria-hidden="true"></span><div class="di-hero-copy"><h2>DO <span>IT.</span></h2><h3>Твоё <em>время.</em><br>Твои правила.</h3><p>Планировщик для задач, встреч и договорённостей. Собирает их в понятное расписание.</p></div>',
@@ -111,9 +142,9 @@ calendarStagePhone(),
 highlighted(data.doit.code),
 '</code></pre></div><p class="di-note">Фрагмент реального исходного кода: проверка сообщения перед разбором команды.</p></section>',
 '<section class="di-section"><div class="di-head"><h3>Сложное внутри.<br><em>Простое снаружи.</em></h3><p>Задачи, календарь и ассистент связаны общей навигацией.</p></div><div class="di-three-phones">',
-screen('Сегодня',['Разобрать запросы','Подготовить план','Созвон с командой']),
-screen('Календарь',['10:00 Стендап','12:00 Задачи','15:00 Демо']),
-screen('Ассистент',['Собери план дня','Предложение готово','Подтвердить действие']),
+showcasePhone('today'),
+showcasePhone('calendar'),
+showcasePhone('assistant'),
 '</div><p class="di-note">Иллюстрации интерфейса, не фактические скриншоты.</p></section>',
 '<section class="di-ending"><h3>Меньше хаоса.<br><em>Больше действия.</em></h3><div class="di-infinity" aria-hidden="true"><i></i><i></i></div><p>DO IT.</p></section>',
 '</div>'
@@ -123,7 +154,6 @@ document.getElementById('panel-doit').innerHTML=parts.join('');
 // Optional pixel-faithful assets exported from the approved presentation.
 // The CSS fallback remains functional until the corresponding files are available.
 [
- ['.di-three-phones','assets/digital/doit-phones.webp'],
  ['.di-infinity','assets/digital/doit-infinity.webp']
 ].forEach(([selector,url])=>{
  const el=document.querySelector('#panel-doit '+selector);
