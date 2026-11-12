@@ -15,8 +15,8 @@
 #panel-bay .bay-geometry circle:nth-child(2){stroke:#e5ff3670}
 #panel-bay .bay-geometry circle:last-child,#panel-bay .bay-geometry circle:nth-last-child(2){fill:#e5ff36}
 #panel-bay .bay-neon-cats{position:absolute;left:5%;right:5%;top:22%;height:110px}
-#panel-bay .bay-neon-cat{position:absolute;width:clamp(38px,6.9vw,65px);left:calc(5% + var(--index)*20%);top:calc(7px + var(--index)*7px);color:#e5ff36;filter:drop-shadow(0 0 7px #e5ff3688);animation:bay-neon-cat-roam calc(7s + var(--index)*.8s) ease-in-out var(--lag) infinite alternate;will-change:transform}
-#panel-bay .bay-neon-cat:nth-child(2n){color:#f4ffd2}
+#panel-bay .bay-neon-cat{position:absolute;width:clamp(38px,6.9vw,65px);left:8%;top:7px;color:#e5ff36;filter:drop-shadow(0 0 7px #e5ff3688);animation:bay-neon-cat-roam 8s ease-in-out var(--lag) infinite alternate;will-change:transform}
+#panel-bay .bay-neon-cat:nth-child(2){left:27%;top:24px;animation-duration:9s}#panel-bay .bay-neon-cat:nth-child(3){left:46%;top:7px;animation-duration:7.5s}#panel-bay .bay-neon-cat:nth-child(4){left:65%;top:26px;animation-duration:8.6s}#panel-bay .bay-neon-cat:nth-child(5){left:83%;top:4px;animation-duration:7.8s}#panel-bay .bay-neon-cat:nth-child(2n){color:#f4ffd2}
 #panel-bay .bay-neon-cat svg{width:100%;display:block}
 #panel-bay .bay-neon-cat svg path:not([fill="none"]){fill:none;stroke:currentColor;stroke-width:2.5;stroke-linejoin:round}
 #panel-bay .bay-neon-cat svg path[stroke="#13232a"]{stroke:currentColor;stroke-width:1.3}
