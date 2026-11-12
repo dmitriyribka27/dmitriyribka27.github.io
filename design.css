@@ -28,7 +28,7 @@
 .design-track-controls button:hover:not(:disabled){border-color:var(--lime);color:var(--lime)}
 .design-track-controls button:disabled{opacity:.28;cursor:default}
 .design-progress{height:3px;background:#434851;flex:1;overflow:hidden;border-radius:4px}
-.design-progress span{display:block;width:16.6667%;height:100%;background:var(--lime);transition:width .2s}
+.design-progress span{display:block;width:20%;height:100%;background:var(--lime);transition:width .2s}
 .design-counter{font:500 12px 'IBM Plex Mono',monospace;white-space:nowrap;color:#acb2bc}
 .design-counter b{color:var(--lime);font-weight:500}
 .design-contact{padding-top:30px}
