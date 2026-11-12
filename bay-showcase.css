@@ -1,0 +1,73 @@
+/* Quiet Bay standalone project scene */
+#panel-bay .bay-page{max-width:1100px;margin:auto;padding:0 clamp(17px,4vw,42px) 50px;color:#f5f6f7;font-family:Onest,Manrope,sans-serif}
+#panel-bay .bay-hero{padding-top:44px}
+#panel-bay .bay-kicker,#panel-bay .bay-label{font:600 12px/1.6 "IBM Plex Mono",monospace;letter-spacing:.08em;color:#e5ff36;text-transform:uppercase}
+#panel-bay .bay-kicker{display:flex;align-items:center;gap:10px}
+#panel-bay .bay-kicker i{width:9px;height:9px;border-radius:50%;background:#e5ff36;box-shadow:0 0 14px #e5ff36;animation:bay-blink 3s infinite}
+#panel-bay h2{font:800 clamp(36px,7.3vw,76px)/1.04 Manrope,sans-serif;letter-spacing:-.05em;margin:18px 0 20px}
+#panel-bay h2 em{font-style:normal;color:#e5ff36}
+#panel-bay .bay-intro h3{font:750 clamp(22px,4.6vw,35px)/1.2 Manrope;margin:0 0 18px}
+#panel-bay p{font-size:clamp(15px,2vw,19px);line-height:1.65;color:#bfc6ce;margin:0}
+#panel-bay .bay-intro p{max-width:700px}
+#panel-bay .bay-scene{position:relative;margin-top:35px;height:clamp(315px,53vw,520px);border:1px solid #677e7273;border-radius:24px;overflow:hidden;background:linear-gradient(#22333c 0%,#354d4a 62%,#193b42 63%,#0a2734 100%);isolation:isolate}
+#panel-bay .bay-sun{position:absolute;top:12%;right:19%;width:60px;height:60px;border-radius:50%;background:#f3da9e;box-shadow:0 0 65px #f8d785aa}
+#panel-bay .bay-cloud{position:absolute;top:24%;left:-20%;width:26%;height:20px;border-radius:50%;background:#e4f5ef44;filter:blur(9px);animation:bay-cloud 32s linear infinite}
+#panel-bay .bay-hills{position:absolute;top:36%;left:-10%;width:120%;height:44%;background:linear-gradient(30deg,#274b3f,#60804b);clip-path:ellipse(56% 49% at 50% 100%)}
+#panel-bay .bay-path{position:absolute;top:62%;left:16%;width:70%;height:15%;border-top:5px dashed #e5dbac88;border-radius:50%;transform:rotate(-5deg)}
+#panel-bay .bay-houses{position:absolute;top:13%;width:100%;display:flex;justify-content:space-evenly;font-size:65px;color:#eed7a8;text-shadow:0 5px #173630}
+#panel-bay .bay-cat-line{position:absolute;left:12%;right:11%;bottom:17%;height:60px}
+#panel-bay .bay-moving-cat{position:absolute;bottom:0;width:clamp(35px,6vw,65px);color:var(--coat);animation:bay-cat 8s ease-in-out var(--lag) infinite alternate;filter:drop-shadow(0 3px 4px #0007)}
+#panel-bay .bay-moving-cat svg{width:100%}
+#panel-bay .bay-sea{position:absolute;top:73%;bottom:0;left:0;right:0;background:linear-gradient(#20515d,#0a293a)}
+#panel-bay .bay-yacht{position:absolute;top:-89px;left:54%;width:clamp(130px,23vw,210px);transform-origin:50% 86%;animation:bay-boat 5.8s ease-in-out infinite;filter:drop-shadow(0 8px 8px #0005)}
+#panel-bay .bay-yacht svg{width:100%;display:block}
+#panel-bay .bay-waterline{position:absolute;top:20%;left:-10%;width:130%;height:25px;border-top:2px solid #c2e0cc99;border-radius:50%;animation:bay-wave 6s ease-in-out infinite}
+#panel-bay .bay-waterline:nth-child(3){top:45%;animation-delay:-2s}
+#panel-bay .bay-waterline:nth-child(4){top:70%;animation-delay:-4s}
+#panel-bay .bay-scene-caption{position:absolute;left:18px;right:18px;bottom:12px;display:flex;justify-content:space-between;color:#eff2e9;font-size:12px}
+#panel-bay .bay-scene-caption b{color:#e5ff36;animation:bay-blink 3s infinite}
+#panel-bay .bay-section{margin-top:62px;padding-top:54px;border-top:1px solid #65706f55}
+#panel-bay .bay-heading{max-width:760px}
+#panel-bay .bay-heading h2{margin:14px 0 19px}
+#panel-bay .bay-numbers{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin-top:28px}
+#panel-bay .bay-numbers>div{border:1px solid #61716666;background:#181f24;padding:18px 11px;border-radius:18px}
+#panel-bay .bay-numbers strong{display:block;color:#e5ff36;font:800 clamp(28px,6vw,52px)/1 Manrope}
+#panel-bay .bay-numbers span{display:block;margin-top:10px;color:#b9c8c3;font-size:12px}
+#panel-bay .bay-route{margin-top:15px;background:linear-gradient(130deg,#18242a,#203129);border:1px solid #66766b77;border-radius:19px;padding:22px}
+#panel-bay .bay-route>div{display:flex;align-items:center;gap:12px}
+#panel-bay .bay-route>div svg{color:#e5ff36;width:25px}
+#panel-bay .bay-route>svg{width:100%;height:150px;margin:12px 0;display:block}
+#panel-bay .bay-route>svg .bay-traveler{filter:drop-shadow(0 0 6px #e5ff36)}
+#panel-bay .bay-cat-grid{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:9px;margin:27px 0}
+#panel-bay .bay-cat-person{background:#171e24;border:1px solid #63736a70;border-radius:16px;text-align:center;padding:13px 4px}
+#panel-bay .bay-cat-person>span{display:block;width:70px;max-width:100%;margin:0 auto 7px;animation:bay-idle 4s ease-in-out infinite}
+#panel-bay .bay-cat-person:nth-child(even)>span{animation-delay:-2s}
+#panel-bay .bay-cat-person svg{width:100%}
+#panel-bay .bay-cat-person strong{display:block;font-size:clamp(12px,2vw,16px)}
+#panel-bay .bay-cat-person small{display:block;color:#adbab3;font-size:10px;margin-top:7px}
+#panel-bay .bay-personal{font-size:15px}
+#panel-bay .bay-mechanics,#panel-bay .bay-tech{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin-top:28px}
+#panel-bay .bay-mechanic{display:flex;gap:16px;background:#171d24;border:1px solid #61726966;border-radius:20px;padding:22px;transition:transform .22s,border-color .22s}
+#panel-bay .bay-mechanic:hover{transform:translateY(-4px);border-color:#e5ff36aa}
+#panel-bay .bay-icon{flex:0 0 43px;height:43px;border:1px solid #77866466;background:#25342d;border-radius:13px;color:#e5ff36;display:grid;place-items:center;animation:bay-idle 5s ease-in-out infinite}
+#panel-bay .bay-icon svg{width:25px;height:25px}
+#panel-bay .bay-mechanic h3{font:750 clamp(17px,2.5vw,23px)/1.2 Manrope;margin:0 0 13px}
+#panel-bay .bay-mechanic p{font-size:15px}
+#panel-bay .bay-mechanic small{display:block;color:#e5ff36;font-size:12px;line-height:1.5;margin-top:16px}
+#panel-bay .bay-ending{text-align:center;padding:73px 0 55px}
+#panel-bay .bay-tiny-yacht{font-size:50px;animation:bay-boat 5s ease-in-out infinite}
+#panel-bay .bay-ending p{max-width:570px;margin:auto}
+#panel-bay .bay-contact{padding:30px;border:1px solid #90a16c77;border-radius:22px;background:linear-gradient(130deg,#181e25,#23301d)}
+#panel-bay .bay-contact h3{font:750 clamp(25px,4vw,37px)/1.2 Manrope;margin:0 0 11px}
+#panel-bay .bay-contact>div{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:24px}
+#panel-bay .bay-contact a{display:flex;justify-content:space-between;align-items:center;gap:10px;text-decoration:none;color:#111;background:#e5ff36;padding:18px;border-radius:12px;font-weight:700}
+#panel-bay .bay-contact a+a{color:#fff;background:#17231d;border:1px solid #a0b28d}
+#panel-bay .bay-contact a b{font-size:22px}
+@keyframes bay-blink{50%{opacity:.35;transform:scale(.85)}}
+@keyframes bay-cat{0%{transform:translate(-7px,0) rotate(-4deg)}50%{transform:translate(12px,-5px) rotate(3deg)}100%{transform:translate(-4px,0) rotate(-3deg)}}
+@keyframes bay-idle{50%{transform:translateY(-5px) rotate(2deg)}}
+@keyframes bay-boat{0%,100%{transform:translateY(0) rotate(-5deg)}50%{transform:translateY(-10px) rotate(5deg)}}
+@keyframes bay-wave{50%{transform:translateX(5%) translateY(4px)}}
+@keyframes bay-cloud{to{left:110%}}
+@media(max-width:650px){#panel-bay .bay-scene{height:325px}#panel-bay .bay-yacht{top:-62px}#panel-bay .bay-cat-line{bottom:23%}#panel-bay .bay-cat-grid{gap:4px}#panel-bay .bay-cat-person{padding:10px 2px}#panel-bay .bay-cat-person small{font-size:9px}#panel-bay .bay-mechanics,#panel-bay .bay-tech,#panel-bay .bay-contact>div{grid-template-columns:1fr}#panel-bay .bay-mechanic{padding:17px;gap:13px}}
+@media(prefers-reduced-motion:reduce){#panel-bay *,#panel-bay *:before,#panel-bay *:after{animation:none!important;transition:none!important}}
