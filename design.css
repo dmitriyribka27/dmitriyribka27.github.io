@@ -82,3 +82,14 @@
  .design-visual--kimbap{gap:8px;aspect-ratio:auto}
  .design-case--kimbap .design-case-caption{padding:15px 5px 5px}
 }
+
+/* Case 03 — AI food photography: four square originals */
+.design-case--sochi-ai .design-case-body{border-radius:20px;padding:12px;background:#141821}
+.design-visual--sochi-ai{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;aspect-ratio:auto;background:transparent}
+.design-visual--sochi-ai img{display:block;width:100%;height:auto;aspect-ratio:1/1;object-fit:cover;border-radius:20px}
+.design-case--sochi-ai .design-case-caption{padding:18px 5px 5px;min-height:0}
+@media(max-width:767px){
+ .design-case--sochi-ai .design-case-body{padding:9px}
+ .design-visual--sochi-ai{gap:8px}
+ .design-case--sochi-ai .design-case-caption{padding:15px 5px 5px}
+}
