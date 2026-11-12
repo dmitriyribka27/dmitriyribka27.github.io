@@ -85,7 +85,6 @@ document.getElementById('panel-doit').innerHTML=parts.join('');
 // Optional pixel-faithful assets exported from the approved presentation.
 // The CSS fallback remains functional until the corresponding files are available.
 [
- ['.di-hero-star','assets/digital/doit-hero-star.webp'],
  ['.di-hero-art','assets/digital/doit-phones.webp'],
  ['.di-calendar-stage','assets/digital/doit-calendar.webp'],
  ['.di-three-phones','assets/digital/doit-phones.webp'],
