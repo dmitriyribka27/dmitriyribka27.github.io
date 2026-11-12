@@ -74,8 +74,14 @@ document.addEventListener('keydown',event=>{if(event.key==='Escape')close()});
   try{if(window.localStorage.getItem(key)==='1')return}catch(_error){}
   const notice=document.createElement('aside');
   notice.className='privacy-notice';
-  notice.setAttribute('aria-label','Информация о конфиденциальности');
-  notice.innerHTML='<div class="privacy-notice-icon" aria-hidden="true">🍪</div><div class="privacy-notice-copy"><strong>Привет! Хорошего дня.</strong><p>Мы не используем cookies для рекламы и отслеживания посетителей.</p><a href="privacy.html">Политика конфиденциальности</a></div><button class="privacy-notice-close" type="button" aria-label="Закрыть уведомление">×</button><button class="privacy-notice-ok" type="button">Понятно, спасибо!</button>';
+  const t=window.PORTFOLIO_I18N?.notice||{title:'Привет! Хорошего дня.',body:'Мы не используем cookies для рекламы и отслеживания посетителей.',policy:'Политика конфиденциальности',ok:'Понятно, спасибо!',close:'Закрыть уведомление',label:'Информация о конфиденциальности'};
+  notice.setAttribute('aria-label',t.label);
+  notice.innerHTML='<div class="privacy-notice-icon" aria-hidden="true">🍪</div><div class="privacy-notice-copy"><strong></strong><p></p><a href="privacy.html"></a></div><button class="privacy-notice-close" type="button">×</button><button class="privacy-notice-ok" type="button"></button>';
+  notice.querySelector('strong').textContent=t.title;
+  notice.querySelector('p').textContent=t.body;
+  notice.querySelector('a').textContent=t.policy;
+  notice.querySelector('.privacy-notice-close').setAttribute('aria-label',t.close);
+  notice.querySelector('.privacy-notice-ok').textContent=t.ok;
   const dismiss=()=>{
     notice.classList.remove('privacy-notice-visible');
     try{window.localStorage.setItem(key,'1')}catch(_error){}
@@ -88,7 +94,7 @@ document.addEventListener('keydown',event=>{if(event.key==='Escape')close()});
 })();
 
 
-// Flag-only language picker. Translation files are not yet deployed.
+// Flag-only language picker; language switching is active on the homepage.
 (()=>{
   const root=document.querySelector('.language-switcher');
   if(!root)return;
@@ -96,10 +102,7 @@ document.addEventListener('keydown',event=>{if(event.key==='Escape')close()});
   const menu=root.querySelector('.language-menu');
   const setOpen=open=>{menu.hidden=!open;trigger.setAttribute('aria-expanded',String(open))};
   trigger.addEventListener('click',event=>{event.stopPropagation();setOpen(menu.hidden)});
-  menu.querySelectorAll('[data-lang]').forEach(button=>button.addEventListener('click',()=>{
-    // Keep Russian content until the selected language is actually translated.
-    setOpen(false);
-  }));
+  menu.addEventListener('click',event=>{const button=event.target.closest('[data-lang]');if(!button)return;setOpen(false);if(window.PORTFOLIO_I18N?.isHome)window.PORTFOLIO_I18N.choose(button.dataset.lang)});
   document.addEventListener('click',event=>{if(!root.contains(event.target))setOpen(false)});
   document.addEventListener('keydown',event=>{if(event.key==='Escape'&&!menu.hidden){setOpen(false);trigger.focus()}});
 })();
