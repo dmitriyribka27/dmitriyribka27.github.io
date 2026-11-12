@@ -242,3 +242,32 @@ button.media-box{color:inherit;cursor:zoom-in;text-align:left;font:inherit}
  .di-three-phones.di-has-asset{transform:none;height:330px;min-height:330px;width:100%;margin:0}
  .di-infinity.di-has-asset{height:220px}
 }
+
+
+/* DO IT v3.2 — original artwork, layout alignment and seamless edges */
+.di-hero{position:relative;isolation:isolate}
+.di-hero-copy{z-index:2}
+.di-hero-star{position:absolute;top:32px;right:8%;width:clamp(105px,15vw,190px);height:clamp(105px,15vw,190px);margin:0;z-index:1}
+.di-hero-star.di-has-asset{position:absolute;top:16px;right:5%;width:clamp(155px,22vw,255px);height:clamp(155px,22vw,255px);margin:0;background:url("assets/digital/doit-hero-star.webp") center/contain no-repeat;mix-blend-mode:screen;filter:none;clip-path:none}
+.di-hero-art.di-has-asset{background:url("assets/digital/doit-phones.webp") center center/contain no-repeat}
+.di-hero-art.di-has-asset>.di-screen,.di-hero-art.di-has-asset>.di-wave{visibility:hidden}
+.di-calendar-stage.di-has-asset{min-height:560px;background:url("assets/digital/doit-calendar.webp") center/auto 100% no-repeat}
+.di-calendar-stage.di-has-asset>.di-screen,.di-calendar-stage.di-has-asset>.di-calendar-lines{visibility:hidden}
+.di-task-connector{position:absolute;inset:0;width:100%;height:100%;overflow:visible;opacity:.75;pointer-events:none;filter:drop-shadow(0 0 8px rgba(229,255,54,.35))}
+.di-task-connector path{stroke-dasharray:900;stroke-dashoffset:0}
+.di-float-card{z-index:1}
+.di-floating-tasks{isolation:isolate}
+@media(max-width:780px){
+.di-hero-star{top:20px;right:1%;width:118px;height:118px}
+.di-hero-star.di-has-asset{top:5px;right:-7px;width:156px;height:156px}
+.di-hero-art.di-has-asset{height:405px;background-size:contain}
+.di-calendar-stage.di-has-asset{min-height:490px;background-size:auto 100%}
+}
+@media(max-width:540px){
+.di-hero-star{top:12px;right:0;width:113px;height:113px}
+.di-hero-star.di-has-asset{top:-14px;right:-8px;width:145px;height:145px}
+.di-hero h2{max-width:75%}
+.di-hero-art.di-has-asset{height:345px;background-size:contain}
+.di-calendar-stage.di-has-asset{min-height:415px;background-size:auto 100%}
+.di-task-connector{opacity:.7}
+}
