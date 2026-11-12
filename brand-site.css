@@ -141,3 +141,23 @@ body > .header::before{content:"";position:absolute;top:0;bottom:0;left:50%;widt
   .process .steps li{transition:none}
   .process .steps li::before{transform:scaleX(1);opacity:.5}
 }
+
+
+/* About section — restrained reading-light sweep */
+.about-copy .reading-word{white-space:nowrap}
+.about-copy .reading-char{
+  transition:text-shadow .48s ease,color .48s ease,-webkit-text-stroke .48s ease;
+  -webkit-text-stroke:0 transparent;
+}
+.about-copy .reading-char.reading-lit{
+  color:#f8f9fa;
+  -webkit-text-stroke:.2px currentColor;
+  text-shadow:0 0 8px rgba(255,255,255,.26),0 0 15px rgba(229,255,54,.13);
+}
+.about-copy .lime .reading-char.reading-lit{
+  color:#efff8b;
+  text-shadow:0 0 9px rgba(229,255,54,.45),0 0 19px rgba(229,255,54,.18);
+}
+@media(prefers-reduced-motion:reduce){
+  .about-copy .reading-char{transition:none!important}
+}
