@@ -69,7 +69,7 @@ const items=today?[
 ];
 return '<div class="di-hero-device '+(today?'di-hero-device-today':'di-hero-device-calendar')+'">'+
 '<div class="di-device-rim"><div class="di-device-screen">'+
-'<div class="di-device-status"><span>9:41</span><span class="di-device-island"></span><span class="di-signal">▂▄▆ <span class="di-wifi">◕</span> ▰</span></div>'+
+'<div class="di-device-status" aria-label="9:41, сотовая связь, Wi-Fi, заряд батареи"><span class="di-status-time">9:41</span><span class="di-device-island"></span><span class="di-status-icons" aria-hidden="true"><span class="di-cellular"><i></i><i></i><i></i><i></i></span><svg class="di-status-wifi" viewBox="0 0 18 14"><path d="M1 4.2Q9 -2.2 17 4.2M4 7.4Q9 3.4 14 7.4M7 10.5Q9 9 11 10.5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><circle cx="9" cy="12" r="1.4" fill="currentColor"/></svg><span class="di-battery"><span class="di-battery-fill"></span></span></span></div>'+
 '<div class="di-device-brand"><b>DO IT</b><span class="di-device-symbol">'+(today?'◌':'✦')+'</span></div>'+
 '<h4>'+(today?'Сегодня':'Календарь')+'</h4>'+
 (today?'<div class="di-device-sub">Пятница, 13 ноября <span>3 из 5 задач</span></div><div class="di-progress"><span></span></div>':
