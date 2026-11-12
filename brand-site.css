@@ -81,3 +81,63 @@ body{background-color:#0b0d11;background-image:linear-gradient(rgba(229,255,54,.
 /* Solid navigation bar, with the page grid continuing below it. */
 body > .header{position:relative;isolation:isolate;background:#0b0d11}
 body > .header::before{content:"";position:absolute;top:0;bottom:0;left:50%;width:100vw;transform:translateX(-50%);background:#0b0d11;z-index:-1;pointer-events:none}
+
+
+/* Home: animated four-step process, without changing the content or layout */
+.process .steps li{
+  position:relative;
+  isolation:isolate;
+  border-top-color:rgba(229,255,54,.26);
+  border-radius:0 0 12px 12px;
+  padding-left:8px;
+  padding-right:8px;
+  transition:background .35s ease,border-color .35s ease,transform .35s ease;
+  animation:homeStepActive 12s ease-in-out infinite;
+  animation-delay:calc((var(--step-index, 0)) * -3s);
+}
+.process .steps li:nth-child(1){--step-index:0}
+.process .steps li:nth-child(2){--step-index:3}
+.process .steps li:nth-child(3){--step-index:2}
+.process .steps li:nth-child(4){--step-index:1}
+.process .steps li::before{
+  content:"";
+  position:absolute;
+  left:0;right:0;top:-2px;height:3px;
+  border-radius:3px;
+  background:var(--lime);
+  transform-origin:left center;
+  transform:scaleX(0);
+  box-shadow:0 0 13px rgba(229,255,54,.38);
+  animation:homeStepLine 12s ease-in-out infinite;
+  animation-delay:calc((var(--step-index, 0)) * -3s);
+  pointer-events:none;
+}
+.process .steps li strong{
+  display:block;
+  transition:color .3s ease;
+}
+.process .steps li span{
+  transition:color .3s ease,text-shadow .3s ease;
+}
+.process .steps li:is(:hover,:focus-visible){
+  outline:1px solid rgba(229,255,54,.58);
+  outline-offset:5px;
+  background:rgba(229,255,54,.055);
+  transform:translateY(-3px);
+}
+.process .steps li:is(:hover,:focus-visible) strong{color:var(--lime)}
+@keyframes homeStepActive{
+  0%,20%{background:rgba(229,255,54,.065);border-top-color:var(--lime)}
+  24%,100%{background:transparent;border-top-color:rgba(229,255,54,.26)}
+}
+@keyframes homeStepLine{
+  0%{transform:scaleX(0);opacity:1}
+  16%{transform:scaleX(1);opacity:1}
+  23%{transform:scaleX(1);opacity:.65}
+  26%,100%{transform:scaleX(0);opacity:0}
+}
+@media(prefers-reduced-motion:reduce){
+  .process .steps li,.process .steps li::before{animation:none!important}
+  .process .steps li{transition:none}
+  .process .steps li::before{transform:scaleX(1);opacity:.5}
+}
