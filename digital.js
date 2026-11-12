@@ -95,6 +95,43 @@ function renderOps(){
 
 }
 
+
+function renderMono(){
+ const p=data.mono;
+ const icon=(name)=>{
+  const paths={
+   wallet:'<rect x="3" y="6" width="18" height="15" rx="3"/><path d="M3 10h18M7 6V4h12v2"/><path d="M16 15h2"/>',
+   arrows:'<path d="M4 8h16m-5-5 5 5-5 5M20 17H4m5-5-5 5 5 5"/>',
+   globe:'<circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c-5 4-5 14 0 18m0-18c5 4 5 14 0 18"/>',
+   check:'<path d="m4 12 5 5L20 6"/>',
+   lock:'<rect x="5" y="10" width="14" height="11" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/>',
+   bolt:'<path d="m13 2-9 11h7l-1 9 10-12h-7l0-8Z"/>'
+  };
+  return '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">'+paths[name]+'</svg>';
+ };
+ const scenarios=[
+  ['Расход','Покупка или оплата списывает сумму с выбранного счёта.','−','expense'],
+  ['Доход','Поступление увеличивает баланс нужного счёта.','+','income'],
+  ['Перевод','Перемещение денег между счетами без повторного дохода.','↔','transfer']
+ ];
+ const gallery=[
+  ['Главная','assets/digital/mono-home.webp'],
+  ['Быстрая запись','assets/digital/mono-entry.webp'],
+  ['Счета и валюты','assets/digital/mono-accounts.webp']
+ ];
+ const screens=gallery.map((item,i)=>'<figure class="mono-shot"><div class="mono-shot-frame"><div class="mono-shot-placeholder" aria-hidden="true"><span>'+icon(['wallet','bolt','globe'][i])+'</span><strong>'+escapeHtml(item[0])+'</strong><small>Место для скриншота</small></div><img src="'+escapeHtml(item[1])+'" alt="MONO Finance — '+escapeHtml(item[0])+'" loading="lazy" onerror="this.hidden=true;this.parentElement.classList.add(\'mono-no-image\')" onload="this.parentElement.classList.add(\'mono-has-image\')"></div><figcaption>'+escapeHtml(item[0])+'</figcaption></figure>').join('');
+ const cards=scenarios.map(s=>'<article class="mono-action '+s[3]+'"><span class="mono-action-sign">'+s[2]+'</span><h4>'+s[0]+'</h4><p>'+s[1]+'</p></article>').join('');
+ const html='<div class="mono-page">'+
+ '<section class="mono-intro"><div class="mono-kicker">Личные финансы в одном приложении <span class="mono-breath" aria-hidden="true"></span></div><div class="mono-hero"><div class="mono-hero-copy"><h2>MONO<span>.</span><br><em>Финансы под рукой.</em></h2><p>'+escapeHtml(p.lead)+'</p><div class="mono-pills"><span>PWA</span><span>GEL</span><span>USD</span><span>RUB</span><span>Локальные данные</span></div></div><div class="mono-orbit" aria-hidden="true"><div class="mono-orbit-ring mono-orbit-one"></div><div class="mono-orbit-ring mono-orbit-two"></div><div class="mono-orbit-center">'+icon('wallet')+'</div><span class="mono-orbit-currency a">₾</span><span class="mono-orbit-currency b">$</span><span class="mono-orbit-currency c">₽</span></div></div></section>'+
+ '<section class="mono-section"><div class="mono-heading"><h3>Записывать операции.<br><em>Видеть свои деньги.</em></h3><p>Главный экран собран вокруг повседневных действий: быстро внести операцию, пересчитать валюту и проверить остатки.</p></div><div class="mono-quick"><div class="mono-quick-top"><span>'+icon('bolt')+'</span><strong>Быстрая запись</strong><span class="mono-pulse-dot"></span></div><div class="mono-quick-actions"><span>Расход <i>−</i></span><span>Доход <i>+</i></span><span>Перевод <i>↔</i></span></div></div><div class="mono-actions">'+cards+'</div></section>'+
+ '<section class="mono-section"><div class="mono-heading"><h3>Три валюты.<br><em>Один понятный обзор.</em></h3><p>Деньги могут храниться в разных валютах и на разных счетах. MONO показывает их отдельно, а конвертер помогает быстро сравнить суммы.</p></div><div class="mono-converter"><div class="mono-converter-title">'+icon('globe')+'<strong>Конвертер валют</strong><span>Пример пересчёта</span></div><div class="mono-converter-row"><div><small>Исходная сумма</small><strong>100,00</strong></div><b>USD</b></div><div class="mono-converter-motion" aria-hidden="true"><span></span><span>↓</span><span></span></div><div class="mono-converter-row result"><div><small>В другой валюте</small><strong>≈ 258,30</strong></div><b>GEL</b></div><p>Курс приведён для иллюстрации интерфейса. Реальный пересчёт зависит от установленного курса.</p></div><div class="mono-accounts"><div><span>'+icon('wallet')+'</span><strong>Отдельные счета</strong><p>Банковские счета и наличные сохраняют собственные балансы.</p></div><div><span>'+icon('arrows')+'</span><strong>Переводы между счетами</strong><p>Операция отражается сразу на двух балансах.</p></div></div></section>'+
+ '<section class="mono-section"><div class="mono-heading"><h3>Экраны <em>MONO.</em></h3><p>Три экрана приложения: главная, добавление операции и счета. Все изображения расположены рядом.</p></div><div class="mono-screens">'+screens+'</div></section>'+
+ '<section class="mono-section"><div class="mono-heading"><h3>Как устроено <em>приложение.</em></h3><p>MONO устанавливается на iPhone как веб-приложение. Основные финансовые записи хранятся локально на устройстве.</p></div><div class="mono-tech"><div><span>'+icon('bolt')+'</span><strong>Быстрый ввод</strong><p>Операции добавляются прямо из основного интерфейса.</p></div><div><span>'+icon('wallet')+'</span><strong>Раздельные балансы</strong><p>Счета и валюты учитываются независимо.</p></div><div><span>'+icon('lock')+'</span><strong>Локальные данные</strong><p>Для базового учёта не нужен отдельный сервер.</p></div></div><div class="mono-stack">'+p.tech.map(x=>'<span>'+escapeHtml(x)+'</span>').join('')+'</div></section>'+
+ '<div class="mono-finish"><div class="mono-finish-mark" aria-hidden="true">'+icon('wallet')+'</div><h3>Быстрее записать.<br><em>Проще разобраться.</em></h3><p>'+escapeHtml(p.ending)+'</p></div>'+
+ '</div>';
+ document.getElementById('panel-mono').innerHTML=html;
+}
+
 function renderDoit(){
 const screen=(heading,rows,extra='')=>'<div class="di-screen '+extra+'"><div class="di-island"></div><div class="di-screen-top"><b>DO IT</b><span>✦</span></div><h4>'+heading+'</h4>'+rows.map((row,i)=>'<div class="di-screen-item '+(i===1?'chosen':'')+'"><i></i><span>'+row+'</span></div>').join('')+'<div class="di-screen-nav">⌂　　 ▦　　 ✧</div></div>';
 const heroPhone=(type)=>{
@@ -198,7 +235,7 @@ document.getElementById('panel-doit').innerHTML=parts.join('');
 
 }
 
-ids.forEach(id=>id==='doit'?renderDoit():id==='ops'?renderOps():render(data[id],id));
+ids.forEach(id=>id==='doit'?renderDoit():id==='ops'?renderOps():id==='mono'?renderMono():render(data[id],id));
 
 /* Contribution explorer: lightweight, fully client-side and keyboard accessible. */
 const contribution=document.querySelector('#panel-doit .di-contribution');
