@@ -1511,3 +1511,7 @@ button.media-box{color:inherit;cursor:zoom-in;text-align:left;font:inherit}
 .kadr-print-cta{font-size:13px;padding:11px 15px}
 }
 @media(prefers-reduced-motion:reduce){.kadr-page *,.kadr-page *::before,.kadr-page *::after{animation:none!important;transition:none!important}}
+
+/* Unified project intro eyebrow — matches SEA LIVERY OPS */
+#panel-mono .mono-kicker,#panel-kadr .kadr-eyebrow{font-family:'IBM Plex Mono',monospace;font-size:12px;font-weight:400;letter-spacing:.15em;line-height:1.65;text-transform:uppercase;color:#dce4bc;display:flex;align-items:center;gap:10px}
+#panel-mono .mono-breath,#panel-kadr .kadr-eyebrow-dot{display:block;flex:0 0 9px;width:9px;height:9px;border-radius:50%;background:#e5ff36;box-shadow:0 0 16px #e5ff3680;animation:opsPulse 3.3s ease-in-out infinite}
