@@ -64,3 +64,8 @@
  .design-cognitio-print{width:min(46%,190px)}
  .design-visual--cognitio .design-image-slot{font-size:clamp(8px,2.1vw,10px);letter-spacing:0}
 }
+
+/* CognitioVerum — actual uploaded media */
+.design-visual--cognitio .design-image-slot{padding:0;overflow:hidden;border:0}
+.design-visual--cognitio .design-image-slot img{display:block;width:100%;height:100%;object-fit:contain}
+.design-visual--cognitio .design-cognitio-print img{object-fit:cover;object-position:center}
