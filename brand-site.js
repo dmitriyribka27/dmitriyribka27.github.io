@@ -66,3 +66,23 @@ document.addEventListener('keydown',event=>{if(event.key==='Escape')close()});
     if(event.matches){if(ticker)window.clearInterval(ticker);ticker=null;observer.disconnect();previous.forEach(letter=>letter.classList.remove('reading-lit'))}
   });
 })();
+
+
+// Informational privacy notice: no consent is requested or implied.
+(()=>{
+  const key='portfolio-privacy-notice-dismissed-v1';
+  try{if(window.localStorage.getItem(key)==='1')return}catch(_error){}
+  const notice=document.createElement('aside');
+  notice.className='privacy-notice';
+  notice.setAttribute('aria-label','Информация о конфиденциальности');
+  notice.innerHTML='<div class="privacy-notice-icon" aria-hidden="true">🍪</div><div class="privacy-notice-copy"><strong>Привет! Хорошего дня.</strong><p>Мы не используем cookies для рекламы и отслеживания посетителей.</p><a href="privacy.html">Политика конфиденциальности</a></div><button class="privacy-notice-close" type="button" aria-label="Закрыть уведомление">×</button><button class="privacy-notice-ok" type="button">Понятно, спасибо!</button>';
+  const dismiss=()=>{
+    notice.classList.remove('privacy-notice-visible');
+    try{window.localStorage.setItem(key,'1')}catch(_error){}
+    window.setTimeout(()=>notice.remove(),350);
+  };
+  notice.querySelector('.privacy-notice-close').addEventListener('click',dismiss);
+  notice.querySelector('.privacy-notice-ok').addEventListener('click',dismiss);
+  document.body.append(notice);
+  window.requestAnimationFrame(()=>window.requestAnimationFrame(()=>notice.classList.add('privacy-notice-visible')));
+})();

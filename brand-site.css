@@ -161,3 +161,18 @@ body > .header::before{content:"";position:absolute;top:0;bottom:0;left:50%;widt
 @media(prefers-reduced-motion:reduce){
   .about-copy .reading-char{transition:none!important}
 }
+
+
+/* Shared informational privacy notice (not a cookie-consent dialog) */
+.privacy-notice{position:fixed;z-index:1000;left:max(16px,env(safe-area-inset-left));bottom:calc(16px + env(safe-area-inset-bottom));width:min(430px,calc(100vw - 32px));padding:18px;display:grid;grid-template-columns:44px minmax(0,1fr) 30px;gap:12px;align-items:start;background:#151a20;border:1px solid #3c454e;border-radius:20px;box-shadow:0 18px 50px rgba(0,0,0,.4);color:#f2f3f5;opacity:0;transform:translateY(20px);transition:opacity .38s ease,transform .38s ease;font-family:Onest,Manrope,Arial,sans-serif}
+.privacy-notice.privacy-notice-visible{opacity:1;transform:translateY(0)}
+.privacy-notice-icon{display:flex;align-items:center;justify-content:center;width:44px;height:44px;border-radius:12px;background:#252d32;font-size:23px}
+.privacy-notice-copy{min-width:0;padding-top:1px}
+.privacy-notice-copy strong{display:block;font-size:15px;line-height:1.4;font-weight:700}
+.privacy-notice-copy p{margin:5px 0 7px;font-size:13px;line-height:1.55;color:#c1c8d0}
+.privacy-notice-copy a{font-size:12px;color:#e5ff36;text-decoration:underline;text-underline-offset:3px}
+.privacy-notice-close{border:0;background:transparent;color:#c1c8d0;cursor:pointer;font-size:25px;line-height:28px;padding:0}
+.privacy-notice-ok{grid-column:1/-1;width:100%;padding:12px 16px;border:0;border-radius:12px;background:#e5ff36;color:#101310;font-size:14px;font-weight:700;cursor:pointer}
+.privacy-notice-close:focus-visible,.privacy-notice-ok:focus-visible,.privacy-notice-copy a:focus-visible{outline:2px solid #e5ff36;outline-offset:3px}
+@media(max-width:500px){.privacy-notice{left:16px;right:16px;width:auto;padding:15px;grid-template-columns:40px minmax(0,1fr) 28px;gap:10px}.privacy-notice-icon{width:40px;height:40px}}
+@media(prefers-reduced-motion:reduce){.privacy-notice{transition:none;transform:none}}
