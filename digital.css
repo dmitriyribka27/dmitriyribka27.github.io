@@ -1159,3 +1159,130 @@ button.media-box{color:inherit;cursor:zoom-in;text-align:left;font:inherit}
   }
   .di-workflow-demo .di-team-project .di-workflow-task-check{font-size:12px}
 }
+
+
+/* SEA LIVERY OPS case — independent presentation; DO IT untouched */
+.ops-page{--ops-accent:#e5ff36;color:#f3f5f6;padding:0 clamp(17px,3.2vw,44px) 64px;font-family:Onest,Manrope,sans-serif;min-width:0}
+.ops-page *{box-sizing:border-box}
+.ops-page em{font-style:normal;color:var(--ops-accent)}
+.ops-intro{padding:clamp(40px,7vw,90px) 0 58px;position:relative}
+.ops-eyebrow{font-size:12px;text-transform:uppercase;letter-spacing:.15em;color:#dce4bc;font-family:'IBM Plex Mono',monospace;display:flex;align-items:center;gap:10px}
+.ops-live-dot{width:9px;height:9px;border-radius:50%;background:var(--ops-accent);box-shadow:0 0 16px #e5ff3680;animation:opsPulse 3.3s ease-in-out infinite}
+.ops-intro-main{display:grid;grid-template-columns:minmax(0,1fr) minmax(170px,.36fr);align-items:center;gap:28px;margin:26px 0 56px}
+.ops-intro h2{font:800 clamp(42px,7.4vw,98px)/1.03 Manrope,sans-serif;letter-spacing:-.065em;margin:0 0 27px}
+.ops-intro-main p{color:#bdc4ce;font-size:clamp(16px,2vw,22px);line-height:1.65;max-width:730px;margin:0}
+.ops-tags,.ops-tech{display:flex;flex-wrap:wrap;gap:10px;margin-top:27px}
+.ops-tags span,.ops-tech span{padding:9px 14px;border:1px solid #434c53;border-radius:10px;background:#191f27;font-size:13px;color:#dce1e6}
+.ops-hero-mark{width:min(100%,280px);aspect-ratio:1;display:flex;flex-direction:column;align-items:center;justify-content:center;border:1px solid #495047;border-radius:28%;background:radial-gradient(circle at 55% 55%,#2c3421,#171c20 65%,#11151b);box-shadow:0 0 45px #e5ff3613,inset 0 0 35px #e5ff3614;transform:rotate(-9deg);animation:opsHeroFloat 6s ease-in-out infinite}
+.ops-hero-mark svg{width:34%;height:34%;color:var(--ops-accent)}
+.ops-hero-mark span{font:800 clamp(28px,4vw,48px) Manrope;color:white;letter-spacing:-.06em;margin-top:12px}
+.ops-flow{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;position:relative}
+.ops-flow-item{border:1px solid #3f4851;border-radius:18px;padding:23px;position:relative;min-width:0;background:linear-gradient(135deg,#1b222b,#11171d);overflow:hidden}
+.ops-flow-item:after{content:"";position:absolute;inset:auto auto 0 0;height:3px;width:100%;background:linear-gradient(90deg,transparent,var(--ops-accent),transparent);transform:translateX(-100%);animation:opsScan 9s linear infinite}
+.ops-flow-item:nth-child(2):after{animation-delay:3s}.ops-flow-item:nth-child(3):after{animation-delay:6s}
+.ops-flow-icon{display:block;color:var(--ops-accent);margin-bottom:17px}
+.ops-flow-icon svg,.ops-feature svg,.ops-contribution svg,.ops-architecture svg{display:block;width:31px;height:31px}
+.ops-flow-item strong{font:750 clamp(17px,2vw,23px) Manrope;display:block}
+.ops-flow-item p{color:#b2bac4;font-size:clamp(13px,1.4vw,15px);line-height:1.5;margin:8px 0 0;max-width:290px}
+.ops-flow-sequence{position:absolute;right:20px;top:20px;font-size:24px;color:#e5ff36;opacity:.8}
+.ops-section{padding:clamp(55px,7vw,94px) 0;border-top:1px solid #343b42;min-width:0}
+.ops-heading{max-width:830px;margin-bottom:34px}
+.ops-heading h3{font:800 clamp(30px,4.8vw,58px)/1.12 Manrope;letter-spacing:-.055em;margin:0 0 17px}
+.ops-heading p{font-size:clamp(15px,1.8vw,19px);line-height:1.65;color:#b8bfc8;margin:0}
+.ops-problems{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.ops-problems article{padding:24px;background:#171c24;border:1px solid #414952;border-radius:17px;min-width:0;transition:transform .25s,border-color .25s}
+.ops-problems article:hover{transform:translateY(-4px);border-color:#a8bc44}
+.ops-problem-index{display:inline-block;color:var(--ops-accent);font:500 14px 'IBM Plex Mono',monospace;margin-bottom:27px}
+.ops-problems h4,.ops-feature h4{font:750 clamp(17px,2vw,23px)/1.3 Manrope;margin:0 0 12px}
+.ops-problems p,.ops-feature p{color:#b1bac4;font-size:clamp(13px,1.5vw,16px);line-height:1.65;margin:0}
+.ops-production{border-radius:25px;padding:clamp(20px,4vw,46px);border:1px solid #4b5840;background:radial-gradient(ellipse at 80% 10%,#27351c,#171e24 63%,#10151b);box-shadow:0 10px 35px #0004;max-width:900px}
+.ops-production-top{display:flex;align-items:center;justify-content:space-between;color:#e5ff36;text-transform:uppercase;font:500 12px 'IBM Plex Mono',monospace;letter-spacing:.1em}
+.ops-production-icon svg{width:30px;height:30px}
+.ops-production-metrics{display:grid;grid-template-columns:1fr 60px 1fr;align-items:center;gap:8px;margin:35px 0 22px}
+.ops-production-metrics>div:not(.ops-production-arrow){display:flex;flex-direction:column;gap:8px}
+.ops-production-metrics small{font-size:14px;color:#b7bfc8}
+.ops-production-metrics strong{font:800 clamp(27px,5vw,57px)/1.1 Manrope;letter-spacing:-.05em;white-space:nowrap}
+.ops-production-metrics strong span{font-size:.45em;color:#b9c5c9;letter-spacing:0}
+.ops-production-arrow{text-align:center;font-size:34px;color:#e5ff36;animation:opsNudge 3s ease-in-out infinite}
+.ops-loss{display:flex;align-items:center;justify-content:space-between;gap:15px;padding:16px 0;border-top:1px solid #435044;color:#cbd3d7;font-size:15px}
+.ops-loss strong{color:#f4f5f7}
+.ops-mass-bar{height:17px;border:1px solid #69765e;background:#283039;border-radius:999px;display:flex;overflow:hidden}
+.ops-mass-bar span{display:block;width:80%;background:linear-gradient(90deg,#afdc29,#e5ff36);transform-origin:left;animation:opsFill 5s ease-in-out infinite}
+.ops-mass-bar i{display:block;flex:1;background:repeating-linear-gradient(115deg,#3d4843 0 8px,#2b352d 8px 16px)}
+.ops-production-foot{display:flex;gap:25px;margin-top:17px;font-size:13px;color:#cbd0d3}
+.ops-key{display:inline-block;width:9px;height:9px;border-radius:2px;margin-right:6px}
+.ops-key-good{background:#e5ff36}.ops-key-loss{background:#596657}
+.ops-production>p{margin:22px 0 0;color:#8f9aa3;font-size:12px}
+.ops-features{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:15px}
+.ops-feature{background:#171d25;padding:25px;border:1px solid #414a54;border-radius:17px;min-width:0;transition:transform .25s,border-color .25s}
+.ops-feature:hover{transform:translateY(-3px);border-color:#a1ac55}
+.ops-feature>span{display:block;color:#e5ff36;margin-bottom:22px;animation:opsIconFloat 4.5s ease-in-out infinite}
+.ops-feature:nth-child(2)>span{animation-delay:.5s}.ops-feature:nth-child(3)>span{animation-delay:1s}.ops-feature:nth-child(4)>span{animation-delay:1.5s}
+.ops-gallery{max-width:1120px}
+.ops-slides{list-style:none;display:flex;gap:0;padding:0;margin:0;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;overscroll-behavior-inline:contain;-webkit-overflow-scrolling:touch}
+.ops-slides::-webkit-scrollbar{display:none}
+.ops-slide{padding:0;margin:0;flex:0 0 100%;scroll-snap-align:start;min-width:0}
+.ops-shot-frame{width:min(100%,420px);aspect-ratio:9/16;border:1px solid #40494d;border-radius:25px;margin:0 auto;position:relative;display:flex;align-items:center;justify-content:center;overflow:hidden;background:radial-gradient(ellipse at center,#26321f 0%,#141921 70%);box-shadow:0 0 45px #e5ff360c}
+.ops-shot-frame>img{display:block;width:100%;height:100%;object-fit:contain;position:relative;z-index:2}
+.ops-shot-frame>img[hidden]{display:none}
+.ops-shot-placeholder{position:absolute;inset:0;display:none;flex-direction:column;align-items:center;justify-content:center;gap:12px;text-align:center;padding:15px;color:#cbd1d7}
+.ops-shot-frame.ops-missing .ops-shot-placeholder{display:flex}
+.ops-shot-placeholder span svg{width:52px;height:52px;color:#e5ff36;margin:0 auto}
+.ops-shot-placeholder strong{font-size:19px}.ops-shot-placeholder small{color:#e5ff36}
+.ops-shot-caption{max-width:420px;margin:21px auto 0;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;align-items:baseline}
+.ops-shot-caption strong{font-size:18px}.ops-shot-caption span{color:#aeb7c0;font-size:13px}
+.ops-gallery-nav{display:flex;align-items:center;justify-content:center;gap:26px;margin:26px 0 0}
+.ops-gallery-nav>button{width:46px;height:46px;border-radius:50%;border:1px solid #4a545e;background:#1c242b;color:#e5ff36;font-size:22px;cursor:pointer}
+.ops-gallery-dots{display:flex;gap:12px;align-items:center}
+.ops-gallery-dots button{width:11px;height:11px;border:0;border-radius:50%;background:#5d676d;cursor:pointer;padding:0;transition:width .25s,background .25s}
+.ops-gallery-dots button[aria-pressed="true"]{background:#e5ff36;width:30px;border-radius:7px;box-shadow:0 0 12px #e5ff3666}
+.ops-gallery button:focus-visible{outline:2px solid #e5ff36;outline-offset:4px}
+.ops-contribution{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.ops-contribution>div{background:linear-gradient(145deg,#1d2528,#171b22);border-top:2px solid #e5ff36;padding:24px 19px;display:flex;flex-direction:column;gap:12px;min-width:0}
+.ops-contribution>div>span{color:#e5ff36;animation:opsIconFloat 4s ease-in-out infinite}
+.ops-contribution strong{font-size:17px}.ops-contribution p{margin:0;font-size:14px;color:#b4bbc4;line-height:1.6}
+.ops-tech{margin:0 0 30px}
+.ops-architecture{border-top:1px solid #424a50}
+.ops-architecture>div{padding:17px 0;border-bottom:1px solid #424a50;display:flex;align-items:center;gap:20px}
+.ops-architecture>div>span{color:#e5ff36;flex:none}
+.ops-architecture p{margin:0;color:#c6cdd4;line-height:1.6;font-size:16px}
+.ops-ending{padding:80px 0 45px;text-align:center;position:relative}
+.ops-ending h3{font:800 clamp(34px,5.3vw,67px)/1.16 Manrope;letter-spacing:-.055em;margin:23px auto;max-width:950px}
+.ops-ending p{font-size:16px;color:#adb8c1;margin:0 auto;max-width:650px;line-height:1.6}
+.ops-ending-symbol{color:#e5ff36;display:inline-flex;filter:drop-shadow(0 0 13px #e5ff3660);animation:opsHeroFloat 5s ease-in-out infinite}
+.ops-ending-symbol svg{width:75px;height:75px;stroke-width:1.2}
+@keyframes opsHeroFloat{0%,100%{transform:translateY(0) rotate(-9deg)}50%{transform:translateY(-12px) rotate(-6deg)}}
+@keyframes opsPulse{0%,100%{opacity:.5;box-shadow:0 0 8px #e5ff3633}50%{opacity:1;box-shadow:0 0 20px #e5ff36aa}}
+@keyframes opsScan{0%{transform:translateX(-100%)}65%,100%{transform:translateX(100%)}}
+@keyframes opsFill{0%,12%{transform:scaleX(.1)}55%,88%{transform:scaleX(1)}100%{transform:scaleX(.1)}}
+@keyframes opsNudge{0%,100%{transform:translateX(0)}50%{transform:translateX(6px)}}
+@keyframes opsIconFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-5px)}}
+@media(max-width:780px){.ops-intro-main{grid-template-columns:1fr;gap:28px}.ops-hero-mark{width:145px;margin:auto;display:none}.ops-flow{gap:8px}.ops-flow-item{padding:16px 11px}.ops-flow-icon svg{width:26px;height:26px}.ops-flow-sequence{right:9px;top:11px;font-size:16px}.ops-flow-item p{font-size:12px}.ops-problems{grid-template-columns:1fr}.ops-problems article{padding:20px}.ops-problem-index{margin-bottom:11px}.ops-contribution{grid-template-columns:1fr}.ops-contribution>div{padding:18px}}
+@media(max-width:540px){
+ .ops-page{padding:0 17px 50px}
+ .ops-intro{padding:38px 0 42px}
+ .ops-intro h2{font-size:clamp(38px,10.5vw,58px);letter-spacing:-.065em;margin-bottom:17px}
+ .ops-intro-main{margin:20px 0 33px}
+ .ops-tags{gap:7px}.ops-tags span{font-size:11px;padding:8px 10px}
+ .ops-flow{grid-template-columns:1fr}
+ .ops-flow-item{display:grid;grid-template-columns:35px minmax(0,1fr);column-gap:12px;align-items:center;padding:14px 17px}
+ .ops-flow-icon{grid-row:span 2;margin:0}
+ .ops-flow-item strong{font-size:17px}.ops-flow-item p{margin:3px 16px 0 0;font-size:12px}
+ .ops-flow-sequence{right:15px;top:50%;transform:translateY(-50%)}
+ .ops-section{padding:50px 0}.ops-heading{margin-bottom:24px}
+ .ops-heading h3{font-size:clamp(29px,8vw,40px)}
+ .ops-features{gap:10px}.ops-feature{padding:16px 13px}.ops-feature h4{font-size:15px}.ops-feature p{font-size:12px}.ops-feature>span{margin-bottom:18px}.ops-feature svg{width:25px;height:25px}
+ .ops-production{padding:19px;border-radius:18px}
+ .ops-production-metrics{grid-template-columns:1fr 25px 1fr;gap:5px;margin:24px 0 18px}
+ .ops-production-metrics small{font-size:11px}
+ .ops-production-metrics strong{font-size:clamp(22px,6vw,31px)}
+ .ops-production-arrow{font-size:21px}.ops-loss{font-size:12px}
+ .ops-production-foot{font-size:11px;gap:14px}
+ .ops-shot-frame{width:min(100%,390px)}.ops-shot-caption strong{font-size:16px}
+ .ops-architecture p{font-size:13px}
+ .ops-architecture svg{width:25px;height:25px}
+}
+@media(prefers-reduced-motion:reduce){
+ .ops-page *, .ops-page *::before,.ops-page *::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}
+ .ops-mass-bar span{transform:none}
+}
