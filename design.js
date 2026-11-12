@@ -9,6 +9,20 @@
  const fill=document.querySelector('#design-progress-fill');
  const desktop=window.matchMedia('(min-width:768px)');
  const reduced=window.matchMedia('(prefers-reduced-motion:reduce)');
+ // Reveal cards only on mobile; keep them visible if observation is unsupported.
+ if('IntersectionObserver' in window && !reduced.matches){
+  const observer=new IntersectionObserver(entries=>{
+   for(const entry of entries){
+    if(entry.isIntersecting){entry.target.classList.add('is-visible');observer.unobserve(entry.target)}
+   }
+  },{threshold:0.08,rootMargin:'0px 0px 35px 0px'});
+  cards.forEach(card=>observer.observe(card));
+  track.classList.add('design-motion-ready');
+  // Desktop cards must never be hidden when switching from a narrow viewport.
+  const revealAll=()=>{if(desktop.matches){cards.forEach(card=>card.classList.add('is-visible'));observer.disconnect()}};
+  desktop.addEventListener?.('change',revealAll);
+  revealAll();
+ }
  const selected=()=>{const left=track.scrollLeft;let index=0;let distance=Infinity;cards.forEach((card,i)=>{const delta=Math.abs(card.offsetLeft-cards[0].offsetLeft-left);if(delta<distance){index=i;distance=delta}});return index};
  const update=()=>{const i=selected();current.textContent=String(i+1).padStart(2,'0');progress.setAttribute('aria-valuenow',String(i+1));fill.style.width=((i+1)/cards.length*100)+'%';prev.disabled=i===0;next.disabled=i===cards.length-1};
  const go=(i)=>{const target=cards[Math.max(0,Math.min(cards.length-1,i))];track.scrollTo({left:target.offsetLeft-cards[0].offsetLeft,behavior:reduced.matches?'instant':'smooth'});};

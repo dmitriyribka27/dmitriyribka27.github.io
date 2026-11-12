@@ -120,3 +120,17 @@
  .design-visual--diko{gap:8px;aspect-ratio:auto}
  .design-case--diko .design-case-caption{padding:15px 5px 5px}
 }
+
+/* DESIGN Motion 1.0 — mobile-only case reveals and quiet separators */
+@media(max-width:767px){
+ .design-case{position:relative}
+ .design-case + .design-case::before{content:"";position:absolute;left:0;right:0;top:-17px;height:1px;background:linear-gradient(90deg,transparent,#424a52 12%,#424a52 88%,transparent);pointer-events:none}
+ .design-case + .design-case::after{content:"";position:absolute;left:50%;top:-20px;width:7px;height:7px;border-radius:50%;background:var(--lime);box-shadow:0 0 0 3px #0b0d11,0 0 12px #e5ff3655;transform:translateX(-50%);opacity:.45;pointer-events:none;transition:opacity .45s ease,box-shadow .45s ease}
+ .design-case + .design-case.is-visible::after{opacity:1;box-shadow:0 0 0 3px #0b0d11,0 0 15px #e5ff3688}
+ .design-motion-ready .design-case:not(.is-visible){opacity:0;transform:translateY(14px)}
+ .design-motion-ready .design-case{transition:opacity .55s ease,transform .55s cubic-bezier(.2,.75,.25,1)}
+}
+@media(max-width:767px) and (prefers-reduced-motion:reduce){
+ .design-motion-ready .design-case{opacity:1!important;transform:none!important;transition:none!important}
+ .design-case + .design-case::after{transition:none!important}
+}
