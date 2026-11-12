@@ -775,3 +775,105 @@ button.media-box{color:inherit;cursor:zoom-in;text-align:left;font:inherit}
 @media(prefers-reduced-motion:reduce){
   .di-floating-tasks .di-float-card{animation:none!important;will-change:auto!important}
 }
+
+
+/* DO IT v3.7 — engineering section: iconography, rhythm and separation */
+.di-tech-grid{
+  gap:clamp(10px,1.8vw,18px);
+  margin-top:28px;
+  margin-bottom:30px;
+}
+.di-tech-grid .di-tech-card{
+  position:relative;
+  min-width:0;
+  padding:20px 18px 19px;
+  background:linear-gradient(155deg,#1c242b,#151a21);
+  border:1px solid #414d55;
+  border-radius:15px;
+  transition:border-color .25s ease,background .25s ease,transform .3s ease;
+}
+.di-tech-grid .di-tech-card:hover{
+  border-color:#a1af64;
+  transform:translateY(-3px);
+}
+.di-tech-grid .di-tech-icon{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  width:43px;
+  height:43px;
+  margin-bottom:16px;
+  border-radius:12px;
+  color:#e5ff36;
+  background:rgba(229,255,54,.065);
+  border:1px solid rgba(229,255,54,.2);
+  animation:diTechBreath 5.6s ease-in-out infinite;
+}
+.di-tech-grid .di-tech-card:nth-child(2) .di-tech-icon{animation-delay:-1.4s}
+.di-tech-grid .di-tech-card:nth-child(3) .di-tech-icon{animation-delay:-2.8s}
+.di-tech-grid .di-tech-card:nth-child(4) .di-tech-icon{animation-delay:-4.2s}
+.di-tech-grid .di-tech-icon svg{width:25px;height:25px;display:block}
+.di-tech-grid .di-tech-card b{font-size:clamp(14px,1.6vw,17px);line-height:1.35;margin-bottom:8px}
+.di-tech-grid .di-tech-card>span:last-child{font-size:clamp(12px,1.25vw,14px);line-height:1.5}
+@keyframes diTechBreath{
+  0%,100%{box-shadow:0 0 0 rgba(229,255,54,0);transform:translateY(0)}
+  50%{box-shadow:0 0 16px rgba(229,255,54,.14);transform:translateY(-3px)}
+}
+.di-page .di-architecture-list{
+  margin:0 0 42px;
+  padding:0;
+  list-style:none;
+  display:grid;
+  gap:0;
+}
+.di-page .di-architecture-list li{
+  position:relative;
+  padding:17px 0 17px 44px;
+  margin:0;
+  border-bottom:1px solid #343d43;
+  color:#d3d7dd;
+  font-size:clamp(14px,1.5vw,17px);
+  line-height:1.65;
+}
+.di-page .di-architecture-list li:last-child{border-bottom:0}
+.di-page .di-architecture-list li::before{
+  content:"";
+  position:absolute;
+  left:4px;
+  top:23px;
+  width:22px;
+  height:22px;
+  border:1px solid rgba(229,255,54,.4);
+  border-radius:8px;
+  background:rgba(229,255,54,.06);
+}
+.di-page .di-architecture-list li::after{
+  content:"";
+  position:absolute;
+  left:12px;
+  top:30px;
+  width:7px;
+  height:4px;
+  border-left:2px solid #e5ff36;
+  border-bottom:2px solid #e5ff36;
+  transform:rotate(-45deg);
+}
+.di-page .di-architecture-list + .di-code{
+  margin-top:14px;
+}
+@media(max-width:540px){
+  .di-tech-grid{gap:10px;margin-top:24px;margin-bottom:24px}
+  .di-tech-grid .di-tech-card{padding:15px 13px 17px}
+  .di-tech-grid .di-tech-icon{width:37px;height:37px;margin-bottom:12px;border-radius:10px}
+  .di-tech-grid .di-tech-icon svg{width:22px;height:22px}
+  .di-tech-grid .di-tech-card b{font-size:14px}
+  .di-tech-grid .di-tech-card>span:last-child{font-size:12px}
+  .di-page .di-architecture-list{margin-bottom:35px}
+  .di-page .di-architecture-list li{padding:15px 0 15px 37px;font-size:14px}
+  .di-page .di-architecture-list li::before{left:2px;top:19px}
+  .di-page .di-architecture-list li::after{left:10px;top:26px}
+}
+@media(prefers-reduced-motion:reduce){
+  .di-tech-grid .di-tech-icon{animation:none}
+  .di-tech-grid .di-tech-card{transition:none}
+}
