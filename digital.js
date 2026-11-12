@@ -132,6 +132,43 @@ function renderMono(){
  document.getElementById('panel-mono').innerHTML=html;
 }
 
+
+function renderKadr(){
+ const p=data.kadr;
+ const svg=(name)=>{
+  const paths={
+   print:'<path d="M6 9V3h12v6M6 18H4a2 2 0 0 1-2-2v-5a3 3 0 0 1 3-3h14a3 3 0 0 1 3 3v5a2 2 0 0 1-2 2h-2"/><path d="M6 14h12v8H6zM17 12h1"/>',
+   photo:'<rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8" cy="8" r="1.5"/><path d="m4 18 5-5 3 3 3-4 5 6"/>',
+   layers:'<path d="m12 2 9 5-9 5-9-5 9-5Zm-9 10 9 5 9-5M3 17l9 5 9-5"/>',
+   calculator:'<rect x="4" y="2" width="16" height="20" rx="2"/><path d="M8 6h8M8 11h2m4 0h2m-8 4h2m4 0h2m-8 4h2m4 0h2"/>',
+   check:'<path d="m4 12 5 5L20 6"/>',
+   scissors:'<circle cx="6" cy="6" r="3"/><circle cx="6" cy="18" r="3"/><path d="M8.5 8.5 21 21M8.5 15.5 21 3"/>',
+   arrow:'<path d="M4 12h16m-6-6 6 6-6 6"/>'
+  };
+  return '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">'+paths[name]+'</svg>';
+ };
+ const gallery=[
+  {name:'Каталог',src:'assets/digital/kadr-catalog.png',icon:'layers'},
+  {name:'Калькулятор',src:'assets/digital/kadr-calculator.png',icon:'calculator'},
+  {name:'Материалы',src:'assets/digital/kadr-materials.png',icon:'photo'}
+ ];
+ const screens=gallery.map((item,i)=>'<figure class="kadr-shot"><div class="kadr-shot-frame"><div class="kadr-shot-placeholder" aria-hidden="true"><span>'+svg(item.icon)+'</span><strong>'+escapeHtml(item.name)+'</strong><small>Место для скриншота</small></div><img src="'+escapeHtml(item.src)+'" loading="lazy" alt="КАДР — '+escapeHtml(item.name)+'" onload="this.parentElement.classList.add(\'kadr-has-image\')" onerror="this.hidden=true;this.parentElement.classList.add(\'kadr-no-image\')"></div><figcaption>'+escapeHtml(item.name)+'</figcaption></figure>').join('');
+ const steps=[
+  {icon:'layers',title:'Каталог',text:'Выбор услуги и тиража.'},
+  {icon:'calculator',title:'Расчёт',text:'Материалы, стоимость и скидка.'},
+  {icon:'check',title:'Цена заказа',text:'Итог для клиента и затраты.'}
+ ];
+ const flow=steps.map((x,i)=>'<article class="kadr-flow-step"><span class="kadr-flow-icon">'+svg(x.icon)+'</span><div><strong>'+x.title+'</strong><p>'+x.text+'</p></div>'+(i<2?'<span class="kadr-flow-arrow" aria-hidden="true">'+svg('arrow')+'</span>':'')+'</article>').join('');
+ document.getElementById('panel-kadr').innerHTML=
+ '<div class="kadr-page"><section class="kadr-hero"><div class="kadr-eyebrow"><span class="kadr-eyebrow-dot"></span> Калькулятор для печатного проекта</div><div class="kadr-hero-layout"><div><h2>КАДР<span>.</span><br><em>Цена под контролем.</em></h2><p>'+escapeHtml(p.lead)+'</p></div><div class="kadr-hero-art" aria-hidden="true"><div class="kadr-art-sheet sheet-back"><span></span><span></span></div><div class="kadr-art-sheet sheet-front"><div class="kadr-art-photo"><span class="kadr-art-sun"></span><span class="kadr-art-mountain"></span></div><span class="kadr-art-line"></span><span class="kadr-art-line short"></span></div><div class="kadr-art-sticker">КАДР</div></div></div></section>'+
+ '<section class="kadr-section"><div class="kadr-heading"><h3>От изделия<br>к <em>готовой цене.</em></h3><p>Печать зависит от формата, материала, количества и обработки. Калькулятор собирает параметры заказа в одном месте.</p></div><div class="kadr-flow" aria-label="Порядок расчёта: каталог, расчёт, цена">'+flow+'</div><div class="kadr-cost-demo" aria-label="Демонстрация расчёта заказа"><div class="kadr-cost-header"><span>'+svg('calculator')+'</span><div><strong>Пример расчёта</strong><small>Фото 10×15 · 20 штук</small></div><span class="kadr-cost-indicator" aria-hidden="true"></span></div><div class="kadr-cost-meter"><span class="kadr-cost-fill"></span></div><div class="kadr-cost-results"><div><small>Количество</small><strong>20 шт.</strong></div><div><small>Цена за штуку</small><strong>0,50 ₾</strong></div><div class="kadr-cost-total"><small>Стоимость заказа</small><strong>10,00 ₾</strong></div></div><p>Пример по базовому прайсу без дополнительных услуг.</p></div></section>'+
+ '<section class="kadr-section"><div class="kadr-heading"><h3>Что рассчитывает <em>КАДР.</em></h3><p>Параметры, которые влияют на стоимость заказа.</p></div><div class="kadr-feature-grid"><article><span>'+svg('layers')+'</span><h4>Позиции прайса</h4><p>Фото, полароиды, стикеры, визитки и другие изделия.</p></article><article><span>'+svg('photo')+'</span><h4>Материалы</h4><p>Бумага, расход чернил и другие прямые затраты.</p></article><article><span>'+svg('calculator')+'</span><h4>Тираж и скидки</h4><p>Пересчёт общей цены при изменении количества и скидки.</p></article><article><span>'+svg('scissors')+'</span><h4>Дополнительная работа</h4><p>Дизайн, обработка и другие услуги в расчёте заказа.</p></article></div></section>'+
+ '<section class="kadr-section"><div class="kadr-heading"><h3>Три экрана <em>системы.</em></h3><p>Каталог услуг, калькулятор заказа и материалы.</p></div><div class="kadr-screens">'+screens+'</div></section>'+
+ '<section class="kadr-section"><div class="kadr-heading"><h3>Как устроен <em>расчёт.</em></h3><p>Параметры заказа связаны между собой. Изменение материала, тиража или скидки влияет на итоговую стоимость.</p></div><div class="kadr-logic"><div><span>'+svg('layers')+'</span><strong>Услуга и формат</strong><p>Выбираются из каталога.</p></div><div><span>'+svg('photo')+'</span><strong>Расход материалов</strong><p>Учитывается в себестоимости.</p></div><div><span>'+svg('calculator')+'</span><strong>Итог заказа</strong><p>Цена и прямые затраты пересчитываются.</p></div></div></section>'+
+ '<section class="kadr-section kadr-story"><div class="kadr-story-mark" aria-hidden="true">'+svg('print')+'</div><div><p class="kadr-story-eyebrow">Печать в Батуми</p><h3>КАДР — наш <em>семейный проект.</em></h3><p>Мы с женой развиваем в Батуми проект по печати фотографий, стикеров и полиграфии для малого бизнеса. Калькулятор помогает рассчитывать стоимость заказов и работать с прайсом.</p><a class="kadr-print-cta" href="https://wa.me/995568997063" target="_blank" rel="noopener noreferrer">Обратиться за печатью <span aria-hidden="true">→</span></a></div></section>'+
+ '<div class="kadr-finish"><span aria-hidden="true">'+svg('print')+'</span><h3>Точный расчёт.<br><em>Понятная цена.</em></h3></div></div>';
+}
+
 function renderDoit(){
 const screen=(heading,rows,extra='')=>'<div class="di-screen '+extra+'"><div class="di-island"></div><div class="di-screen-top"><b>DO IT</b><span>✦</span></div><h4>'+heading+'</h4>'+rows.map((row,i)=>'<div class="di-screen-item '+(i===1?'chosen':'')+'"><i></i><span>'+row+'</span></div>').join('')+'<div class="di-screen-nav">⌂　　 ▦　　 ✧</div></div>';
 const heroPhone=(type)=>{
@@ -235,7 +272,7 @@ document.getElementById('panel-doit').innerHTML=parts.join('');
 
 }
 
-ids.forEach(id=>id==='doit'?renderDoit():id==='ops'?renderOps():id==='mono'?renderMono():render(data[id],id));
+ids.forEach(id=>id==='doit'?renderDoit():id==='ops'?renderOps():id==='mono'?renderMono():id==='kadr'?renderKadr():render(data[id],id));
 
 /* Contribution explorer: lightweight, fully client-side and keyboard accessible. */
 const contribution=document.querySelector('#panel-doit .di-contribution');
