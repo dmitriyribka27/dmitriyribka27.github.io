@@ -605,3 +605,54 @@ button.media-box{color:inherit;cursor:zoom-in;text-align:left;font:inherit}
  .di-three-phones.di-real-screens{gap:5px!important;padding:10px 0 8px!important}
  .di-three-phones.di-real-screens img{border-radius:7px}
 }
+
+
+/* Continuous asymmetrical infinity drawn in SVG; no raster image required. */
+.di-ending .di-infinity.di-infinity-flow,
+.di-ending .di-infinity.di-infinity-flow.di-has-asset{
+ width:min(100%,560px)!important;
+ height:auto!important;
+ aspect-ratio:600 / 260;
+ margin:clamp(18px,4vw,35px) auto 0!important;
+ filter:none!important;
+ background:none!important;
+ mix-blend-mode:normal!important;
+ overflow:visible;
+}
+.di-infinity-flow svg{
+ display:block;
+ width:100%;
+ height:100%;
+ overflow:visible;
+ transform-origin:center;
+ animation:di-infinity-float 7s ease-in-out infinite;
+}
+.di-infinity-flow .di-infinity-line,
+.di-infinity-flow .di-infinity-glow{
+ fill:none;
+ stroke-linecap:round;
+ stroke-linejoin:round;
+ vector-effect:non-scaling-stroke;
+}
+.di-infinity-flow .di-infinity-line{
+ stroke:#e5ff36;
+ stroke-width:3.2px;
+ filter:drop-shadow(0 0 4px rgba(229,255,54,.75));
+}
+.di-infinity-flow .di-infinity-glow{
+ stroke:#e5ff36;
+ stroke-width:10px;
+ opacity:.32;
+ filter:blur(12px);
+}
+@keyframes di-infinity-float{
+ 0%,100%{transform:translateY(0) rotate(-1.4deg) scaleX(1)}
+ 33%{transform:translateY(-7px) rotate(.65deg) scaleX(1.018)}
+ 66%{transform:translateY(4px) rotate(-.4deg) scaleX(.987)}
+}
+@media(max-width:540px){
+ .di-ending .di-infinity.di-infinity-flow{width:100%!important;height:auto!important}
+}
+@media(prefers-reduced-motion:reduce){
+ .di-infinity-flow svg{animation:none!important}
+}
