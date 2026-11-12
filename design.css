@@ -51,3 +51,8 @@
  .design-contact{padding-top:18px}
 }
 @media(prefers-reduced-motion:reduce){.design-track{scroll-behavior:auto}.design-progress span,.design-track-controls button{transition:none}}
+
+.design-case--cognitio{flex-basis:min(560px,calc(100vw - 12%))}
+.design-visual--four{grid-template-columns:1fr 1fr;grid-template-rows:1fr 1fr;aspect-ratio:1.36}
+.design-visual--four .design-image-slot{grid-row:auto!important}
+@media(max-width:767px){.design-case--cognitio{flex-basis:auto}.design-visual--four{aspect-ratio:1.25}}
