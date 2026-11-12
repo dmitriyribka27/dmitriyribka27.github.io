@@ -63,8 +63,8 @@ ops:{
   ],
   media:[
     {kind:"image",src:"assets/digital/ops-home.webp",title:"Главный экран"},
-    {kind:"image",src:"assets/digital/ops-production.webp",title:"Производство"},
-    {kind:"image",src:"assets/digital/ops-finance.webp",title:"Финансы"}
+    {kind:"image",src:"assets/digital/ops-finance.webp",title:"Финансы"},
+    {kind:"image",src:"assets/digital/ops-production.webp",title:"Производство"}
   ],
   tech:["PWA","JavaScript","Supabase","GitHub"],
   architecture:["Складской журнал фиксирует движения и обеспечивает прослеживаемость остатков.","Производственные операции учитывают вес сырья, выход продукции и технологические потери.","Расчёт себестоимости использует данные материалов и упаковки."],
