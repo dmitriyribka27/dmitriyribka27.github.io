@@ -1286,3 +1286,13 @@ button.media-box{color:inherit;cursor:zoom-in;text-align:left;font:inherit}
  .ops-page *, .ops-page *::before,.ops-page *::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}
  .ops-mass-bar span{transform:none}
 }
+
+/* SL OPS: static three-screen gallery, sized to the mobile viewport */
+#panel-ops .ops-slides{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(5px,1.6vw,20px);overflow:visible;scroll-snap-type:none;align-items:start}
+#panel-ops .ops-slide{min-width:0;width:100%;flex:none;scroll-snap-align:none}
+#panel-ops .ops-shot-frame{width:100%;max-width:none;border-radius:clamp(7px,1.7vw,19px);aspect-ratio:9/16;box-shadow:0 12px 36px #0005}
+#panel-ops .ops-shot-frame>img{object-fit:contain}
+#panel-ops .ops-shot-caption{display:block;text-align:center;margin-top:12px}
+#panel-ops .ops-shot-caption strong{display:block;font-size:clamp(11px,1.6vw,18px)}
+#panel-ops .ops-shot-caption span{display:block;font-size:clamp(10px,1.2vw,13px);margin-top:5px}
+@media(max-width:620px){#panel-ops .ops-shot-caption span{display:none}#panel-ops .ops-shot-caption{margin-top:9px}#panel-ops .ops-shot-frame{border-width:1px}}
