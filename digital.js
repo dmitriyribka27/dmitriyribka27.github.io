@@ -58,8 +58,8 @@ function renderOps(){
  const p=data.ops;
  const screens=[
   {name:'Главная',file:'assets/digital/ops-home.webp',hint:'Обзор смены, заказов и показателей'},
-  {name:'Производство',file:'assets/digital/ops-production.webp',hint:'Выпуск продукции и расход сырья'},
-  {name:'Финансы',file:'assets/digital/ops-finance.webp',hint:'Маржа, затраты и движение средств'}
+  {name:'Финансы',file:'assets/digital/ops-finance.webp',hint:'Маржа, затраты и движение средств'},
+  {name:'Производство',file:'assets/digital/ops-production.webp',hint:'Выпуск продукции и расход сырья'}
  ];
  const icon=(type)=>({
   stock:'<path d="m12 2 9 5-9 5-9-5 9-5Zm-9 5v10l9 5 9-5V7M12 12v10"/>',
