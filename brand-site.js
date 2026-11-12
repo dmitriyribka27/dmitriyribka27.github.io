@@ -86,3 +86,17 @@ document.addEventListener('keydown',event=>{if(event.key==='Escape')close()});
   document.body.append(notice);
   window.requestAnimationFrame(()=>window.requestAnimationFrame(()=>notice.classList.add('privacy-notice-visible')));
 })();
+
+
+// Shared language picker. EN/KA remain disabled until translated content is ready.
+(()=>{
+  const root=document.querySelector('.language-switcher');
+  if(!root)return;
+  const trigger=root.querySelector('.language-trigger');
+  const menu=root.querySelector('.language-menu');
+  const setOpen=open=>{menu.hidden=!open;trigger.setAttribute('aria-expanded',String(open))};
+  trigger.addEventListener('click',()=>setOpen(menu.hidden));
+  root.querySelector('[data-lang="ru"]')?.addEventListener('click',()=>setOpen(false));
+  document.addEventListener('pointerdown',event=>{if(!root.contains(event.target))setOpen(false)});
+  document.addEventListener('keydown',event=>{if(event.key==='Escape'&&!menu.hidden){setOpen(false);trigger.focus()}});
+})();
