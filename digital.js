@@ -242,7 +242,7 @@ return '<div class="di-showcase-phone di-showcase-'+kind+'" role="img" aria-labe
 };
 const parts=[
 '<div class="di-page">',
-'<section class="di-hero"><span class="di-star di-hero-star" aria-hidden="true"></span><div class="di-hero-copy"><h2>DO <span>IT.</span></h2><h3>Твоё <em>время.</em><br>Твои правила.</h3><p>'+escapeHtml(data.doit.lead)+'</p></div>',
+'<section class="di-hero"><div class="di-hero-copy"><h2>DO <span>IT.</span></h2><h3>Твоё <em>время.</em><br>Твои правила.</h3><p>'+escapeHtml(data.doit.lead)+'</p></div>',
 '<div class="di-hero-art">',
 heroPhone('today'),
 heroPhone('calendar'),
