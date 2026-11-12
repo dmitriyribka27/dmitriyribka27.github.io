@@ -55,12 +55,34 @@ function render(project,id){
 
 function renderDoit(){
 const screen=(heading,rows,extra='')=>'<div class="di-screen '+extra+'"><div class="di-island"></div><div class="di-screen-top"><b>DO IT</b><span>✦</span></div><h4>'+heading+'</h4>'+rows.map((row,i)=>'<div class="di-screen-item '+(i===1?'chosen':'')+'"><i></i><span>'+row+'</span></div>').join('')+'<div class="di-screen-nav">⌂　　 ▦　　 ✧</div></div>';
+const heroPhone=(type)=>{
+const today=type==='today';
+const items=today?[
+ ['Разобрать запросы','10:00 · 30 мин',''],
+ ['Подготовить презентацию','11:30 · 1 ч','done'],
+ ['Созвон с командой','15:00 · 45 мин',''],
+ ['Составить план на неделю','17:00 · 30 мин',''],
+]:[
+ ['Планирование дня','10:00–10:30',''],
+ ['Работа над задачами','12:00–13:00','active'],
+ ['Встреча с командой','15:00–15:45','']
+];
+return '<div class="di-hero-device '+(today?'di-hero-device-today':'di-hero-device-calendar')+'">'+
+'<div class="di-device-rim"><div class="di-device-screen">'+
+'<div class="di-device-status"><span>9:41</span><span class="di-device-island"></span><span class="di-signal">▂▄▆ <span class="di-wifi">◕</span> ▰</span></div>'+
+'<div class="di-device-brand"><b>DO IT</b><span class="di-device-symbol">'+(today?'◌':'✦')+'</span></div>'+
+'<h4>'+(today?'Сегодня':'Календарь')+'</h4>'+
+(today?'<div class="di-device-sub">Пятница, 13 ноября <span>3 из 5 задач</span></div><div class="di-progress"><span></span></div>':
+'<div class="di-weekdays"><span>Пн<small>9</small></span><span>Вт<small>10</small></span><span>Ср<small>11</small></span><span class="current">Чт<small>12</small></span><span>Пт<small>13</small></span></div>')+
+'<div class="di-device-list">'+items.map(([label,meta,mode])=>'<div class="di-device-task '+mode+'"><span class="di-device-check">'+(mode==='done'?'✓':'')+'</span><div><strong>'+label+'</strong><small>'+meta+'</small></div></div>').join('')+'</div>'+
+'<div class="di-device-bottom"><span>⌂</span><span>▦</span><span>✧</span><span>♙</span></div><div class="di-device-home"></div></div></div></div>'
+};
 const parts=[
 '<div class="di-page">',
 '<section class="di-hero"><span class="di-star di-hero-star" aria-hidden="true"></span><div class="di-hero-copy"><h2>DO <span>IT.</span></h2><h3>Твоё <em>время.</em><br>Твои правила.</h3><p>Планировщик для задач, встреч и договорённостей. Собирает их в понятное расписание.</p></div>',
 '<div class="di-hero-art">',
-screen('Сегодня',['Разобрать запросы','Подготовить план','Созвон с командой'],'di-phone-back'),
-screen('Календарь',['10:00 Планирование','12:00 Задачи','15:00 Встреча'],'di-phone-front'),
+heroPhone('today'),
+heroPhone('calendar'),
 '<div class="di-wave" aria-hidden="true"></div></div></section>',
 '<section class="di-section"><div class="di-head"><h3>Задач много.<br>Порядка <em>мало.</em></h3><p>Заметки, календарь, переписки и идеи оказываются в разных местах.</p></div><div class="di-floating-tasks"><svg class="di-task-connector" viewBox="0 0 700 340" preserveAspectRatio="none" aria-hidden="true"><defs><linearGradient id="di-connect-grad" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#a6bd26"/><stop offset=".5" stop-color="#e5ff36"/><stop offset="1" stop-color="#a8b7a4"/></linearGradient></defs><path d="M155 56 C365 20 400 110 513 135 S510 210 340 238 S240 284 530 296" fill="none" stroke="url(#di-connect-grad)" stroke-width="3" stroke-linecap="round"/><path class="di-task-pulse" d="M155 56 C365 20 400 110 513 135 S510 210 340 238 S240 284 530 296" fill="none" stroke="#f7ffc0" stroke-width="4" stroke-linecap="round"/></svg><div class="di-float-card a">Позвонить клиенту</div><div class="di-float-card b">Проект до пятницы</div><div class="di-float-card c">Встреча в 14:30</div><div class="di-float-card d">Не забыть оплатить</div></div><p class="di-statement">Планирование становится отдельной работой.</p></section>',
 '<section class="di-section"><div class="di-head"><h3>Одна мысль.<br><em>Три задачи.</em></h3><p>Разбор голосового запроса на действия с датами и сроками.</p></div><div class="di-voice"><span class="di-microphone">♩</span><span class="di-equalizer" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></span></div><blockquote class="di-quote">«Завтра в 12 встреча с Русланом, до пятницы закончить презентацию, вечером позвонить Белле»</blockquote><div class="di-flow-arrow">↓</div><div class="di-task-list"><div>✓ <span>Встреча с Русланом — завтра в 12:00</span></div><div>✓ <span>Закончить презентацию — до пятницы</span></div><div>✓ <span>Позвонить Белле — вечером</span></div></div><p class="di-statement">Из одной фразы — готовый список действий.</p></section>',
@@ -85,7 +107,6 @@ document.getElementById('panel-doit').innerHTML=parts.join('');
 // Optional pixel-faithful assets exported from the approved presentation.
 // The CSS fallback remains functional until the corresponding files are available.
 [
- ['.di-hero-art','assets/digital/doit-phones.webp'],
  ['.di-calendar-stage','assets/digital/doit-calendar.webp'],
  ['.di-three-phones','assets/digital/doit-phones.webp'],
  ['.di-infinity','assets/digital/doit-infinity.webp']
