@@ -397,3 +397,66 @@ button.media-box{color:inherit;cursor:zoom-in;text-align:left;font:inherit}
  .di-status-icons{gap:3px;transform:scale(.78);transform-origin:right center}
  .di-device-island{top:-5px}
 }
+
+
+/* DO IT calendar: native detailed device, shared hero-phone design */
+.di-calendar-stage{min-height:630px;padding:26px 0 40px;box-sizing:border-box;overflow:hidden;background:radial-gradient(ellipse at 50% 60%,rgba(229,255,54,.11),transparent 62%)}
+.di-calendar-device{width:294px;height:570px;position:relative;z-index:2;filter:drop-shadow(0 22px 40px rgba(0,0,0,.65));color:#f6f7f9;font-family:Manrope,sans-serif}
+.di-calendar-device .di-device-rim{border-radius:43px;padding:6px}
+.di-calendar-device .di-device-screen{border-radius:39px;padding:19px 14px 24px}
+.di-calendar-device .di-device-status{margin-bottom:18px}
+.di-calendar-device .di-device-island{top:-8px;width:82px;height:22px}
+.di-calendar-header{display:flex;align-items:center;gap:10px;margin-top:16px;color:#fff}
+.di-calendar-header>span:first-child{font-size:34px;font-weight:300;line-height:24px;color:#ccd2d8}
+.di-calendar-header strong{font-size:25px;font-weight:800;letter-spacing:-.05em}
+.di-calendar-header-action{margin-left:auto;font-size:24px;color:#d7dde4}
+.di-calendar-week{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:3px;margin-top:22px}
+.di-calendar-week>span{min-width:0;display:flex;flex-direction:column;align-items:center;gap:7px;color:#9da8b4;font-size:10px;padding:7px 0 9px;border-radius:10px}
+.di-calendar-week b{font-size:15px;font-weight:750;color:#dce0e5}
+.di-calendar-week .selected{color:#12161b;background:#e5ff36;box-shadow:0 0 19px rgba(229,255,54,.3)}
+.di-calendar-week .selected b{color:#12161b}
+.di-calendar-summary{display:flex;justify-content:space-between;align-items:center;margin:20px 0 11px;font-size:10px;color:#aeb7c0;gap:4px}
+.di-calendar-summary span:last-child{color:#e5ff36;font-weight:700}
+.di-calendar-timeline{display:grid;gap:11px;border-top:1px solid #343c44;padding-top:15px}
+.di-calendar-timeline-row{display:grid;grid-template-columns:37px minmax(0,1fr);gap:9px;align-items:start}
+.di-calendar-timeline-row time{font-size:10px;color:#a5afba;line-height:1.3;padding-top:11px}
+.di-calendar-event{border:1px solid #424e59;border-left:3px solid #a6b2bc;border-radius:9px;background:linear-gradient(120deg,#252d35,#1a2129);padding:10px 9px;min-width:0}
+.di-calendar-event strong{display:block;color:#eef0f2;font-size:11px;line-height:1.25;font-weight:750}
+.di-calendar-event small{display:block;margin-top:4px;color:#a8b3bd;font-size:9px;line-height:1.2}
+.di-calendar-event.focus{border-color:#e5ff36;border-left-width:3px;background:linear-gradient(110deg,#e5ff36,#d1ec21);box-shadow:0 0 18px rgba(229,255,54,.22)}
+.di-calendar-event.focus strong,.di-calendar-event.focus small{color:#10150a}
+.di-calendar-event.free{border-color:rgba(229,255,54,.65);border-left-color:#e5ff36;background:rgba(229,255,54,.07)}
+.di-calendar-event.free strong{color:#e5ff36}
+.di-calendar-device .di-device-bottom{bottom:19px}
+.di-calendar-device .di-device-bottom .selected{color:#e5ff36}
+.di-calendar-device .di-device-home{bottom:6px}
+.di-calendar-stage .di-calendar-lines{z-index:0;pointer-events:none;top:55%;width:125%}
+@media(max-width:540px){
+ .di-calendar-stage{min-height:555px;padding:14px 0 28px}
+ .di-calendar-device{width:264px;height:520px}
+ .di-calendar-device .di-device-rim{border-radius:39px;padding:5px}
+ .di-calendar-device .di-device-screen{border-radius:34px;padding:17px 12px 23px}
+ .di-calendar-device .di-device-status{margin-bottom:15px}
+ .di-calendar-device .di-device-island{top:-6px;width:72px;height:20px}
+ .di-calendar-header{margin-top:15px}
+ .di-calendar-header strong{font-size:23px}
+ .di-calendar-header-action{font-size:21px}
+ .di-calendar-week{margin-top:17px}
+ .di-calendar-week>span{font-size:9px;gap:6px}
+ .di-calendar-week b{font-size:13px}
+ .di-calendar-summary{margin:15px 0 10px;font-size:9px}
+ .di-calendar-timeline{gap:8px;padding-top:12px}
+ .di-calendar-timeline-row{grid-template-columns:32px minmax(0,1fr);gap:7px}
+ .di-calendar-timeline-row time{font-size:9px;padding-top:9px}
+ .di-calendar-event{padding:8px 8px}
+ .di-calendar-event strong{font-size:10px}
+ .di-calendar-event small{font-size:8px}
+ .di-calendar-device .di-device-bottom{bottom:18px}
+}
+@media(max-width:360px){
+ .di-calendar-stage{min-height:516px}
+ .di-calendar-device{width:240px;height:484px}
+ .di-calendar-week{margin-top:12px}
+ .di-calendar-summary{margin:12px 0 8px}
+ .di-calendar-timeline{gap:6px}
+}
