@@ -1296,3 +1296,81 @@ button.media-box{color:inherit;cursor:zoom-in;text-align:left;font:inherit}
 #panel-ops .ops-shot-caption strong{display:block;font-size:clamp(11px,1.6vw,18px)}
 #panel-ops .ops-shot-caption span{display:block;font-size:clamp(10px,1.2vw,13px);margin-top:5px}
 @media(max-width:620px){#panel-ops .ops-shot-caption span{display:none}#panel-ops .ops-shot-caption{margin-top:9px}#panel-ops .ops-shot-frame{border-width:1px}}
+
+/* MONO FINANCE — independent presentation */
+.mono-page{max-width:1110px;margin:0 auto;padding:0 20px 60px;color:#f3f5f5}
+.mono-page em{color:#e5ff36;font-style:normal}
+.mono-page svg{width:28px;height:28px}
+.mono-intro{padding:58px 0 70px;border-bottom:1px solid #353b42}
+.mono-kicker{display:flex;align-items:center;gap:13px;color:#e5ff36;font-size:13px;letter-spacing:.04em;font-weight:700}
+.mono-breath{width:7px;height:7px;background:#e5ff36;border-radius:50%;box-shadow:0 0 15px #e5ff36;animation:monoPulse 2.7s ease-in-out infinite}
+.mono-hero{display:grid;grid-template-columns:minmax(0,1.35fr) minmax(220px,.65fr);align-items:center;gap:20px;min-height:380px}
+.mono-hero h2{font:800 clamp(54px,9vw,108px)/1.02 Manrope,sans-serif;letter-spacing:-.07em;margin:35px 0 25px}
+.mono-hero h2>span{color:#e5ff36}.mono-hero h2 em{display:block;font-size:clamp(27px,4.8vw,57px);letter-spacing:-.055em;margin-top:14px}
+.mono-hero-copy>p{font-size:clamp(16px,1.9vw,20px);color:#b9c0c9;line-height:1.68;max-width:650px}
+.mono-pills{display:flex;gap:9px;flex-wrap:wrap;margin-top:30px}.mono-pills span,.mono-stack span{padding:9px 13px;background:#181d24;border:1px solid #414850;border-radius:10px;color:#d6dce2;font-size:13px}
+.mono-orbit{width:min(100%,290px);aspect-ratio:1;position:relative;justify-self:center;display:grid;place-items:center;filter:drop-shadow(0 0 16px #e5ff3615)}
+.mono-orbit-ring{position:absolute;border:1px solid #e5ff366e;border-radius:48%;inset:18%;transform:rotate(-28deg) scaleX(1.4);animation:monoOrbit 15s linear infinite}
+.mono-orbit-two{border-color:#ffffff66;inset:24%;transform:rotate(48deg) scaleX(1.65);animation-duration:19s;animation-direction:reverse}
+.mono-orbit-center{width:102px;height:102px;border-radius:28px;background:linear-gradient(140deg,#242c2d,#0d1118);border:1px solid #e5ff3688;box-shadow:0 0 30px #e5ff3622;display:grid;place-items:center;color:#e5ff36}
+.mono-orbit-center svg{width:46px;height:46px}.mono-orbit-currency{position:absolute;display:grid;place-items:center;width:43px;height:43px;border-radius:50%;background:#151c20;border:1px solid #626c52;color:#e5ff36;font-size:23px;font-weight:700;box-shadow:0 0 20px #e5ff3624;animation:monoFloat 4.5s ease-in-out infinite}
+.mono-orbit-currency.a{left:8%;top:20%}.mono-orbit-currency.b{right:5%;top:31%;animation-delay:-1.5s}.mono-orbit-currency.c{left:45%;bottom:1%;animation-delay:-3s}
+.mono-section{padding:65px 0;border-bottom:1px solid #353b42;min-width:0}
+.mono-heading{margin-bottom:30px}.mono-heading h3{font:800 clamp(30px,5.6vw,60px)/1.15 Manrope,sans-serif;letter-spacing:-.055em;margin:0 0 22px}.mono-heading p{color:#b8c0c9;line-height:1.7;max-width:760px;margin:0;font-size:clamp(15px,1.7vw,19px)}
+.mono-quick{border:1px solid #4d5744;border-radius:22px;background:linear-gradient(115deg,#1c2323,#131920);padding:22px 24px;overflow:hidden}
+.mono-quick-top{display:flex;align-items:center;gap:14px;font-size:22px}.mono-quick-top>span:first-child{color:#e5ff36;display:flex}.mono-pulse-dot{margin-left:auto;width:9px;height:9px;border-radius:50%;background:#e5ff36;animation:monoPulse 2s infinite}
+.mono-quick-actions{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin-top:22px}
+.mono-quick-actions span{border-radius:12px;border:1px solid #444d54;padding:15px 14px;background:#181e26;color:#f3f5f5;display:flex;justify-content:space-between;align-items:center;gap:8px;font-weight:700}
+.mono-quick-actions i{font-size:23px;font-style:normal;color:#e5ff36}
+.mono-actions{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:13px;margin-top:20px}
+.mono-action{position:relative;background:#171d25;border:1px solid #3d474e;border-radius:17px;padding:24px;overflow:hidden;transition:border-color .25s,transform .25s}
+.mono-action:hover{transform:translateY(-4px);border-color:#e5ff36}
+.mono-action-sign{width:48px;height:48px;display:grid;place-items:center;border:1px solid #e5ff366b;border-radius:15px;color:#e5ff36;font-size:27px;animation:monoFloat 5s ease-in-out infinite}
+.mono-action:nth-child(2) .mono-action-sign{animation-delay:-1.5s}.mono-action:nth-child(3) .mono-action-sign{animation-delay:-3s}
+.mono-action h4{font-size:21px;margin:22px 0 8px}.mono-action p{font-size:14px;line-height:1.65;color:#b2bcc7;margin:0}
+.mono-converter{max-width:650px;margin:0 auto 30px;padding:26px;background:linear-gradient(150deg,#202726,#121821);border:1px solid #57634c;border-radius:23px}
+.mono-converter-title{display:flex;align-items:center;gap:12px;margin-bottom:23px}.mono-converter-title svg{color:#e5ff36}.mono-converter-title strong{font-size:20px}.mono-converter-title>span{margin-left:auto;color:#aeb6be;font-size:12px}
+.mono-converter-row{border:1px solid #444e55;border-radius:14px;display:flex;align-items:center;justify-content:space-between;padding:16px 18px;gap:8px;background:#141a22}
+.mono-converter-row div{display:flex;flex-direction:column;gap:5px}.mono-converter-row small{color:#9faab5;font-size:12px}.mono-converter-row strong{font-size:clamp(24px,4vw,38px);line-height:1.2;font-variant-numeric:tabular-nums}
+.mono-converter-row>b{padding:9px 12px;border-radius:9px;background:#28312c;font-size:14px;color:#e5ff36}
+.mono-converter-row.result{border-color:#d9ed7180}.mono-converter-row.result strong{color:#e5ff36}
+.mono-converter-motion{height:60px;display:flex;align-items:center;gap:14px;color:#e5ff36;justify-content:center}
+.mono-converter-motion span:first-child,.mono-converter-motion span:last-child{height:1px;width:70px;background:linear-gradient(90deg,transparent,#e5ff36)}
+.mono-converter-motion span:last-child{transform:rotate(180deg)}.mono-converter-motion span:nth-child(2){font-size:29px;animation:monoFloat 2.6s ease-in-out infinite}
+.mono-converter>p{margin:17px 0 0;color:#9faab5;font-size:12px;line-height:1.55}
+.mono-accounts,.mono-tech{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:15px}
+.mono-accounts>div,.mono-tech>div{border-top:2px solid #e5ff36;background:#181e25;padding:21px;display:grid;grid-template-columns:40px 1fr;gap:8px 11px}
+.mono-accounts span,.mono-tech span{grid-row:span 2;color:#e5ff36;display:flex;animation:monoFloat 4s ease-in-out infinite}
+.mono-accounts strong,.mono-tech strong{font-size:17px}.mono-accounts p,.mono-tech p{margin:0;color:#acb7c1;font-size:14px;line-height:1.55}
+.mono-screens{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(6px,1.8vw,20px);align-items:start}
+.mono-shot{margin:0;min-width:0}.mono-shot-frame{width:100%;aspect-ratio:9/16;position:relative;overflow:hidden;border-radius:clamp(8px,1.7vw,20px);border:1px solid #444f53;background:linear-gradient(150deg,#202a2a,#11161d);box-shadow:0 12px 36px #0005}
+.mono-shot-frame img{width:100%;height:100%;object-fit:contain;position:absolute;inset:0;z-index:2}
+.mono-shot-frame img[hidden]{display:none}.mono-shot-frame.mono-has-image .mono-shot-placeholder{display:none}
+.mono-shot-placeholder{height:100%;padding:12px;display:flex;flex-direction:column;justify-content:center;align-items:center;gap:14px;text-align:center;color:#bbc3cb}
+.mono-shot-placeholder>span{color:#e5ff36;filter:drop-shadow(0 0 16px #e5ff3655)}.mono-shot-placeholder svg{width:clamp(25px,5vw,50px);height:clamp(25px,5vw,50px)}
+.mono-shot-placeholder strong{font-size:clamp(10px,2.2vw,20px);color:#f3f4f6}.mono-shot-placeholder small{font-size:clamp(8px,1.2vw,12px);color:#a9b2bc}
+.mono-shot figcaption{text-align:center;font-size:clamp(11px,1.6vw,18px);font-weight:700;padding:12px 3px 0}
+.mono-tech{grid-template-columns:repeat(3,minmax(0,1fr))}
+.mono-stack{margin-top:25px;display:flex;gap:10px;flex-wrap:wrap}
+.mono-finish{text-align:center;padding:85px 0 15px}.mono-finish-mark{width:92px;height:92px;border-radius:28px;border:1px solid #e5ff3699;display:grid;place-items:center;margin:0 auto 30px;background:#1a2422;box-shadow:0 0 42px #e5ff3625;animation:monoFloat 5s ease-in-out infinite}
+.mono-finish-mark svg{width:43px;height:43px;color:#e5ff36}
+.mono-finish h3{font:800 clamp(32px,6vw,67px)/1.15 Manrope;letter-spacing:-.055em;margin:0 0 22px}
+.mono-finish p{color:#b3bdc5;font-size:16px;margin:0}
+@keyframes monoFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-9px)}}
+@keyframes monoPulse{0%,100%{opacity:.35;box-shadow:0 0 5px #e5ff3630}50%{opacity:1;box-shadow:0 0 18px #e5ff36aa}}
+@keyframes monoOrbit{0%{rotate:0deg}100%{rotate:360deg}}
+@media(max-width:730px){.mono-hero{grid-template-columns:1fr}.mono-orbit{width:190px;margin:4px auto 0}.mono-hero h2{margin-top:27px}.mono-intro{padding-top:42px}.mono-accounts,.mono-tech{grid-template-columns:1fr 1fr}}
+@media(max-width:540px){
+.mono-page{padding:0 17px 42px}.mono-intro{padding:35px 0 45px}.mono-hero{gap:3px}.mono-hero h2{font-size:clamp(51px,14vw,73px)}.mono-hero h2 em{font-size:clamp(27px,7vw,39px)}
+.mono-hero-copy>p{font-size:15px;line-height:1.7}.mono-pills{margin-top:20px;gap:7px}.mono-pills span{font-size:11px;padding:7px 10px}
+.mono-orbit{width:165px;aspect-ratio:1;margin:25px auto 5px}.mono-orbit-center{width:70px;height:70px;border-radius:19px}.mono-orbit-center svg{width:35px;height:35px}.mono-orbit-currency{width:29px;height:29px;font-size:16px}
+.mono-section{padding:49px 0}.mono-heading h3{font-size:clamp(29px,8vw,43px)}.mono-heading p{font-size:14px}
+.mono-quick{padding:17px 13px;border-radius:15px}.mono-quick-top{font-size:17px}.mono-quick-actions{gap:5px}.mono-quick-actions span{font-size:11px;padding:11px 8px}.mono-quick-actions i{font-size:18px}
+.mono-actions{gap:8px}.mono-action{padding:13px 10px;border-radius:12px}.mono-action-sign{width:35px;height:35px;font-size:21px;border-radius:10px}.mono-action h4{font-size:14px;margin:13px 0 7px}.mono-action p{font-size:11px;line-height:1.55}
+.mono-converter{padding:17px 14px}.mono-converter-title strong{font-size:17px}.mono-converter-title>span{font-size:10px}
+.mono-accounts,.mono-tech{grid-template-columns:1fr}.mono-accounts>div,.mono-tech>div{padding:18px}
+.mono-shot-placeholder{gap:10px;padding:5px}.mono-shot-placeholder small{display:none}
+.mono-shot figcaption{padding-top:9px}
+.mono-finish{padding-top:60px}
+}
+@media(prefers-reduced-motion:reduce){.mono-page *, .mono-page *::before,.mono-page *::after{animation:none!important;transition:none!important}}
