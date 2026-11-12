@@ -18,7 +18,7 @@
 .project-stage{width:100%;display:flex;overflow-x:auto;overflow-y:clip;scroll-snap-type:x mandatory;scrollbar-width:none;overscroll-behavior-x:contain;-webkit-overflow-scrolling:touch}
 .project-stage::-webkit-scrollbar{display:none}
 .project-panel{flex:0 0 100%;min-width:0;scroll-snap-align:start;scroll-snap-stop:always;overflow:hidden;align-self:flex-start}
-.project-panel[aria-hidden="true"]{visibility:hidden}
+/* Inactive panels remain paintable while swiping; aria-hidden and inert manage accessibility. */
 .presentation{max-width:var(--digital-width);margin:0 auto;padding:52px 18px 60px}
 .presentation h2,.presentation h3{font-family:Manrope,sans-serif;letter-spacing:-.045em}
 .presentation h2{font-size:clamp(31px,4.3vw,52px);line-height:1.12;margin:0 0 17px}
