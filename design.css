@@ -1,0 +1,53 @@
+/* DESIGN — vertical on touch devices, horizontal on desktop */
+.design-page{overflow-x:hidden}
+.design-main{overflow:hidden}
+.design-intro{max-width:1440px;margin:auto;padding:70px 5.6% 12px}
+.design-kicker{font:500 11px 'IBM Plex Mono',monospace;letter-spacing:.14em;color:var(--steel);display:flex;align-items:center;gap:12px}
+.design-dot{width:8px;height:8px;border-radius:50%;background:var(--lime);box-shadow:0 0 16px #e5ff3670}
+.design-intro h1{font:800 clamp(56px,8vw,112px)/1.05 Manrope,sans-serif;letter-spacing:-.07em;margin:24px 0 12px}
+.design-intro h1 span{color:var(--lime)}
+.design-lead{font:400 clamp(15px,1.4vw,19px)/1.6 Onest,sans-serif;color:#c2c6cb;max-width:660px;margin:0}
+.design-hint{font:500 11px 'IBM Plex Mono',monospace;color:#9399a3;letter-spacing:.05em;margin:30px 0 0}
+.hint-mobile{display:none}
+.design-work{position:relative}
+.design-work::before{content:"";position:absolute;inset:0;pointer-events:none;background-image:linear-gradient(#e5ff3610 1px,transparent 1px),linear-gradient(90deg,#e5ff3610 1px,transparent 1px);background-size:110px 110px}
+.design-work-inner{position:relative;max-width:1440px;margin:auto;padding:26px 5.6% 85px}
+.design-track{display:flex;gap:42px;overflow-x:auto;overscroll-behavior-inline:contain;scroll-snap-type:x mandatory;scrollbar-width:none;scroll-behavior:smooth;padding:12px 0 22px;touch-action:pan-x;outline-offset:5px;cursor:grab}
+.design-track:active{cursor:grabbing}
+.design-track::-webkit-scrollbar{display:none}
+.design-case{flex:0 0 min(510px,calc(100vw - 12%));min-width:0;scroll-snap-align:start}
+.design-case h2{font:800 clamp(27px,3vw,41px)/1.16 Manrope,sans-serif;letter-spacing:-.045em;margin:0 0 22px}
+.design-case h2 em{font-style:normal;color:var(--lime)}
+.design-case-body{background:#141821;border:1px solid #262d37;border-radius:12px;overflow:hidden}
+.design-visual{display:grid;grid-template-columns:1fr 1fr;grid-auto-rows:1fr;gap:5px;aspect-ratio:1.56;background:#161b22}
+.design-image-slot{min-width:0;min-height:0;display:grid;place-items:center;background:linear-gradient(140deg,#282f36,#1a2029);border:1px solid #3a414d;color:#8c96a3;font:500 clamp(9px,1vw,11px) 'IBM Plex Mono',monospace;letter-spacing:.1em;text-align:center;padding:12px}
+.design-image-slot:first-child:nth-last-child(3){grid-row:span 2}
+.design-case-caption{margin:0;padding:16px 18px 18px;min-height:100px;color:#e0e3e8;font:400 clamp(14px,1.25vw,16px)/1.5 Onest,sans-serif}
+.design-track-controls{display:flex;align-items:center;gap:19px;padding-top:12px}
+.design-track-controls button{width:40px;height:40px;border:1px solid #414954;border-radius:50%;background:#141821;color:var(--text);font-size:20px;cursor:pointer;transition:border-color .2s,color .2s}
+.design-track-controls button:hover:not(:disabled){border-color:var(--lime);color:var(--lime)}
+.design-track-controls button:disabled{opacity:.28;cursor:default}
+.design-progress{height:3px;background:#434851;flex:1;overflow:hidden;border-radius:4px}
+.design-progress span{display:block;width:16.6667%;height:100%;background:var(--lime);transition:width .2s}
+.design-counter{font:500 12px 'IBM Plex Mono',monospace;white-space:nowrap;color:#acb2bc}
+.design-counter b{color:var(--lime);font-weight:500}
+.design-contact{padding-top:30px}
+@media(max-width:767px){
+ .design-intro{padding:48px 6% 8px}
+ .design-intro h1{font-size:clamp(51px,13vw,75px);margin:18px 0 12px}
+ .design-lead{font-size:15px}
+ .design-hint{margin-top:20px}
+ .hint-desktop{display:none}.hint-mobile{display:inline}
+ .design-work::before{background-size:75px 75px}
+ .design-work-inner{padding:16px 6% 30px}
+ .design-track{display:flex;flex-direction:column;overflow:visible;gap:33px;padding:0;cursor:auto;touch-action:auto;scroll-snap-type:none}
+ .design-case{flex:none;width:100%}
+ .design-case h2{font-size:clamp(27px,7vw,38px);margin:0 0 15px}
+ .design-case-body{border-radius:11px}
+ .design-visual{gap:5px;aspect-ratio:1.52}
+ .design-image-slot{font-size:10px}
+ .design-case-caption{font-size:14px;min-height:0;padding:14px 15px 16px}
+ .design-track-controls{display:none}
+ .design-contact{padding-top:18px}
+}
+@media(prefers-reduced-motion:reduce){.design-track{scroll-behavior:auto}.design-progress span,.design-track-controls button{transition:none}}
