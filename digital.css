@@ -1115,3 +1115,47 @@ button.media-box{color:inherit;cursor:zoom-in;text-align:left;font:inherit}
  .di-workflow-task-check,.di-workflow-role-status,.di-workflow-result-icon{opacity:1;transform:none}
  .di-workflow-role-status{transform:translateY(-50%)}
 }
+
+
+/* DO IT workflow: compact task chip; override legacy .di-team-project span typography. */
+.di-workflow-demo .di-team-project .di-workflow-task{
+  box-sizing:border-box;
+  width:calc(100% - 12px);
+  max-width:205px;
+  min-width:0;
+  min-height:36px;
+  padding:7px 8px;
+  gap:5px;
+  border-radius:10px;
+  line-height:1.25;
+  overflow:hidden;
+}
+.di-workflow-demo .di-team-project .di-workflow-task-title{
+  display:block;
+  min-width:0;
+  color:#eff2f5;
+  font-family:Onest,Manrope,sans-serif;
+  font-size:clamp(11px,1.2vw,13px);
+  font-weight:650;
+  line-height:1.3;
+  letter-spacing:0;
+  overflow-wrap:break-word;
+}
+.di-workflow-demo .di-team-project .di-workflow-task-check{
+  flex:none;
+  font-size:15px;
+  line-height:1;
+}
+@media(max-width:540px){
+  .di-workflow-demo .di-team-project .di-workflow-task{
+    width:calc(100% - 6px);
+    min-height:32px;
+    padding:5px 4px;
+    gap:3px;
+  }
+  .di-workflow-demo .di-team-project .di-workflow-task-title{
+    font-size:10px;
+    line-height:1.2;
+  }
+  .di-workflow-demo .di-team-project .di-workflow-task-check{font-size:12px}
+}
