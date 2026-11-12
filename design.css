@@ -93,3 +93,17 @@
  .design-visual--sochi-ai{gap:8px}
  .design-case--sochi-ai .design-case-caption{padding:15px 5px 5px}
 }
+
+/* Case 04 — Kromka: two business-card sides and a portrait flyer */
+.design-case--kromka .design-case-body{border-radius:20px;padding:12px;background:#141821}
+.design-visual--kromka{display:grid;grid-template-columns:minmax(0,1.4fr) minmax(0,.75fr);align-items:center;gap:12px;aspect-ratio:auto;background:transparent}
+.design-kromka-cards{display:grid;grid-template-rows:repeat(2,auto);gap:12px;min-width:0}
+.design-visual--kromka img{display:block;width:100%;height:auto;object-fit:contain;border-radius:20px}
+.design-kromka-flyer{align-self:center}
+.design-case--kromka .design-case-caption{padding:18px 5px 5px;min-height:0}
+@media(max-width:767px){
+ .design-case--kromka .design-case-body{padding:9px}
+ .design-visual--kromka{gap:8px}
+ .design-kromka-cards{gap:8px}
+ .design-case--kromka .design-case-caption{padding:15px 5px 5px}
+}
