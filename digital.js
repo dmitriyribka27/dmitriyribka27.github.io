@@ -80,7 +80,23 @@ screen('Ассистент',['Собери план дня','Предложен�
 '<section class="di-ending"><h3>Меньше хаоса.<br><em>Больше действия.</em></h3><div class="di-infinity" aria-hidden="true"><i></i><i></i></div><p>DO IT.</p></section>',
 '</div>'
 ];
+
 document.getElementById('panel-doit').innerHTML=parts.join('');
+// Optional pixel-faithful assets exported from the approved presentation.
+// The CSS fallback remains functional until the corresponding files are available.
+[
+ ['.di-hero-star','assets/digital/doit-hero-star.webp'],
+ ['.di-floating-tasks','assets/digital/doit-task-cards.webp'],
+ ['.di-three-phones','assets/digital/doit-phones.webp'],
+ ['.di-infinity','assets/digital/doit-infinity.webp']
+].forEach(([selector,url])=>{
+ const el=document.querySelector('#panel-doit '+selector);
+ if(!el)return;
+ const img=new Image();
+ img.onload=()=>el.classList.add('di-has-asset');
+ img.src=url;
+});
+
 }
 
 ids.forEach(id=>id==='doit'?renderDoit():render(data[id],id));
