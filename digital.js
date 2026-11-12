@@ -138,7 +138,7 @@ heroPhone('calendar'),
 calendarStagePhone(),
 '<div class="di-calendar-lines" aria-hidden="true"></div></div><p class="di-statement">Планируй работу. Учитывай свободное время.</p></section>',
 '<section class="di-section"><div class="di-head"><h3>Одна команда.<br><em>Общий план.</em></h3><p>'+escapeHtml(data.doit.problems[2].text)+'</p></div><div class="di-team"><div class="di-team-project"><span>↗</span><strong>Проект<br>«Запуск»</strong></div><div class="di-team-roles"><div><b>Руководитель</b><span>Назначает</span></div><div><b>Исполнитель</b><span>Выполняет</span></div><div><b>Руководитель</b><span>Принимает</span></div></div></div><div class="di-result">✓　Результат принят</div></section>',
-'<section class="di-section"><div class="di-head"><h3>Моя работа над проектом</h3><p>'+escapeHtml(data.doit.contribution)+'</p></div></section>',
+'<section class="di-section di-contribution"><div class="di-head"><h3>Моя работа над проектом</h3><p>'+escapeHtml(data.doit.contribution)+'</p></div><div class="di-contrib-interactive" aria-label="Направления моей работы"><div class="di-contrib-steps"><button class="di-contrib-step is-active" type="button" data-contrib-index="0" aria-pressed="true"><span class="di-contrib-step-icon"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="3"/><path d="M3 10h18M8 4v6M8 14h4m-4 3h8"/></svg></span><span>Проектирование</span><i aria-hidden="true"></i></button><button class="di-contrib-step" type="button" data-contrib-index="1" aria-pressed="false"><span class="di-contrib-step-icon"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="4"/><path d="M8 8h8M8 12h8M8 16h5"/><circle cx="18" cy="17" r="1" fill="currentColor" stroke="none"/></svg></span><span>Интерфейсы и сценарии</span><i aria-hidden="true"></i></button><button class="di-contrib-step" type="button" data-contrib-index="2" aria-pressed="false"><span class="di-contrib-step-icon"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="8" ry="3"/><path d="M4 5v14c0 4 16 4 16 0V5M4 12c0 4 16 4 16 0"/></svg></span><span>Данные и доступ</span><i aria-hidden="true"></i></button><button class="di-contrib-step" type="button" data-contrib-index="3" aria-pressed="false"><span class="di-contrib-step-icon"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round"><path d="m12 2 2.6 6.7L21 11l-6.4 2.3L12 20l-2.6-6.7L3 11l6.4-2.3L12 2Z"/><path d="M19 17v5m-2.5-2.5h5"/></svg></span><span>AI-команды</span><i aria-hidden="true"></i></button></div><div class="di-contrib-detail" role="status" aria-live="polite"><div class="di-contrib-detail-top"><span class="di-contrib-detail-label">Проектирование</span><span class="di-contrib-detail-counter">1 из 4</span></div><p class="di-contrib-detail-text">Спроектировал структуру веб-приложения и взаимосвязь основных модулей.</p><div class="di-contrib-progress" aria-hidden="true"><span></span></div></div></div></section>',
 '<section class="di-section"><div class="di-head"><h3>Инженерная <em>часть.</em></h3><p>PostgreSQL, серверные проверки доступа и отдельная обработка пользовательских команд.</p></div><div class="di-tech-grid"><div class="di-tech-card"><span class="di-tech-icon"><svg viewBox="0 0 24 24" width="25" height="25" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round" stroke-linecap="round" aria-hidden="true"><rect x="4" y="2.5" width="16" height="19" rx="3"/><path d="M10 18h4"/></svg></span><b>Клиент</b><span>PWA и JavaScript</span></div><div class="di-tech-card"><span class="di-tech-icon"><svg viewBox="0 0 24 24" width="25" height="25" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round" stroke-linecap="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="4"/><path d="M8 8l-3 4 3 4m8-8 3 4-3 4M13.5 7l-3 10"/></svg></span><b>Серверная логика</b><span>Supabase Edge Functions</span></div><div class="di-tech-card"><span class="di-tech-icon"><svg viewBox="0 0 24 24" width="25" height="25" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round" stroke-linecap="round" aria-hidden="true"><ellipse cx="12" cy="5" rx="8" ry="3"/><path d="M4 5v14c0 4 16 4 16 0V5M4 12c0 4 16 4 16 0"/></svg></span><b>База данных</b><span>PostgreSQL</span></div><div class="di-tech-card"><span class="di-tech-icon"><svg viewBox="0 0 24 24" width="25" height="25" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round" stroke-linecap="round" aria-hidden="true"><path d="M8 4L3 12l5 8M16 4l5 8-5 8M10 16l4-8"/><circle cx="12" cy="12" r="1"/></svg></span><b>Разработка</b><span>GitHub и Cloudflare Pages</span></div></div><ul class="tech-list di-architecture-list">'+data.doit.architecture.map(item=>'<li>'+escapeHtml(item)+'</li>').join('')+'</ul><div class="code-card di-code"><div class="code-card-head">supabase/functions/ai-command/index.ts</div><pre tabindex="0" aria-label="Фрагмент кода"><code>',
 highlighted(data.doit.code),
 '</code></pre></div><p class="di-note">Фрагмент реального исходного кода: проверка сообщения перед разбором команды.</p></section>',
@@ -157,6 +157,28 @@ document.getElementById('panel-doit').innerHTML=parts.join('');
 }
 
 ids.forEach(id=>id==='doit'?renderDoit():render(data[id],id));
+
+/* Contribution explorer: lightweight, fully client-side and keyboard accessible. */
+const contribution=document.querySelector('#panel-doit .di-contribution');
+if(contribution){
+ const controls=[...contribution.querySelectorAll('.di-contrib-step')];
+ const label=contribution.querySelector('.di-contrib-detail-label');
+ const detail=contribution.querySelector('.di-contrib-detail-text');
+ const count=contribution.querySelector('.di-contrib-detail-counter');
+ const progress=contribution.querySelector('.di-contrib-progress span');
+ const contributions=["Спроектировал структуру веб-приложения и взаимосвязь основных модулей.","Продумал пользовательские сценарии и интерфейсы для личной и командной работы.","Разработал логику управления задачами, интеграцию с Supabase и проверки доступа.","Проработал обработку AI-команд с подтверждением действий перед изменением данных."];
+ const contributionTitles=["Проектирование","Интерфейсы и сценарии","Данные и доступ","AI-команды"];
+ controls.forEach((control,index)=>{
+  control.addEventListener('click',()=>{
+   controls.forEach((item,i)=>{item.classList.toggle('is-active',i===index);item.setAttribute('aria-pressed',String(i===index));});
+   label.textContent=contributionTitles[index];
+   detail.textContent=contributions[index];
+   count.textContent=(index+1)+' из '+controls.length;
+   progress.style.width=((index+1)/controls.length*100)+'%';
+  });
+ });
+}
+
 let active=0;
 let scrollTimer=0;
 let switching=false;
