@@ -1,0 +1,26 @@
+/* Isolated privacy-page typography. Existing portfolio styles remain unchanged. */
+.privacy-page{overflow-x:hidden;background-color:#0b0d11;background-image:linear-gradient(rgba(229,255,54,.025) 1px,transparent 1px),linear-gradient(90deg,rgba(229,255,54,.025) 1px,transparent 1px);background-size:48px 48px}
+.privacy-document{width:min(100% - 40px,800px);margin:0 auto;padding:68px 0 90px}
+.privacy-document h1{font:800 clamp(30px,5vw,48px)/1.15 Manrope,sans-serif;letter-spacing:-.045em;margin:0 0 16px;overflow-wrap:break-word}
+.privacy-updated{color:#a4a8b1;margin:0 0 54px;font:500 14px/1.6 Onest,Manrope,sans-serif}
+.privacy-document section{margin:0 0 39px}
+.privacy-document section h2{margin:0 0 18px;color:#f2f3f5;font:750 clamp(20px,3vw,24px)/1.35 Manrope,sans-serif;letter-spacing:-.025em}
+.privacy-document h3{margin:24px 0 10px;font:700 18px/1.4 Manrope,sans-serif}
+.privacy-document p,.privacy-document li{font:400 17px/1.72 Onest,Manrope,sans-serif;color:#d6d9e0;overflow-wrap:anywhere}
+.privacy-document p{margin:0 0 15px}
+.privacy-document ul{padding-left:1.5em;margin:8px 0 21px}
+.privacy-document li{padding-left:.15em;margin:0 0 7px}
+.privacy-document a{color:#e5ff36;text-decoration:underline;text-underline-offset:3px;overflow-wrap:anywhere}
+.privacy-document a:hover{color:#f2ffab}
+.privacy-page .footer a:last-child{color:#e5ff36}
+@media(max-width:620px){
+ .privacy-document{width:calc(100% - 36px);padding:42px 0 65px}
+ .privacy-document h1{font-size:32px}
+ .privacy-document h2{font-size:21px}
+ .privacy-document p,.privacy-document li{font-size:16px;line-height:1.7}
+ .privacy-document h3{font-size:18px}
+ .privacy-updated{font-size:13px;margin-bottom:40px}
+ .privacy-document section{margin-bottom:33px}
+ .privacy-page .footer{align-items:flex-start}
+ .privacy-page .footer a:last-child{max-width:55%;text-align:right}
+}
