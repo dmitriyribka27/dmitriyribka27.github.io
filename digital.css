@@ -227,3 +227,18 @@ button.media-box{color:inherit;cursor:zoom-in;text-align:left;font:inherit}
 .di-ending{padding:70px 0 25px}.di-infinity{width:300px;height:155px}.di-infinity i{width:137px;height:93px;left:12px}.di-infinity i:nth-child(2){right:12px}
 }
 @media(prefers-reduced-motion:reduce){.di-page *{animation:none!important;transition:none!important}}
+
+
+/* Display original approved visual crops if present; CSS visuals are the fallback. */
+.di-hero-star.di-has-asset{width:118px;height:118px;clip-path:none;background: url("assets/digital/doit-hero-star.webp") center/cover no-repeat;mix-blend-mode:screen;filter:none;margin-left:-8px}
+.di-floating-tasks.di-has-asset:after{content:"";position:absolute;inset:-3%;background:url("assets/digital/doit-task-cards.webp") center/contain no-repeat;mix-blend-mode:screen;pointer-events:none}
+.di-floating-tasks.di-has-asset .di-float-card{visibility:hidden}
+.di-three-phones.di-has-asset{background:url("assets/digital/doit-phones.webp") center/contain no-repeat;min-height:460px}
+.di-three-phones.di-has-asset .di-screen{visibility:hidden}
+.di-infinity.di-has-asset{width:min(100%,540px);height:285px;background:url("assets/digital/doit-infinity.webp") center/contain no-repeat;mix-blend-mode:screen;filter:none}
+.di-infinity.di-has-asset i{visibility:hidden}
+@media(max-width:540px){
+ .di-hero-star.di-has-asset{width:90px;height:90px}
+ .di-three-phones.di-has-asset{transform:none;height:330px;min-height:330px;width:100%;margin:0}
+ .di-infinity.di-has-asset{height:220px}
+}
