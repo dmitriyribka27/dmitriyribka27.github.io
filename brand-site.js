@@ -102,7 +102,7 @@ document.addEventListener('keydown',event=>{if(event.key==='Escape')close()});
   const menu=root.querySelector('.language-menu');
   const setOpen=open=>{menu.hidden=!open;trigger.setAttribute('aria-expanded',String(open))};
   trigger.addEventListener('click',event=>{event.stopPropagation();setOpen(menu.hidden)});
-  menu.addEventListener('click',event=>{const button=event.target.closest('[data-lang]');if(!button)return;setOpen(false);if(window.PORTFOLIO_I18N?.isHome)window.PORTFOLIO_I18N.choose(button.dataset.lang)});
+  menu.addEventListener('click',event=>{const button=event.target.closest('[data-lang]');if(!button)return;setOpen(false);if(window.PORTFOLIO_I18N?.localizedPage)window.PORTFOLIO_I18N.choose(button.dataset.lang)});
   document.addEventListener('click',event=>{if(!root.contains(event.target))setOpen(false)});
   document.addEventListener('keydown',event=>{if(event.key==='Escape'&&!menu.hidden){setOpen(false);trigger.focus()}});
 })();

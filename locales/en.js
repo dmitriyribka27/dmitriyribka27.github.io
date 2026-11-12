@@ -76,3 +76,55 @@ window.PORTFOLIO_LOCALES.en={
     "pick": "Choose language"
   }
 };
+
+window.PORTFOLIO_LOCALES.en.design={
+  "ВИЗУАЛЬНЫЕ ПРОЕКТЫ": "VISUAL PROJECTS",
+  "Подборка моих работ по графическому дизайну: от фирменного оформления до рекламных и печатных материалов.": "A selection of my graphic design work, from brand identity to promotional and printed materials.",
+  "Листайте вправо или используйте стрелки": "Scroll right or use the arrows",
+  "КАФЕ": "CAFÉ",
+  "КИМБАП.": "KIMBAP.",
+  "ФОТОСЕССИЯ.": "FOOD IMAGERY.",
+  "КОФЕЙНЯ": "COFFEE SHOP",
+  "КРОМКА.": "KROMKA.",
+  "ЦВЕТОЧНАЯ МАСТЕРСКАЯ": "FLOWER STUDIO",
+  "ДИКО.": "DIKO.",
+  "Для нашей с женой книжной лавки CognitioVerum в Краснодаре я разработал визитки, карточки программы лояльности, вывеску и печатные материалы. В оформлении использовал оливковые оттенки и элементы, отсылающие к литературе.": "For CognitioVerum, the bookshop my wife and I ran in Krasnodar, I designed business cards, loyalty cards, signage and printed materials. Olive tones and literary details shaped the visual style.",
+  "Разработал меню и рекламную листовку для кафе корейской кухни «Кимбап». Оформил ассортимент с фотографиями блюд, подготовил макеты к печати.": "I designed a menu and promotional leaflet for Kimbap, a Korean café. I laid out the dishes with photographs and prepared the artwork for print.",
+  "Создал серию изображений блюд с помощью генеративного ИИ для заведений Сочи. Подобрал освещение, ракурсы и композицию для оформления карточек в Яндекс Картах, 2ГИС и сервисах доставки.": "I created a series of AI-generated food images for restaurants in Sochi. I refined the lighting, angles and compositions for listings on Yandex Maps, 2GIS and delivery platforms.",
+  "Разработал двустороннюю визитку и рекламный флаер для кофейни «Кромка». Сохранил общую цветовую палитру и оформление, адаптировав дизайн под разные форматы.": "I designed a double-sided business card and promotional flyer for Kromka coffee shop. Both formats share the same color palette and visual style.",
+  "Разработал двустороннюю рекламную листовку для цветочной мастерской «Дико» в Астрахани. Использовал контрастные цвета и растительные иллюстрации, сохранив единое оформление обеих сторон.": "I designed a double-sided promotional leaflet for Diko, a flower studio in Astrakhan. Contrasting colors and botanical illustrations connect both sides.",
+  "ЕСТЬ ЗАДАЧА ПО ДИЗАЙНУ?": "NEED DESIGN WORK?",
+  "ОБСУДИМ": "LET'S DISCUSS",
+  "ВАШ ПРОЕКТ.": "YOUR PROJECT.",
+  "Расскажите о своей задаче. Уточню детали, предложу решение и сориентирую по стоимости и срокам.": "Tell me what you need. I'll clarify the details, suggest an approach and give you an estimate of the cost and timeline."
+};
+window.PORTFOLIO_LOCALES.en.designAttrs={
+  "Основное меню": "Main navigation",
+  "Кейсы дизайна": "Design projects",
+  "Лента из пяти кейсов": "Five design projects",
+  "Четыре элемента фирменного оформления книжной лавки CognitioVerum": "Four brand identity pieces for CognitioVerum bookshop",
+  "Вытянутая вывеска книжной лавки CognitioVerum": "Long-form CognitioVerum bookshop sign",
+  "Лицевая сторона визитки CognitioVerum": "Front of CognitioVerum business card",
+  "Оборотная сторона визитки с восемью отметками программы лояльности": "Back of loyalty card with eight stamp spaces",
+  "Фотография напечатанной продукции CognitioVerum": "Printed CognitioVerum materials",
+  "Листовка и меню для кафе Кимбап": "Kimbap café leaflet and menu",
+  "Трёхсекционная листовка кафе Кимбап: обложка, контакты и изображения блюд": "Kimbap tri-fold leaflet: cover, contacts and food images",
+  "Внутреннее меню кафе Кимбап с ассортиментом, фотографиями блюд и ценами": "Kimbap menu with dishes, photographs and prices",
+  "Четыре изображения блюд для цифровых меню заведений Сочи": "Four food images for digital menus in Sochi",
+  "Фуд-фотография для цифрового меню — вариант 1": "Food image for a digital menu — 1",
+  "Фуд-фотография для цифрового меню — вариант 2": "Food image for a digital menu — 2",
+  "Фуд-фотография для цифрового меню — вариант 3": "Food image for a digital menu — 3",
+  "Фуд-фотография для цифрового меню — вариант 4": "Food image for a digital menu — 4",
+  "Две стороны визитки и флаер кофейни Кромка": "Kromka business card, front and back, and flyer",
+  "Лицевая сторона визитки кофейни Кромка": "Front of Kromka business card",
+  "Оборотная сторона визитки кофейни Кромка": "Back of Kromka business card",
+  "Вертикальный рекламный флаер кофейни Кромка": "Vertical Kromka promotional flyer",
+  "Две стороны рекламной листовки цветочной мастерской Дико": "Both sides of Diko flower studio leaflet",
+  "Лицевая сторона рекламной листовки Дико — фиолетовый фон, лаймовая цветочная графика и описание мастерской": "Diko leaflet front: purple background, lime botanical graphics and studio description",
+  "Оборотная сторона листовки Дико — услуги, контакты и QR-код на лаймовом фоне": "Diko leaflet back: services, contacts and QR code on a lime background",
+  "Навигация по кейсам": "Project navigation",
+  "Предыдущий кейс": "Previous project",
+  "Прогресс просмотра кейсов": "Project browsing progress",
+  "Следующий кейс": "Next project"
+};
+window.PORTFOLIO_LOCALES.en.designMeta={"title":"DESIGN — Dmitriy Rybka","description":"Dmitriy Rybka's graphic design portfolio: five selected projects."};
