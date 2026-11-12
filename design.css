@@ -70,3 +70,14 @@
  .design-visual--cognitio .design-cognitio-print{width:46%}
  .design-case--cognitio .design-case-body{padding:9px}\n .design-case--cognitio .design-case-caption{padding:15px 5px 5px}
 }
+
+/* Case 02 — Kimbap: original print layouts without cropping text */
+.design-case--kimbap .design-case-body{border-radius:20px;padding:12px;background:#141821}
+.design-visual--kimbap{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));grid-auto-rows:auto;align-items:start;gap:12px;aspect-ratio:auto;background:transparent}
+.design-visual--kimbap img{display:block;width:100%;height:auto;aspect-ratio:1611/1139;object-fit:contain;border-radius:20px}
+.design-case--kimbap .design-case-caption{padding:18px 5px 5px;min-height:0}
+@media(max-width:767px){
+ .design-case--kimbap .design-case-body{padding:9px}
+ .design-visual--kimbap{gap:8px;aspect-ratio:auto}
+ .design-case--kimbap .design-case-caption{padding:15px 5px 5px}
+}
