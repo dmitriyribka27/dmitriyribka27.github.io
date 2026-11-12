@@ -281,3 +281,23 @@ button.media-box{color:inherit;cursor:zoom-in;text-align:left;font:inherit}
 @media(max-width:540px){
   .di-hero-star.di-has-asset{top:20px;right:20px}
 }
+
+
+/* DO IT v3.3: crisp CSS four-point star, no raster image */
+.di-hero-star,
+.di-hero-star.di-has-asset{
+  background:linear-gradient(145deg,#ffffff 18%,#e9edf7 43%,#929db4 70%,#ffffff 90%);
+  clip-path:polygon(50% 0%,59% 34%,70% 43%,100% 50%,70% 57%,59% 66%,50% 100%,41% 66%,30% 57%,0% 50%,30% 43%,41% 34%);
+  mix-blend-mode:normal;
+  filter:drop-shadow(0 0 14px rgba(239,244,255,.85)) drop-shadow(0 0 28px rgba(221,231,255,.45));
+  margin:0;
+}
+@media(max-width:540px){
+  .di-hero-star,
+  .di-hero-star.di-has-asset{
+    top:20px;
+    right:20px;
+    width:145px;
+    height:145px;
+  }
+}
