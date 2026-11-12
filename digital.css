@@ -974,3 +974,144 @@ button.media-box{color:inherit;cursor:zoom-in;text-align:left;font:inherit}
 @media(prefers-reduced-motion:reduce){
  .di-contrib-step,.di-contrib-step .di-contrib-step-icon,.di-contrib-progress span{animation:none!important;transition:none!important}
 }
+
+
+/* DO IT — animated assignment, execution and approval sequence.
+   All essential text stays visible; animation only adds progressive emphasis. */
+.di-workflow-demo{--di-workflow-duration:11s}
+.di-workflow-demo .di-team-project{position:relative;overflow:hidden;padding:16px 8px}
+.di-workflow-demo .di-team-project-symbol{
+  display:block;line-height:1;
+  animation:diWorkflowArrow var(--di-workflow-duration) ease-in-out infinite;
+}
+.di-workflow-task{
+  display:flex;align-items:center;justify-content:center;gap:8px;
+  min-height:29px;max-width:96%;padding:6px 9px;
+  border:1px solid rgba(229,255,54,.5);border-radius:9px;
+  font-size:clamp(10px,1.3vw,13px);font-weight:650;
+  color:#edf1f5;background:#252e2a;
+  opacity:0;transform:translateY(9px) scale(.96);
+  animation:diWorkflowTask var(--di-workflow-duration) ease-in-out infinite;
+}
+.di-workflow-task-title{position:relative;white-space:normal}
+.di-workflow-task-title::after{
+  content:'';position:absolute;top:53%;left:0;height:2px;width:100%;
+  background:#b1c4b6;transform:scaleX(0);transform-origin:left;
+  animation:diWorkflowStrike var(--di-workflow-duration) ease-in-out infinite;
+}
+.di-workflow-task-check{
+  color:#a7ff82;font-size:18px;font-weight:850;
+  opacity:0;transform:scale(.3);
+  text-shadow:0 0 10px rgba(124,255,126,.5);
+  animation:diWorkflowCheck var(--di-workflow-duration) ease-in-out infinite;
+}
+.di-workflow-demo .di-team-roles .di-workflow-role{
+  position:relative;
+  padding-right:34px;
+  animation:diWorkflowRole var(--di-workflow-duration) ease-in-out infinite;
+}
+.di-workflow-role-assign{--di-role-start:13%;--di-role-end:34%}
+.di-workflow-role-execute{--di-role-start:39%;--di-role-end:62%}
+.di-workflow-role-accept{--di-role-start:68%;--di-role-end:91%}
+.di-workflow-role-status{
+  position:absolute;right:12px;top:50%;transform:translateY(-50%) scale(.4);
+  color:#a7ff82;font-size:20px;font-weight:800;
+  opacity:0;
+  animation:diWorkflowStatus var(--di-workflow-duration) ease-in-out infinite;
+}
+.di-workflow-role-assign .di-workflow-role-status{animation-delay:0s;--di-check-at:31%}
+.di-workflow-role-execute .di-workflow-role-status{--di-check-at:59%}
+.di-workflow-role-accept .di-workflow-role-status{--di-check-at:87%}
+.di-workflow-demo .di-workflow-result{
+  display:flex;gap:14px;align-items:center;
+  animation:diWorkflowResult var(--di-workflow-duration) ease-in-out infinite;
+}
+.di-workflow-result-icon{
+  display:inline-flex;align-items:center;justify-content:center;flex:none;
+  width:29px;height:29px;border-radius:50%;
+  background:#a7ff82;color:#17231a;
+  font-size:21px;line-height:1;
+  opacity:0;transform:scale(.35);
+  animation:diWorkflowResultIcon var(--di-workflow-duration) ease-in-out infinite;
+}
+@keyframes diWorkflowArrow{
+  0%,9%,100%{transform:translateY(0)}
+  19%,24%{transform:translate(4px,-4px)}
+  34%,95%{transform:translateY(0)}
+}
+@keyframes diWorkflowTask{
+  0%,12%{opacity:0;transform:translateY(9px) scale(.96)}
+  18%,89%{opacity:1;transform:translateY(0) scale(1)}
+  94%,100%{opacity:0;transform:translateY(-5px) scale(.98)}
+}
+@keyframes diWorkflowStrike{
+  0%,76%{transform:scaleX(0)}
+  84%,93%{transform:scaleX(1)}
+  100%{transform:scaleX(0)}
+}
+@keyframes diWorkflowCheck{
+  0%,81%{opacity:0;transform:scale(.3)}
+  86%,94%{opacity:1;transform:scale(1)}
+  100%{opacity:0;transform:scale(.3)}
+}
+@keyframes diWorkflowRole{
+  0%,100%{border-color:#58646e;background:#1b2128;box-shadow:none}
+  19%,23%{border-color:#58646e;background:#1b2128}
+  24%,31%{border-color:rgba(229,255,54,.85);background:#243027;box-shadow:0 0 18px rgba(229,255,54,.12)}
+  35%,100%{border-color:#58646e;background:#1b2128}
+}
+.di-workflow-role-assign{animation-name:diWorkflowRoleAssign!important}
+.di-workflow-role-execute{animation-name:diWorkflowRoleExecute!important}
+.di-workflow-role-accept{animation-name:diWorkflowRoleAccept!important}
+@keyframes diWorkflowRoleAssign{
+  0%,12%,38%,100%{border-color:#58646e;background:#1b2128;box-shadow:none}
+  17%,32%{border-color:#e5ff36;background:#243027;box-shadow:0 0 18px rgba(229,255,54,.15)}
+}
+@keyframes diWorkflowRoleExecute{
+  0%,38%,68%,100%{border-color:#58646e;background:#1b2128;box-shadow:none}
+  43%,61%{border-color:#e5ff36;background:#243027;box-shadow:0 0 18px rgba(229,255,54,.15)}
+}
+@keyframes diWorkflowRoleAccept{
+  0%,66%,94%,100%{border-color:#58646e;background:#1b2128;box-shadow:none}
+  72%,88%{border-color:#a7ff82;background:#203026;box-shadow:0 0 18px rgba(124,255,126,.18)}
+}
+@keyframes diWorkflowStatus{
+  0%,100%{opacity:0;transform:translateY(-50%) scale(.4)}
+  35%,92%{opacity:1;transform:translateY(-50%) scale(1)}
+  95%{opacity:0;transform:translateY(-50%) scale(.4)}
+}
+.di-workflow-role-execute .di-workflow-role-status{animation-name:diWorkflowStatusExecute}
+.di-workflow-role-accept .di-workflow-role-status{animation-name:diWorkflowStatusAccept}
+@keyframes diWorkflowStatusExecute{
+  0%,58%,100%{opacity:0;transform:translateY(-50%) scale(.4)}
+  63%,92%{opacity:1;transform:translateY(-50%) scale(1)}
+  96%{opacity:0;transform:translateY(-50%) scale(.4)}
+}
+@keyframes diWorkflowStatusAccept{
+  0%,83%,100%{opacity:0;transform:translateY(-50%) scale(.4)}
+  88%,94%{opacity:1;transform:translateY(-50%) scale(1)}
+  97%{opacity:0;transform:translateY(-50%) scale(.4)}
+}
+@keyframes diWorkflowResult{
+  0%,79%,100%{border-color:#a8c237;background:#1a251d;box-shadow:none}
+  86%,94%{border-color:#a7ff82;background:#213b28;box-shadow:0 0 24px rgba(124,255,126,.17)}
+}
+@keyframes diWorkflowResultIcon{
+  0%,81%,100%{opacity:0;transform:scale(.35)}
+  87%,94%{opacity:1;transform:scale(1)}
+}
+@media(max-width:540px){
+ .di-workflow-demo .di-team-project{padding:12px 5px}
+ .di-workflow-task{font-size:9px;gap:3px;padding:4px;line-height:1.2}
+ .di-workflow-task-check{font-size:14px}
+ .di-workflow-demo .di-team-roles .di-workflow-role{padding-right:24px}
+ .di-workflow-role-status{right:7px;font-size:14px}
+ .di-workflow-result-icon{width:24px;height:24px;font-size:17px}
+}
+@media(prefers-reduced-motion:reduce){
+ .di-workflow-demo *{animation:none!important;transition:none!important}
+ .di-workflow-task{opacity:1;transform:none}
+ .di-workflow-task-title::after{transform:scaleX(1)}
+ .di-workflow-task-check,.di-workflow-role-status,.di-workflow-result-icon{opacity:1;transform:none}
+ .di-workflow-role-status{transform:translateY(-50%)}
+}
