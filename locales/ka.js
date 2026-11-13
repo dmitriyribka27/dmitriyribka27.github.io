@@ -128,3 +128,5 @@ window.PORTFOLIO_LOCALES.ka.designAttrs={
   "Следующий кейс": "შემდეგი პროექტი"
 };
 window.PORTFOLIO_LOCALES.ka.designMeta={"title":"DESIGN — დმიტრი რიბკა","description":"დმიტრი რიბკას გრაფიკული დიზაინის პორტფოლიო: ხუთი პროექტი."};
+
+window.PORTFOLIO_LOCALES.ka.sharedAttrs={"Другие языки":"სხვა ენები","Выбрать язык":"ენის არჩევა"};

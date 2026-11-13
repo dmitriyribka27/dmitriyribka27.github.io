@@ -128,3 +128,5 @@ window.PORTFOLIO_LOCALES.en.designAttrs={
   "Следующий кейс": "Next project"
 };
 window.PORTFOLIO_LOCALES.en.designMeta={"title":"DESIGN — Dmitriy Rybka","description":"Dmitriy Rybka's graphic design portfolio: five selected projects."};
+
+window.PORTFOLIO_LOCALES.en.sharedAttrs={"Другие языки":"Other languages","Выбрать язык":"Choose language"};

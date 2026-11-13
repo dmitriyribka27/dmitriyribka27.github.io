@@ -15,16 +15,17 @@ window.PORTFOLIO_I18N={language:active,preferred,notice:dict.notice,isDesign,loc
 document.documentElement.lang=active;
 if(isHome||isDesign){
  const root=document.querySelector('main');
- if(root){const walker=document.createTreeWalker(root,NodeFilter.SHOW_TEXT);const nodes=[];while(walker.nextNode())nodes.push(walker.currentNode);for(const node of nodes){const raw=node.nodeValue;const trimmed=raw.trim();const translated=(isDesign?dict.design:dict.home)?.[trimmed];if(translated!==undefined&&translated!==trimmed)node.nodeValue=raw.replace(trimmed,translated)}}
+ if(root){const walker=document.createTreeWalker(root,NodeFilter.SHOW_TEXT);const nodes=[];while(walker.nextNode())nodes.push(walker.currentNode);for(const node of nodes){const raw=node.nodeValue;const trimmed=raw.trim();const translated=(isDesign?dict.design?.[trimmed]??dict.home?.[trimmed]:dict.home?.[trimmed]);if(translated!==undefined&&translated!==trimmed)node.nodeValue=raw.replace(trimmed,translated)}}
  document.querySelectorAll('.nav a,.footer a,.footer span').forEach(el=>{const walker=document.createTreeWalker(el,NodeFilter.SHOW_TEXT);const nodes=[];while(walker.nextNode())nodes.push(walker.currentNode);nodes.forEach(n=>{const t=n.nodeValue.trim();if(dict.home[t]&&dict.home[t]!==t)n.nodeValue=n.nodeValue.replace(t,dict.home[t])})});
  document.title=isDesign?dict.designMeta.title:dict.meta.title;
  const description=document.querySelector('meta[name="description"]');if(description)description.content=isDesign?dict.designMeta.description:dict.meta.description;
- if(isDesign){document.querySelectorAll('[aria-label],[alt]').forEach(el=>{for(const attr of ['aria-label','alt']){const value=el.getAttribute(attr);if(value&&dict.designAttrs?.[value])el.setAttribute(attr,dict.designAttrs[value])}})}
+ if(isDesign){document.querySelectorAll('[aria-label],[alt]').forEach(el=>{for(const attr of ['aria-label','alt','title']){const value=el.getAttribute(attr);const translated=dict.designAttrs?.[value]??dict.sharedAttrs?.[value];if(value&&translated)el.setAttribute(attr,translated)}})}
  else {const portrait=document.querySelector('.about-picture img');if(portrait)portrait.alt=dict.meta.alt;}
 }
 const flags={ru:'🇷🇺',en:'🇺🇸',ka:'🇬🇪'};
 const root=document.querySelector('.language-switcher');
 if(root){const flag=root.querySelector('.language-trigger-flag');if(flag)flag.textContent=flags[active];const trigger=root.querySelector('.language-trigger');if(trigger)trigger.setAttribute('aria-label',dict.notice.pick);
+ const menuLabel=root.querySelector('.language-menu');if(menuLabel)menuLabel.setAttribute('aria-label',active==='en'?'Other languages':active==='ka'?'სხვა ენები':'Другие языки');
  const menu=root.querySelector('.language-menu');if(menu){menu.innerHTML='';for(const lang of supported.filter(x=>x!==active)){
  const button=document.createElement('button');button.type='button';button.className='language-option';button.dataset.lang=lang;button.setAttribute('aria-label',lang==='en'?'English':lang==='ka'?'ქართული':'Русский');const span=document.createElement('span');span.setAttribute('aria-hidden','true');span.textContent=flags[lang];button.append(span);menu.append(button)} }
 }
