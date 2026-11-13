@@ -134,3 +134,18 @@
  .design-motion-ready .design-case{opacity:1!important;transform:none!important;transition:none!important}
  .design-case + .design-case::after{transition:none!important}
 }
+
+
+/* Desktop DESIGN: full-width vertical case gallery, no sideways carousel. */
+@media(min-width:768px){
+ .design-intro{max-width:1360px;padding:70px 5.6% 12px}
+ .design-work-inner{max-width:1360px;padding:30px 5.6% 90px}
+ .design-track{display:flex;flex-direction:column;gap:66px;overflow:visible;scroll-snap-type:none;scroll-behavior:auto;touch-action:auto;cursor:auto;padding:0}
+ .design-track:active{cursor:auto}
+ .design-case{flex:none;width:100%;max-width:1120px;scroll-snap-align:none}
+ .design-case h2{margin-bottom:24px}
+ .design-case-caption{min-height:0}
+ .design-track-controls{display:none}
+ .design-hint{display:none}
+ .design-contact{padding-top:54px}
+}
