@@ -142,3 +142,15 @@ Object.assign(window.PORTFOLIO_LOCALES.en.digital,{"Спроектировал �
 Object.assign(window.PORTFOLIO_LOCALES.en.digital,{"Продумал пользовательские сценарии и интерфейсы для личной и командной работы.":"Designed user flows and interfaces for individual and team work."});
 Object.assign(window.PORTFOLIO_LOCALES.en.digital,{"Разработал логику управления задачами, интеграцию с Supabase и проверки доступа.":"Built task management logic, Supabase integration and access checks."});
 Object.assign(window.PORTFOLIO_LOCALES.en.digital,{"Проработал обработку AI-команд с подтверждением действий перед изменением данных.":"Designed AI command handling with confirmation before changing data."});
+Object.assign(window.PORTFOLIO_LOCALES.en.digital,{"Двойной учёт":"Dual-unit tracking"});
+Object.assign(window.PORTFOLIO_LOCALES.en.digital,{"Штуки и килограммы внутри товарной карточки.":"Units and kilograms in each product record."});
+Object.assign(window.PORTFOLIO_LOCALES.en.digital,{"История операций":"Transaction history"});
+Object.assign(window.PORTFOLIO_LOCALES.en.digital,{"Поступления, списания, инвентаризация и производство.":"Receipts, write-offs, stocktaking and production."});
+Object.assign(window.PORTFOLIO_LOCALES.en.digital,{"Проверка остатков":"Stock verification"});
+Object.assign(window.PORTFOLIO_LOCALES.en.digital,{"Фактическое количество и причины расхождений.":"Actual quantities and reasons for discrepancies."});
+Object.assign(window.PORTFOLIO_LOCALES.en.digital,{"Расчёт выпуска":"Production yield calculation"});
+Object.assign(window.PORTFOLIO_LOCALES.en.digital,{"Исходное сырьё, выход, потери и упаковка.":"Raw materials, output, losses and packaging."});
+Object.assign(window.PORTFOLIO_LOCALES.en.digital,{"Учёт начинается":"Tracking starts"});
+Object.assign(window.PORTFOLIO_LOCALES.en.digital,{"с":"with"});
+Object.assign(window.PORTFOLIO_LOCALES.en.digital,{"точного движения.":"accurate stock movements."});
+Object.assign(window.PORTFOLIO_LOCALES.en.digital,{"кг":"kg"});

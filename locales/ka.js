@@ -142,3 +142,15 @@ Object.assign(window.PORTFOLIO_LOCALES.ka.digital,{"Спроектировал �
 Object.assign(window.PORTFOLIO_LOCALES.ka.digital,{"Продумал пользовательские сценарии и интерфейсы для личной и командной работы.":"შევქმენი მომხმარებლის სცენარები და ინტერფეისები პირადი და გუნდური მუშაობისთვის."});
 Object.assign(window.PORTFOLIO_LOCALES.ka.digital,{"Разработал логику управления задачами, интеграцию с Supabase и проверки доступа.":"განვავითარე ამოცანების მართვის ლოგიკა, Supabase-თან ინტეგრაცია და წვდომის შემოწმება."});
 Object.assign(window.PORTFOLIO_LOCALES.ka.digital,{"Проработал обработку AI-команд с подтверждением действий перед изменением данных.":"შევქმენი AI ბრძანებების დამუშავების მექანიზმი, რომელიც მონაცემების შეცვლამდე დადასტურებას ითხოვს."});
+Object.assign(window.PORTFOLIO_LOCALES.ka.digital,{"Двойной учёт":"ორმაგი აღრიცხვა"});
+Object.assign(window.PORTFOLIO_LOCALES.ka.digital,{"Штуки и килограммы внутри товарной карточки.":"ცალები და კილოგრამები ერთი პროდუქტის ბარათში."});
+Object.assign(window.PORTFOLIO_LOCALES.ka.digital,{"История операций":"ოპერაციების ისტორია"});
+Object.assign(window.PORTFOLIO_LOCALES.ka.digital,{"Поступления, списания, инвентаризация и производство.":"მიღება, ჩამოწერა, ინვენტარიზაცია და წარმოება."});
+Object.assign(window.PORTFOLIO_LOCALES.ka.digital,{"Проверка остатков":"ნაშთების შემოწმება"});
+Object.assign(window.PORTFOLIO_LOCALES.ka.digital,{"Фактическое количество и причины расхождений.":"ფაქტობრივი რაოდენობა და შეუსაბამობების მიზეზები."});
+Object.assign(window.PORTFOLIO_LOCALES.ka.digital,{"Расчёт выпуска":"წარმოების გამოსავლის გამოთვლა"});
+Object.assign(window.PORTFOLIO_LOCALES.ka.digital,{"Исходное сырьё, выход, потери и упаковка.":"საწყისი ნედლეული, გამოსავალი, დანაკარგები და შეფუთვა."});
+Object.assign(window.PORTFOLIO_LOCALES.ka.digital,{"Учёт начинается":"აღრიცხვა იწყება"});
+Object.assign(window.PORTFOLIO_LOCALES.ka.digital,{"с":""});
+Object.assign(window.PORTFOLIO_LOCALES.ka.digital,{"точного движения.":"ზუსტი მოძრაობით."});
+Object.assign(window.PORTFOLIO_LOCALES.ka.digital,{"кг":"კგ"});
