@@ -4,6 +4,8 @@
 
 ## ОБЩИЙ КОНТЕКСТ
 
+- **SEO этап 2 (2026-11-13):** обновлены статические `title`, `meta description`, `og:title`, `og:description`, `twitter:title`, `twitter:description` на `index.html`, `digital.html`, `design.html`. Акцент: сайты/PWA/автоматизация, реальные digital-кейсы, графический дизайн в Батуми и удалённо. Разметка, вёрстка, JS, мобильная и ПК-версии не менялись. IndexNow: пользователь отправил 4 URL, все HTTP 200; Google Search Console и Bing Webmaster подключены. Отдельные RU/EN/KA URL пока не реализованы; не ставить `hreflang` без отдельных адресов.
+
 - **SEO (2026-11-13):** на `index.html`, `digital.html`, `design.html`, `privacy.html` установлены уникальные статические title/description, canonical, robots, Open Graph/Twitter; на главной JSON-LD Person. Созданы `robots.txt` и `sitemap.xml` с 4 каноническими URL. Переключение RU/EN/KA остаётся на одном URL через JavaScript: отдельная индексация языков — будущий этап. Не обещать позиции в выдаче; потребуется Google Search Console.
 
 - **DESIGN кейс №2 — Кафе Кимбап:** два оригинальных PNG `assets/design/kimbap-1.png` (листовка) и `assets/design/kimbap-2.png` (меню), загружены из чата через Drive → GitHub Blob. В `design.html` изображения стоят рядом с `object-fit:contain`, скруглением 20px и общей графитовой подложкой. Подпись кратко описывает разработку макета и подготовку к печати.
@@ -66,4 +68,4 @@
 
 ## ПОСЛЕДНЕЕ
 
-- **2026-11-13 — IndexNow:** добавлен публичный файл подтверждения `d10fefa64c91466fa525c7edfe187245.txt` в корень GitHub Pages (коммит `63c2aea`). Ключ и содержимое файла: `d10fefa64c91466fa525c7edfe187245`. Проверить публикацию по `https://dmitriyribka27.github.io/d10fefa64c91466fa525c7edfe187245.txt`; после доступности отправить четыре URL через IndexNow API и проверить HTTP-ответ. Пока отправка URL не выполнялась. Дизайн, мобильная и ПК-версия не менялись.
+- **2026-11-13 — SEO, этап 2:** актуализированы поисковые заголовки и описания главной, Digital и Design. Все изменения только в `<head>` HTML, визуальные компоненты не затронуты. Следующий этап — мониторинг показов/кликов в GSC/Bing, анализ поисковых запросов, затем при необходимости отдельные локализованные URL для EN/KA. Требуется проверить опубликованные title/description после деплоя GitHub Pages.
