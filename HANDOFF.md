@@ -4,7 +4,7 @@
 
 ## ОБЩИЙ КОНТЕКСТ
 
-- **SEO этап 2 (2026-11-13):** обновлены статические `title`, `meta description`, `og:title`, `og:description`, `twitter:title`, `twitter:description` на `index.html`, `digital.html`, `design.html`. Акцент: сайты/PWA/автоматизация, реальные digital-кейсы, графический дизайн в Батуми и удалённо. Разметка, вёрстка, JS, мобильная и ПК-версии не менялись. IndexNow: пользователь отправил 4 URL, все HTTP 200; Google Search Console и Bing Webmaster подключены. Отдельные RU/EN/KA URL пока не реализованы; не ставить `hreflang` без отдельных адресов.
+- **SEO этап 2 (2026-11-13):** обновлены статические `title`, `meta description`, `og:title`, `og:description`, `twitter:title`, `twitter:description` на `index.html`, `digital.html`, `design.html`. Акцент: сайты/PWA/автоматизация, реальные digital-кейсы и графический дизайн без географического ограничения. Разметка, вёрстка, JS, мобильная и ПК-версии не менялись. IndexNow: пользователь отправил 4 URL, все HTTP 200; Google Search Console и Bing Webmaster подключены. Отдельные RU/EN/KA URL пока не реализованы; не ставить `hreflang` без отдельных адресов.
 
 - **SEO (2026-11-13):** на `index.html`, `digital.html`, `design.html`, `privacy.html` установлены уникальные статические title/description, canonical, robots, Open Graph/Twitter; на главной JSON-LD Person. Созданы `robots.txt` и `sitemap.xml` с 4 каноническими URL. Переключение RU/EN/KA остаётся на одном URL через JavaScript: отдельная индексация языков — будущий этап. Не обещать позиции в выдаче; потребуется Google Search Console.
 
@@ -67,5 +67,7 @@
 - **SEO, этап 1 (2026-11-13):** обновлены метаданные четырёх HTML-страниц; добавлены robots.txt и sitemap.xml. Google Search Console подтвердил владение, Google проиндексировал страницы; Bing успешно распознал 4 URL sitemap и подтвердил возможность индексации страниц. Не добавлять hreflang до отдельных языковых URL.
 
 ## ПОСЛЕДНЕЕ
+
+- **2026-11-13 — уточнение SEO-позиционирования:** по просьбе владельца убрана географическая привязка «Батуми» из `title`, `meta description`, Open Graph и Twitter на главной и Design. Digital не менялась. Не добавлять город в глобальные SEO-теги или видимый текст без отдельного согласования. Вёрстка и контент страницы не затронуты.
 
 - **2026-11-13 — SEO, этап 2:** актуализированы поисковые заголовки и описания главной, Digital и Design. Все изменения только в `<head>` HTML, визуальные компоненты не затронуты. Следующий этап — мониторинг показов/кликов в GSC/Bing, анализ поисковых запросов, затем при необходимости отдельные локализованные URL для EN/KA. Требуется проверить опубликованные title/description после деплоя GitHub Pages.
