@@ -122,3 +122,51 @@ document.addEventListener('keydown',event=>{if(event.key==='Escape')close()});
   document.body.append(button);
   update();
 })();
+
+
+/* GA4 contact interactions v1.0.
+   Event delegation covers links added dynamically by Digital project panels.
+   No personal details or message contents are sent to Analytics. */
+(() => {
+  const measurementId = 'G-76533XR7NF';
+  const classify = (anchor) => {
+    const href = anchor.getAttribute('href') || '';
+    let url;
+    try { url = new URL(href, window.location.href); } catch (_) { return null; }
+    const host = url.hostname.toLowerCase().replace(/^www\./, '');
+    if (host === 't.me' || host === 'telegram.me' || host === 'telegram.org') return 'telegram';
+    if (host === 'wa.me' || host === 'api.whatsapp.com' || host === 'web.whatsapp.com' || host === 'whatsapp.com') return 'whatsapp';
+    if (url.protocol === 'mailto:') return 'email';
+    return null;
+  };
+  document.addEventListener('click', (event) => {
+    const anchor = event.target instanceof Element ? event.target.closest('a[href]') : null;
+    if (!anchor) return;
+    const method = classify(anchor);
+    if (method) {
+      if (typeof window.gtag !== 'function') return;
+      const placement = anchor.closest('header') ? 'header'
+        : anchor.closest('footer') ? 'footer'
+        : anchor.closest('.contact-panel, .digital-contact, .design-contact') ? 'contact_section'
+        : anchor.closest('.hero') ? 'hero'
+        : anchor.closest('.project-panel, .design-case') ? 'project'
+        : 'other';
+      window.gtag('event', 'contact_click', {
+        contact_method: method,
+        contact_placement: placement,
+        page_path: window.location.pathname,
+        send_to: measurementId
+      });
+      return;
+    }
+    const href = anchor.getAttribute('href') || '';
+    if (href === '#contact' || href.endsWith('/#contact') || href.endsWith('index.html#contact')) {
+      if (typeof window.gtag === 'function') {
+        window.gtag('event', 'contact_navigation', {
+          page_path: window.location.pathname,
+          send_to: measurementId
+        });
+      }
+    }
+  }, { capture: true });
+})();
