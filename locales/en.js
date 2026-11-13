@@ -154,3 +154,4 @@ Object.assign(window.PORTFOLIO_LOCALES.en.digital,{"Учёт начинаетс�
 Object.assign(window.PORTFOLIO_LOCALES.en.digital,{"с":"with"});
 Object.assign(window.PORTFOLIO_LOCALES.en.digital,{"точного движения.":"accurate stock movements."});
 Object.assign(window.PORTFOLIO_LOCALES.en.digital,{"кг":"kg"});
+Object.assign(window.PORTFOLIO_LOCALES.en.digital,{"Покупка или оплата списывает сумму с выбранного счёта.":"A purchase or payment deducts money from the selected account.","Поступление увеличивает баланс нужного счёта.":"Incoming money increases the selected account balance.","Перемещение денег между счетами без повторного дохода.":"Move money between accounts without counting it as new income."});

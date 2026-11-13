@@ -154,3 +154,4 @@ Object.assign(window.PORTFOLIO_LOCALES.ka.digital,{"Учёт начинаетс�
 Object.assign(window.PORTFOLIO_LOCALES.ka.digital,{"с":""});
 Object.assign(window.PORTFOLIO_LOCALES.ka.digital,{"точного движения.":"ზუსტი მოძრაობით."});
 Object.assign(window.PORTFOLIO_LOCALES.ka.digital,{"кг":"კგ"});
+Object.assign(window.PORTFOLIO_LOCALES.ka.digital,{"Покупка или оплата списывает сумму с выбранного счёта.":"შეძენის ან გადახდის თანხა არჩეული ანგარიშიდან ჩამოიჭრება.","Поступление увеличивает баланс нужного счёта.":"შემოსული თანხა არჩეული ანგარიშის ნაშთს ზრდის.","Перемещение денег между счетами без повторного дохода.":"თანხის გადატანა ანგარიშებს შორის, შემოსავლის ხელახლა აღრიცხვის გარეშე."});
