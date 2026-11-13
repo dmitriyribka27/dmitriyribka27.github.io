@@ -106,3 +106,19 @@ document.addEventListener('keydown',event=>{if(event.key==='Escape')close()});
   document.addEventListener('click',event=>{if(!root.contains(event.target))setOpen(false)});
   document.addEventListener('keydown',event=>{if(event.key==='Escape'&&!menu.hidden){setOpen(false);trigger.focus()}});
 })();
+
+
+// Fixed scroll-to-top control, shared across every portfolio page.
+(()=>{
+  const button=document.createElement('button');
+  button.type='button';
+  button.className='scroll-to-top';
+  button.setAttribute('aria-label',({ru:'Наверх',en:'Back to top',ka:'ზემოთ დაბრუნება'})[document.documentElement.lang]||'Back to top');
+  button.setAttribute('title',button.getAttribute('aria-label'));
+  button.innerHTML='<svg viewBox="0 0 24 24" width="21" height="21" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 14 7-7 7 7"/></svg>';
+  const update=()=>{const visible=window.scrollY>320;button.classList.toggle('is-visible',visible);button.tabIndex=visible?0:-1;button.setAttribute('aria-hidden',String(!visible));};
+  button.addEventListener('click',()=>window.scrollTo({top:0,behavior:window.matchMedia('(prefers-reduced-motion: reduce)').matches?'instant':'smooth'}));
+  window.addEventListener('scroll',update,{passive:true});
+  document.body.append(button);
+  update();
+})();
