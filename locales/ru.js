@@ -128,3 +128,6 @@ window.PORTFOLIO_LOCALES.ru.designAttrs={
   "Следующий кейс": "Следующий кейс"
 };
 window.PORTFOLIO_LOCALES.ru.designMeta={"title":"DESIGN — Дмитрий Рыбка","description":"Дизайн-портфолио Дмитрия Рыбки: пять визуальных кейсов."};
+
+window.PORTFOLIO_LOCALES.ru.digital={};
+window.PORTFOLIO_LOCALES.ru.digitalMeta={title:"Digital — Дмитрий Рыбка",description:"Цифровые проекты Дмитрия Рыбки: DO IT, Sea Livery OPS, MONO Finance, КАДР и игра «Тихая бухта»."};
