@@ -275,6 +275,7 @@ document.getElementById('panel-doit').innerHTML=parts.join('');
 ids.forEach(id=>id==='doit'?renderDoit():id==='ops'?renderOps():id==='mono'?renderMono():id==='kadr'?renderKadr():render(data[id],id));
 
 /* Contribution explorer: lightweight, fully client-side and keyboard accessible. */
+const localizedDoitText=(value)=>{const lang=window.PORTFOLIO_I18N?.language||'ru';return window.PORTFOLIO_LOCALES?.[lang]?.digital?.[value]||value;};
 const contribution=document.querySelector('#panel-doit .di-contribution');
 if(contribution){
  const controls=[...contribution.querySelectorAll('.di-contrib-step')];
@@ -287,9 +288,9 @@ if(contribution){
  controls.forEach((control,index)=>{
   control.addEventListener('click',()=>{
    controls.forEach((item,i)=>{item.classList.toggle('is-active',i===index);item.setAttribute('aria-pressed',String(i===index));});
-   label.textContent=contributionTitles[index];
-   detail.textContent=contributions[index];
-   count.textContent=(index+1)+' из '+controls.length;
+   label.textContent=localizedDoitText(contributionTitles[index]);
+   detail.textContent=localizedDoitText(contributions[index]);
+   count.textContent=localizedDoitText((index+1)+' из '+controls.length);
    progress.style.width=((index+1)/controls.length*100)+'%';
   });
  });
