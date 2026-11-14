@@ -84,3 +84,14 @@
  .services-includes li{font-size:9px}
 }
 @media(prefers-reduced-motion:reduce){.services-row{transition:none}.services-row:hover{transform:none}}
+
+/* SERVICES 1.3 — vertical icon labels and graphic design card */
+.services-includes{flex-direction:column;align-items:flex-start;gap:7px}
+.services-includes li{width:max-content;max-width:100%;white-space:normal}
+.services-includes li::before{content:attr(data-icon);width:14px;height:auto;background:none;transform:none;color:var(--lime);font:700 13px/1 'IBM Plex Mono',monospace;text-align:center}
+.services-design{position:relative;overflow:hidden;margin-top:54px;border:1px solid #333d3a;border-radius:18px;padding:24px 25px;background:linear-gradient(118deg,#171c24 0%,#13171d 72%,#1a211b 100%)}
+.services-design::before{content:"";position:absolute;left:0;top:20px;bottom:20px;width:2px;background:var(--lime);opacity:.8}
+.services-design h2{margin:12px 0 9px}
+.services-design .services-includes{margin:16px 0 0}
+.services-design .services-text-link{margin-top:19px}
+@media(max-width:620px){.services-design{margin-top:36px;padding:19px 17px 20px;border-radius:15px}.services-design::before{top:18px;bottom:18px}}
