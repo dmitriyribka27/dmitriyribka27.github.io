@@ -48,3 +48,13 @@
  .services-price strong{font-size:16px}
 }
 @media(prefers-reduced-motion:reduce){.services-page *{scroll-behavior:auto}}
+
+/* Contact panel mirrors the existing Design CTA: stacked buttons, rounded graphite panel. */
+.services-contact{margin-top:54px;padding:0;border:0;display:block}
+.services-contact .contact-panel{display:flex;flex-direction:column;align-items:stretch;gap:26px;padding:clamp(26px,5vw,55px);border-radius:24px;background:radial-gradient(circle at 97% 0,#28341b,transparent 60%),#141821;border:1px solid #4b5842}
+.services-contact .eyebrow{display:block;color:var(--lime);font:700 clamp(12px,1.5vw,16px)/1.4 Onest,Manrope,sans-serif;margin:0}
+.services-contact .contact-panel h2{font:800 clamp(35px,5.8vw,68px)/1.07 Manrope,sans-serif;letter-spacing:-.055em;margin:20px 0 24px}
+.services-contact .contact-panel p:not(.eyebrow){font-size:clamp(14px,1.7vw,18px);line-height:1.65;color:#aeb4bf;max-width:680px;margin:0}
+.services-contact .contact-actions{display:grid;grid-template-columns:1fr;gap:12px;width:100%}
+.services-contact .contact-actions .btn{width:100%;min-height:58px;padding:16px 22px;margin:0;border-radius:12px;display:flex;justify-content:space-between;font-size:clamp(14px,1.6vw,17px)}
+@media(max-width:620px){.services-contact{margin-top:38px}.services-contact .contact-panel{padding:25px;gap:24px}.services-contact .contact-panel h2{font-size:clamp(32px,9vw,46px);margin:15px 0 22px}.services-contact .contact-actions .btn{min-height:55px;padding:14px 16px}}
