@@ -8,7 +8,7 @@ const dict=dictionaries[active];
 const notice=active==='ru'?undefined:{title:dict.notice[0],body:dict.notice[1],policy:dict.notice[2],ok:dict.notice[3],close:dict.notice[4],label:dict.notice[5]};
 window.PORTFOLIO_I18N={localizedPage:true,language:active,choose,notice};
 document.documentElement.lang=active;
-const root=document.querySelector('.language-switcher');if(root){root.querySelector('.language-trigger-flag').textContent=flags[active];root.querySelectorAll('[data-lang]').forEach(button=>{button.hidden=button.dataset.lang===active;button.removeAttribute('disabled');button.removeAttribute('title');button.setAttribute('aria-label',button.dataset.lang==='en'?'English':button.dataset.lang==='ka'?'ქართული':'Русский')});}
+const root=document.querySelector('.language-switcher');if(root){root.querySelector('.language-trigger-flag').textContent=flags[active];root.querySelectorAll('[data-lang]').forEach(button=>{button.hidden=button.dataset.lang===active;button.style.display=button.hidden?'none':'';button.removeAttribute('disabled');button.removeAttribute('title');button.setAttribute('aria-label',button.dataset.lang==='en'?'English':button.dataset.lang==='ka'?'ქართული':'Русский')});}
 if(!dict)return;
 const set=(selector,text)=>{const el=document.querySelector(selector);if(el)el.textContent=text};
 const attr=(selector,name,value)=>{const el=document.querySelector(selector);if(el)el.setAttribute(name,value)};
