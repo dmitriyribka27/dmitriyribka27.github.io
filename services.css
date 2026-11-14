@@ -58,3 +58,29 @@
 .services-contact .contact-actions{display:grid;grid-template-columns:1fr;gap:12px;width:100%}
 .services-contact .contact-actions .btn{width:100%;min-height:58px;padding:16px 22px;margin:0;border-radius:12px;display:flex;justify-content:space-between;font-size:clamp(14px,1.6vw,17px)}
 @media(max-width:620px){.services-contact{margin-top:38px}.services-contact .contact-panel{padding:25px;gap:24px}.services-contact .contact-panel h2{font-size:clamp(32px,9vw,46px);margin:15px 0 22px}.services-contact .contact-actions .btn{min-height:55px;padding:14px 16px}}
+
+/* SERVICES 1.2 — editorial service cards with brand micro-labels */
+.services-rows{border:0;display:grid;grid-template-columns:1fr;gap:12px}
+.services-row{position:relative;overflow:hidden;border:1px solid #333d3a;border-radius:18px;background:linear-gradient(118deg,#171c24 0%,#13171d 72%,#1a211b 100%);padding:24px 25px;gap:20px;transition:border-color .2s ease,transform .2s ease}
+.services-row::before{content:"";position:absolute;left:0;top:20px;bottom:20px;width:2px;background:var(--lime);opacity:.8}
+.services-row:hover{border-color:#6b7c45;transform:translateY(-2px)}
+.services-row h3{margin-bottom:7px}
+.services-row-info>p{max-width:530px}
+.services-includes{list-style:none;display:flex;flex-wrap:wrap;gap:7px;margin:17px 0 0;padding:0}
+.services-includes li{display:inline-flex;align-items:center;gap:8px;min-height:29px;padding:6px 10px 6px 9px;border:1px solid #47523d;border-radius:7px;background:linear-gradient(115deg,rgba(229,255,54,.085),rgba(229,255,54,.025));color:#dce4d1;font:500 10px/1.35 'IBM Plex Mono',monospace;letter-spacing:.01em}
+.services-includes li::before{content:"";flex:none;width:5px;height:5px;background:var(--lime);transform:rotate(45deg)}
+.services-price{align-self:start}
+@media(max-width:620px){
+ .services-rows{gap:10px}
+ .services-row{padding:19px 17px 18px;gap:9px;border-radius:15px}
+ .services-row::before{top:18px;bottom:18px}
+ .services-row h3{font-size:clamp(16px,4.4vw,19px)}
+ .services-includes{margin-top:13px;gap:6px}
+ .services-includes li{font-size:9px;min-height:26px;padding:5px 8px}
+ .services-price strong{font-size:clamp(16px,4.5vw,19px)}
+}
+@media(max-width:370px){
+ .services-row{grid-template-columns:minmax(0,1fr) auto;padding:17px 12px}
+ .services-includes li{font-size:9px}
+}
+@media(prefers-reduced-motion:reduce){.services-row{transition:none}.services-row:hover{transform:none}}
