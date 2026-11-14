@@ -153,3 +153,10 @@
 @keyframes services-orbit{to{transform:rotate(360deg)}}
 @media(max-width:620px){.services-art,.services-design .services-art{opacity:.64;right:4%;bottom:8%;width:clamp(105px,32%,165px)}}
 @media(prefers-reduced-motion:reduce){.services-art,.services-design .services-art{opacity:.65}.services-art .motion-pointer,.services-art .motion-page,.services-art .motion-data,.services-art .motion-spark,.services-art .motion-orbit{animation:none}}
+
+/* SERVICES 1.7 — clearer multipage navigation and before/after revision */
+.services-art--multipage .motion-multi-indicator{animation:services-multi-focus 5s ease-in-out infinite}
+.services-art--revision .motion-revision-result{animation:services-revision-reveal 5.5s ease-in-out infinite}
+@keyframes services-multi-focus{0%,20%,100%{opacity:.3}35%,70%{opacity:1}}
+@keyframes services-revision-reveal{0%,18%,100%{opacity:.12}35%,75%{opacity:1}}
+@media(prefers-reduced-motion:reduce){.services-art--multipage .motion-multi-indicator,.services-art--revision .motion-revision-result{animation:none;opacity:1}}
