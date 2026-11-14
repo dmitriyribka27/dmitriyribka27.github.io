@@ -8,7 +8,7 @@ const dict=dictionaries[active];
 const notice=active==='ru'?undefined:{title:dict.notice[0],body:dict.notice[1],policy:dict.notice[2],ok:dict.notice[3],close:dict.notice[4],label:dict.notice[5]};
 window.PORTFOLIO_I18N={localizedPage:true,language:active,choose,notice};
 document.documentElement.lang=active;
-const root=document.querySelector('.language-switcher');if(root){root.querySelector('.language-trigger-flag').textContent=flags[active];root.querySelectorAll('[data-lang]').forEach(button=>{button.removeAttribute('disabled');button.removeAttribute('title');button.setAttribute('aria-label',button.dataset.lang==='en'?'English':button.dataset.lang==='ka'?'ქართული':'Русский')});}
+const root=document.querySelector('.language-switcher');if(root){root.querySelector('.language-trigger-flag').textContent=flags[active];root.querySelectorAll('[data-lang]').forEach(button=>{button.hidden=button.dataset.lang===active;button.removeAttribute('disabled');button.removeAttribute('title');button.setAttribute('aria-label',button.dataset.lang==='en'?'English':button.dataset.lang==='ka'?'ქართული':'Русский')});}
 if(!dict)return;
 const set=(selector,text)=>{const el=document.querySelector(selector);if(el)el.textContent=text};
 const attr=(selector,name,value)=>{const el=document.querySelector(selector);if(el)el.setAttribute(name,value)};
@@ -19,7 +19,7 @@ document.querySelectorAll('.services-row').forEach((row,i)=>{const c=dict.cards[
 set('.services-design h2',dict.design[0]);set('.services-design div>p',dict.design[1]);document.querySelectorAll('.services-design .services-includes li').forEach((el,i)=>el.textContent=dict.design[i+2]);set('.services-link-label',dict.design[5]);set('.services-disclaimer',dict.disclaimer);
 set('.services-contact .eyebrow',dict.contact[0]);const cta=document.querySelector('.services-contact h2');if(cta){cta.textContent=dict.contact[1];cta.append(document.createElement('br'));const span=document.createElement('span');span.className='lime';span.textContent=dict.contact[2];cta.append(span)}set('.services-contact-copy>p:not(.eyebrow)',dict.contact[3]);document.querySelectorAll('.services-contact .contact-actions a').forEach((el,i)=>{el.textContent=dict.contact[i+4]+' ';const span=document.createElement('span');span.setAttribute('aria-hidden','true');span.textContent='→';el.append(span)});
 document.querySelectorAll('.services-from').forEach(el=>el.textContent=dict.price[0]);set('.services-price small',dict.price[1]);
-set('.footer span',dict.footer[0]);set('.footer a[href="privacy.html"]',dict.footer[1]);
+set('.footer > span',dict.footer[0]);set('.footer a[href="privacy.html"]',dict.footer[1]);
 document.title=dict.meta[0];attr('meta[name="description"]','content',dict.meta[1]);attr('meta[property="og:title"]','content',dict.meta[0]);attr('meta[property="og:description"]','content',dict.meta[1]);
 attr('.nav','aria-label',dict.attrs[0]);attr('.language-trigger','aria-label',dict.attrs[1]);attr('.language-menu','aria-label',dict.attrs[2]);document.querySelectorAll('.services-row .services-includes').forEach(el=>el.setAttribute('aria-label',dict.attrs[3]));attr('.services-design .services-includes','aria-label',dict.attrs[4]);
 })();
