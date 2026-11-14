@@ -17,6 +17,7 @@ document.documentElement.lang=active;
 if(isHome||isDesign||isDigital){
  const root=document.querySelector('main');
  if(root){const walker=document.createTreeWalker(root,NodeFilter.SHOW_TEXT);const nodes=[];while(walker.nextNode())nodes.push(walker.currentNode);for(const node of nodes){const raw=node.nodeValue;const trimmed=raw.trim();const translated=(isDesign?dict.design?.[trimmed]??dict.home?.[trimmed]:isDigital?dict.digital?.[trimmed]??dict.home?.[trimmed]:dict.home?.[trimmed]);if(translated!==undefined&&translated!==trimmed)node.nodeValue=raw.replace(trimmed,translated)}}
+ const servicesLink=document.querySelector('.nav a[href="services.html"]');if(servicesLink)servicesLink.textContent=({ru:'Услуги',en:'Services',ka:'სერვისები'})[active];
  document.querySelectorAll('.nav a,.footer a,.footer span').forEach(el=>{const walker=document.createTreeWalker(el,NodeFilter.SHOW_TEXT);const nodes=[];while(walker.nextNode())nodes.push(walker.currentNode);nodes.forEach(n=>{const t=n.nodeValue.trim();if(dict.home[t]&&dict.home[t]!==t)n.nodeValue=n.nodeValue.replace(t,dict.home[t])})});
  document.title=isDesign?dict.designMeta.title:isDigital?dict.digitalMeta.title:dict.meta.title;
  const description=document.querySelector('meta[name="description"]');if(description)description.content=isDesign?dict.designMeta.description:isDigital?dict.digitalMeta.description:dict.meta.description;
