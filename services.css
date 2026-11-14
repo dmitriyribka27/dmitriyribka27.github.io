@@ -95,3 +95,13 @@
 .services-design .services-includes{margin:16px 0 0}
 .services-design .services-text-link{margin-top:19px}
 @media(max-width:620px){.services-design{margin-top:36px;padding:19px 17px 20px;border-radius:15px}.services-design::before{top:18px;bottom:18px}}
+
+/* SERVICES 1.4 — subtle contextual line illustrations, no motion */
+.services-row,.services-design{isolation:isolate}
+.services-art{position:absolute;right:6%;bottom:9%;width:clamp(105px,25%,200px);height:auto;aspect-ratio:1;pointer-events:none;color:#a4bb69;opacity:.24;z-index:0}
+.services-row-info,.services-row>.services-price,.services-design>div,.services-design>.services-price{position:relative;z-index:1}
+.services-design .services-art{right:8%;bottom:9%;width:clamp(105px,22%,185px)}
+.services-text-link{text-decoration:none}
+.services-link-label{text-decoration:underline;text-underline-offset:5px}
+.services-link-arrow{text-decoration:none;display:inline-block}
+@media(max-width:620px){.services-art{right:5%;bottom:10%;width:clamp(92px,33%,160px);opacity:.19}.services-design .services-art{right:5%;bottom:13%;width:clamp(92px,28%,145px)}}
