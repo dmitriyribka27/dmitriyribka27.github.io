@@ -175,3 +175,8 @@
 @keyframes services-multi-nav{0%,15%,100%{opacity:.35}30%,58%{opacity:1}}
 @keyframes services-multi-content{0%,25%,100%{opacity:.25;transform:translateY(3px)}45%,75%{opacity:1;transform:translateY(0)}}
 @media(prefers-reduced-motion:reduce){.services-art--business .motion-business-reveal,.services-art--business .accent,.services-art--landing .motion-landing-reveal,.services-art--landing .accent,.services-art--multipage .motion-multi-nav,.services-art--multipage .motion-multi-content{animation:none;opacity:1;transform:none}}
+
+/* SERVICES v1.9 — prevent illustration strokes from colliding */
+.services-art--business .accent{stroke-width:1.8}
+.services-art--business .detail{stroke-width:1.8}
+.services-art--landing .motion-landing-reveal{transform-box:fill-box;transform-origin:center}
