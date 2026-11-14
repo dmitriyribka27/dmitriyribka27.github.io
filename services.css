@@ -105,3 +105,29 @@
 .services-link-label{text-decoration:underline;text-underline-offset:5px}
 .services-link-arrow{text-decoration:none;display:inline-block}
 @media(max-width:620px){.services-art{right:5%;bottom:10%;width:clamp(92px,33%,160px);opacity:.19}.services-design .services-art{right:5%;bottom:13%;width:clamp(92px,28%,145px)}}
+
+/* SERVICES 1.5 — restrained luminous SVG motion; CSS-only, reduced-motion safe */
+.services-art{
+ color:#e5ff36;
+ opacity:.43;
+ filter:drop-shadow(0 0 5px rgba(229,255,54,.28)) drop-shadow(0 0 19px rgba(229,255,54,.12));
+ transform-origin:50% 50%;
+ animation:services-art-breathe 6.8s ease-in-out infinite;
+ will-change:opacity,transform;
+}
+.services-row:nth-child(2) .services-art{animation-delay:-1.7s}
+.services-row:nth-child(3) .services-art{animation-delay:-3.4s}
+.services-group:nth-of-type(3) .services-art{animation-delay:-2.5s}
+.services-group:nth-of-type(4) .services-art{animation-delay:-4.2s}
+.services-design .services-art{opacity:.48;animation-delay:-2.1s}
+@keyframes services-art-breathe{
+ 0%,100%{opacity:.34;transform:translate3d(0,0,0) scale(.985);filter:drop-shadow(0 0 4px rgba(229,255,54,.2)) drop-shadow(0 0 13px rgba(229,255,54,.08))}
+ 50%{opacity:.64;transform:translate3d(0,-4px,0) scale(1.025);filter:drop-shadow(0 0 8px rgba(229,255,54,.5)) drop-shadow(0 0 23px rgba(229,255,54,.19))}
+}
+@media(max-width:620px){
+ .services-art{opacity:.36}
+ .services-design .services-art{opacity:.4}
+}
+@media(prefers-reduced-motion:reduce){
+ .services-art,.services-design .services-art{animation:none;transform:none;filter:none;opacity:.28;will-change:auto}
+}
