@@ -180,3 +180,14 @@
 .services-art--business .accent{stroke-width:1.8}
 .services-art--business .detail{stroke-width:1.8}
 .services-art--landing .motion-landing-reveal{transform-box:fill-box;transform-origin:center}
+
+/* SERVICES v2.0 — no decorative section numbers; clear clock and living Bezier */
+.services-group-head{gap:0}
+.services-design h2{margin-top:0}
+.services-art--clock .motion-clock-hand{transform-origin:100px 100px;animation:services-clock-tick 12s steps(12,end) infinite}
+@keyframes services-clock-tick{to{transform:rotate(360deg)}}
+.services-art--design .motion-design-curve{stroke-dasharray:205;stroke-dashoffset:205;animation:services-design-draw 5.6s ease-in-out infinite}
+.services-art--design .motion-design-points{animation:services-design-pulse 5.6s ease-in-out infinite}
+@keyframes services-design-draw{0%,12%{stroke-dashoffset:205;opacity:.35}48%,80%{stroke-dashoffset:0;opacity:1}100%{stroke-dashoffset:-205;opacity:.35}}
+@keyframes services-design-pulse{0%,15%,100%{opacity:.25}50%,80%{opacity:1}}
+@media(prefers-reduced-motion:reduce){.services-art--clock .motion-clock-hand,.services-art--design .motion-design-curve,.services-art--design .motion-design-points{animation:none}.services-art--design .motion-design-curve{stroke-dashoffset:0}.services-art--design .motion-design-points{opacity:1}}
