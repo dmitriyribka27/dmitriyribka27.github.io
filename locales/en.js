@@ -8,6 +8,8 @@ window.PORTFOLIO_LOCALES.en={
     "АВТОМАТИЗАЦИЯ.": "AUTOMATION.",
     "Я Дмитрий Рыбка. Разрабатываю сайты, мобильные веб-приложения и системы для управления бизнесом — от учёта заказов до внутренних рабочих сервисов.": "I'm Dmitriy Rybka. I build websites, mobile web apps and business management tools — from order tracking to internal workflows.",
     "Обсудить задачу": "Discuss a project",
+    "Хотите оценить бюджет?": "Want to estimate your budget?",
+    "Узнать цены": "View pricing",
     "Посмотреть проекты": "View projects",
     "ЛИСТАЙТЕ ВНИЗ ↓": "SCROLL DOWN ↓",
     "ЧЕМ МОГУ БЫТЬ ПОЛЕЗЕН": "WHAT I CAN DO",
