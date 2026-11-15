@@ -152,11 +152,11 @@
 
 /* DARIUS — featured print case, two originals with their natural proportions */
 .design-case--darius .design-case-body{border-radius:20px;padding:12px;background:#141821}
-.design-visual--darius{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,.9fr);align-items:center;gap:12px;aspect-ratio:auto;background:transparent}
+.design-visual--darius{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,.9fr);grid-auto-rows:auto;align-items:center;align-content:start;gap:12px;aspect-ratio:auto;background:transparent}
 .design-visual--darius img{display:block;width:100%;height:auto;object-fit:contain;border-radius:20px}
 .design-case--darius .design-case-caption{padding:18px 5px 5px;min-height:0}
 @media(max-width:767px){
  .design-case--darius .design-case-body{padding:9px}
- .design-visual--darius{grid-template-columns:minmax(0,1fr);gap:9px}
+ .design-visual--darius{grid-template-columns:minmax(0,1fr);grid-template-rows:auto auto;grid-auto-rows:auto;align-items:start;align-content:start;gap:8px}
  .design-case--darius .design-case-caption{padding:15px 5px 5px}
 }
