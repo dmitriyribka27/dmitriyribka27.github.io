@@ -213,3 +213,10 @@ html[lang="ka"] .language-trigger-flag,.language-option[data-lang="ka"] span{bac
 
 /* Four-link header: keep full labels accessible on narrow phones. */
 @media(max-width:620px){body>.header{height:auto;min-height:73px;padding:9px 5%;display:grid;grid-template-columns:minmax(0,1fr) 38px;column-gap:8px;row-gap:4px}body>.header .wordmark{grid-column:1;grid-row:1}body>.header .language-switcher{grid-column:2;grid-row:1;justify-self:end}body>.header .nav{grid-column:1/-1;grid-row:2;display:flex;justify-content:space-between;gap:4px;width:100%;min-width:0}body>.header .nav a{font-size:12px;font-weight:700;padding:10px 5px;white-space:nowrap;min-height:40px;display:inline-flex;align-items:center}}
+
+/* Subtle pricing path beneath the homepage hero actions. */
+.hero-pricing{display:flex;align-items:baseline;flex-wrap:wrap;gap:8px 12px;margin-top:18px;font:500 14px Manrope,sans-serif;color:var(--steel)}
+.hero-pricing a{display:inline-flex;align-items:center;gap:8px;color:var(--text);font-weight:700;text-decoration:underline;text-decoration-color:var(--lime);text-underline-offset:5px;transition:color .2s}
+.hero-pricing a:hover,.hero-pricing a:focus-visible{color:var(--lime)}
+.hero-pricing a span{color:var(--lime);text-decoration:none}
+@media(max-width:767px){.hero-pricing{font-size:13px;margin-top:16px;gap:7px 10px}}
