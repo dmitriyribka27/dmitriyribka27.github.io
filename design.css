@@ -160,3 +160,11 @@
  .design-visual--darius{grid-template-columns:minmax(0,1fr);grid-template-rows:auto auto;grid-auto-rows:auto;align-items:start;align-content:start;gap:8px}
  .design-case--darius .design-case-caption{padding:15px 5px 5px}
 }
+
+/* DARIUS desktop: stacked artwork on the left, description on the right. */
+@media(min-width:768px){
+ .design-case--darius .design-case-body{display:grid;grid-template-columns:minmax(0,.56fr) minmax(0,.44fr);align-items:start;gap:clamp(20px,3vw,44px);padding:clamp(14px,2vw,26px)}
+ .design-visual--darius{grid-template-columns:minmax(0,1fr);grid-template-rows:auto auto;align-items:start;gap:12px;min-width:0}
+ .design-visual--darius .design-darius-certificate,.design-visual--darius .design-darius-hands{width:100%;height:auto}
+ .design-case--darius .design-case-caption{padding:4px 0 0;min-width:0;min-height:0;align-self:start}
+}
