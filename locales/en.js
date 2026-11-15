@@ -163,3 +163,5 @@ Object.assign(window.PORTFOLIO_LOCALES.en.digital,{"Каталог":"Catalog","�
 
 // Quiet Bay: consistent transliteration of the five cats' names.
 Object.assign(window.PORTFOLIO_LOCALES.en.digital,{"Кент":"Kent","Мия":"Miya","Лев":"Lev","Цитера":"Citera","Рыжий":"Rizhiy","Кент, Мия, Лев, Цитера, Рыжий и персонаж Беллы живут по своему распорядку. Работают, гуляют, питаются, отдыхают и спят. Их действия зависят от потребностей и игрового времени.":"Kent, Miya, Lev, Citera, Rizhiy and Bella's character follow their own routines. They work, walk, eat, rest and sleep. Their actions depend on their needs and the in-game time."});
+
+Object.assign(window.PORTFOLIO_LOCALES.en.design,{"МАССАЖ.":"MASSAGE.","Для DARIUS разработал дизайн подарочного сертификата на массаж и выполнил печать тиража 100 экземпляров через КАДР. В основе оформления — тёплая палитра, фактура бумаги и графика рук.":"I designed a massage gift certificate for DARIUS and printed a run of 100 copies through KADR. The visual concept uses a warm palette, paper texture and imagery of reaching hands."});
