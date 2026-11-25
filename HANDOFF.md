@@ -127,3 +127,5 @@
 - **2026-11-25, catalogue hover:** replicated active design.css project-card hover on service cards: cover scale 1.035, transform .3s ease, title #e5ff36; same reduced-motion transition behaviour. CSS cache v4. No grid, pricing or configurator changes. Browser verification pending.
 
 - **2026-11-25, final catalogue copy/UX audit:** neutral request opening RU/EN/KA; quantity-adjusted line costs; explicit preliminary one-time/monthly estimates and request for final cost/timing; translated intro and error state, visible validation, accessible quantity controls, corrected unit display and additional repeatable scoped units; fixed discuss toggle size; stable code mapping for short cards. No price changes. Browser/device verification still pending.
+
+- **2026-11-25, hotfix v14:** previous copy polish introduced an unescaped apostrophe in English greeting, causing JS parse failure and HTML fallback. Replaced contraction with `I am`, bumped script cache version to 14. Syntax validation: passed. No other functional changes.
