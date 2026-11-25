@@ -99,3 +99,5 @@
 ## ПОСЛЕДНЕЕ
 
 - **2026-11-25:** Services configurator v1: services-config.json из актуального листа «Прайс» (26 услуг, 108 видимых привязок допов), services-configurator.js/css, services.html. Поддержка из T, разовые/месячные суммы, количество, языки, корзина дизайна, копирование, мессенджеры, GA4. По запросу скрыты; индивидуальная оценка не суммируется. Ограничения: описания из таблицы RU, EN названия, KA интерфейс без полного перевода каталога; условные пересечения объёма требуют согласования, браузерный тест не проводился. Проверить iPhone, расчёт, копирование и ссылки.
+
+- **2026-11-25, configurator v2:** compact options, collapsed scope and limits, inline info, quantity from zero, direct language addition, switches, optional collapsed comment. Support remains opt-in; drafts retained until reset. No catalogue price changes. JS syntax checked, browser test pending.
