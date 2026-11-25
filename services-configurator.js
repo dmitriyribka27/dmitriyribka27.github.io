@@ -1,5 +1,5 @@
 (async()=>{
-const data=await fetch('services-config.json?v=3').then(r=>{if(!r.ok)throw Error('catalogue');return r.json()});
+const data=await fetch('services-config.json?v=4').then(r=>{if(!r.ok)throw Error('catalogue');return r.json()});
 const lang=document.documentElement.lang, en=lang==='en', ka=lang==='ka';
 const t=(ru,e,k)=>en?e:ka?k:ru;
 const name=p=>en?p.en:p.name;
