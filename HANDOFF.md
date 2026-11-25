@@ -105,3 +105,5 @@
 - **2026-11-25, configurator v3:** focus on heading instead of close button; independent modal details (bottom sheet on mobile, centered desktop), no layout shifts; public JSON wording addressed to visitor as Вы, prices and rules unchanged. Source sheet not edited. JS syntax checked; browser verification pending.
 
 - **2026-11-25, configurator v4:** shorter customer-facing names and selected descriptions, no internal billing codes in edited copy, unified support toggle with info, price/unit combined in details, compact footer and reset link, preserve disclosure state on same-size rerender. Public JSON only; prices unchanged. JS syntax checked; browser test pending.
+
+- **2026-11-25, catalogue copy v5:** reviewed all 26 base services and 64 unique add-ons (108 bindings); simplified Russian public descriptions, names and limits; removed redundant price references and internal jargon. Verified price, unit, payment, model, support and dependency fields unchanged. Public JSON only; source sheet and translations unchanged. Browser test pending.
