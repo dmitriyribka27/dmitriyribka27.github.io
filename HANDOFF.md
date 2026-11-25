@@ -115,3 +115,5 @@
 - Desktop configurator polish: explicitly center messenger and copy button labels using flex; dark thin body scrollbar; CSS cache v6. Browser verification pending.
 
 - Customer copy pass: clarified monthly QR/site checks and technical terms in service JSON; all non-copy fields verified unchanged. Removed repeated monthly units in info panels. Google Sheets source not edited; browser test pending.
+
+- Refined QR and website maintenance descriptions: monthly technical checks, not merely checking whether a page opens. Pricing and scope limits retained.
