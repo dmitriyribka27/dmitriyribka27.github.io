@@ -117,3 +117,5 @@
 - Customer copy pass: clarified monthly QR/site checks and technical terms in service JSON; all non-copy fields verified unchanged. Removed repeated monthly units in info panels. Google Sheets source not edited; browser test pending.
 
 - Refined QR and website maintenance descriptions: monthly technical checks, not merely checking whether a page opens. Pricing and scope limits retained.
+
+- **2026-11-25, configurator v9 QA:** compared live price sheet and JSON: 26 base records, 134 active add-on bindings, 108 visible; 26 request-only bindings intentionally omitted. Prices, units, payment, model, dependencies and support match; public copy preserved. Added pure services-rules.js, base language validation and common alias deduplication, overlap guard for menu layout/content, explicit discuss controls, CRM form condition and messenger fallback copy. Added tests/services.test.cjs; 11 pure rule checks passed in JS execution; browser/Safari and full EN/KA copy still pending. No sheet changes or images.

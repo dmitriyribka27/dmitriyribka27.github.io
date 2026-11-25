@@ -1,0 +1,9 @@
+'use strict';
+function languageKey(v){const x=String(v??'').normalize('NFKC').trim().toLowerCase().replace(/\s+/g,' ');const aliases=[['ru','русский','русский язык','russian','რუსული'],['en','английский','английский язык','english','ინგლისური'],['ka','ge','грузинский','грузинский язык','georgian','ქართული'],['fr','французский','french','ფრანგული'],['de','немецкий','german','გერმანული'],['tr','турецкий','turkish','თურქული'],['es','испанский','spanish','ესპანური'],['uk','украинский','ukrainian','უკრაინული']];return aliases.find(a=>a.includes(x))?.[0]||x}
+function languagesValid(base,values){const b=languageKey(base),keys=values.map(languageKey);return !!b&&keys.length>0&&keys.every(x=>x&&x!==b)&&new Set(keys).size===keys.length}
+function blocked(id,opts){return id==='APP-03'&&!opts['APP-02']?'accounts':(id==='CARE-02'&&opts['CARE-09']||id==='CARE-09'&&opts['CARE-02']||id==='DES-A03'&&opts['DES-A04']||id==='DES-A04'&&opts['DES-A03'])?'overlap':''}
+function calculate(data,items){let once=0,monthly=0,unknown=false;function add(p,n){if(!Number.isFinite(p.price)){unknown=true;return}if(p.payment==='ежемесячно')monthly+=p.price*n;else once+=p.price*n}for(const [id,opts] of Object.entries(items)){const p=data.find(p=>p.id===id);if(!p)continue;add(p,1);for(const a of p.addons){const v=opts[a.id];if(v)add(a,Array.isArray(v)?v.filter(x=>String(x).trim()).length:v)}}return {once,monthly,unknown}}
+function validOrder(data,items,bases){return Object.keys(items).length>0&&Object.entries(items).every(([id,opts])=>data.some(p=>p.id===id)&&Object.entries(opts).every(([code,v])=>!blocked(code,opts)&&(!Array.isArray(v)||languagesValid(bases[id],v))))}
+const ServiceRules={languageKey,languagesValid,blocked,calculate,validOrder};
+if(typeof module!=='undefined'&&module.exports)module.exports=ServiceRules;
+else globalThis.ServiceRules=ServiceRules;
