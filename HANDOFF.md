@@ -103,3 +103,5 @@
 - **2026-11-25, configurator v2:** compact options, collapsed scope and limits, inline info, quantity from zero, direct language addition, switches, optional collapsed comment. Support remains opt-in; drafts retained until reset. No catalogue price changes. JS syntax checked, browser test pending.
 
 - **2026-11-25, configurator v3:** focus on heading instead of close button; independent modal details (bottom sheet on mobile, centered desktop), no layout shifts; public JSON wording addressed to visitor as Вы, prices and rules unchanged. Source sheet not edited. JS syntax checked; browser verification pending.
+
+- **2026-11-25, configurator v4:** shorter customer-facing names and selected descriptions, no internal billing codes in edited copy, unified support toggle with info, price/unit combined in details, compact footer and reset link, preserve disclosure state on same-size rerender. Public JSON only; prices unchanged. JS syntax checked; browser test pending.
