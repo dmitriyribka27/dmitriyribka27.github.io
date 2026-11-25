@@ -123,3 +123,5 @@
 - **2026-11-25, configurator v10 localization:** added EN/KA catalogue translations keyed by service/add-on code, translated units and modal copy; verified coverage of 26 base records, 64 unique visible add-ons and all units. Original Russian JSON and pricing unchanged. Browser and native Georgian proofreading pending.
 
 - **2026-11-25, catalogue covers:** verified all 23 uploaded WebP names in assets/services against visible service IDs; connected square images via lowercase service code, empty decorative alt, first four eager and remaining lazy, async decoding, existing CSS fallback on image error. Grid, filters, prices and order logic unchanged. Cache versions: catalogue CSS v3, configurator JS v12. Browser/Safari verification pending.
+
+- **2026-11-25, catalogue hover:** replicated active design.css project-card hover on service cards: cover scale 1.035, transform .3s ease, title #e5ff36; same reduced-motion transition behaviour. CSS cache v4. No grid, pricing or configurator changes. Browser verification pending.

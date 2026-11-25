@@ -3,3 +3,6 @@
 
 /* Service photography: preserve full square artwork and CSS fallback. */
 .svc-cover-image{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;display:block;z-index:2;opacity:0}.svc-cover.has-photo .svc-cover-image{opacity:1}.svc-cover.has-photo .svc-stage,.svc-cover.has-photo:before{visibility:hidden}
+
+/* Match Design project-card hover: same scale, duration, easing and title colour. */
+.svc-cover-image{transition:transform .3s ease}.svc-card:hover .svc-cover-image{transform:scale(1.035)}.svc-card:hover .svc-title{color:#e5ff36}@media(prefers-reduced-motion:reduce){.svc-cover-image{transition:none}}
