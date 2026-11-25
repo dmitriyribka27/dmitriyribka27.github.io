@@ -113,3 +113,5 @@
 - **Catalogue v8:** hide QR-S01/02/03 from public grid and HTML fallback (23 cards); keep linked support data and totals. Linked support options render below toggle, removed from order on disable. CSS arrows and top-aligned grid. Syntax checked; Safari verification pending.
 
 - Desktop configurator polish: explicitly center messenger and copy button labels using flex; dark thin body scrollbar; CSS cache v6. Browser verification pending.
+
+- Customer copy pass: clarified monthly QR/site checks and technical terms in service JSON; all non-copy fields verified unchanged. Removed repeated monthly units in info panels. Google Sheets source not edited; browser test pending.
