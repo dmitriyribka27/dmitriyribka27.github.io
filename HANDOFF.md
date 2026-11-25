@@ -109,3 +109,5 @@
 - **2026-11-25, catalogue copy v5:** reviewed all 26 base services and 64 unique add-ons (108 bindings); simplified Russian public descriptions, names and limits; removed redundant price references and internal jargon. Verified price, unit, payment, model, support and dependency fields unchanged. Public JSON only; source sheet and translations unchanged. Browser test pending.
 
 - **2026-11-25, services catalogue v6:** 26 square cards, category filters, 2 mobile / 3 desktop / 4 wide columns, static CSS cover compositions (not generated photos), old inline SVG rows removed, card opens existing configurator. Design cards seed the shared design basket; calculator and JSON unchanged. Static fallback prices remain in HTML. RU/EN summaries, KA catalogue content still partial. JS syntax checked; real browser test pending.
+
+- **Catalogue v8:** hide QR-S01/02/03 from public grid and HTML fallback (23 cards); keep linked support data and totals. Linked support options render below toggle, removed from order on disable. CSS arrows and top-aligned grid. Syntax checked; Safari verification pending.
