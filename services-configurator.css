@@ -10,3 +10,5 @@
 
 /* Center messenger labels independently of global anchor styles. */
 .cfg-dialog .cfg-foot .cfg-links>a.cfg-button{display:flex;align-items:center;justify-content:center;flex:1 1 0;min-width:0;min-height:40px;padding:8px 12px;line-height:1.2;text-align:center;box-sizing:border-box}.cfg-dialog .cfg-copy{display:flex;align-items:center;justify-content:center;line-height:1.2;box-sizing:border-box}.cfg-body{scrollbar-width:thin;scrollbar-color:#59616b #101318}.cfg-body::-webkit-scrollbar{width:8px}.cfg-body::-webkit-scrollbar-track{background:#101318}.cfg-body::-webkit-scrollbar-thumb{background:#59616b;border-radius:8px;border:2px solid #101318}
+
+.cfg-validation:empty{display:none}.cfg-validation{color:#e5ff36}.cfg-choice input.cfg-toggle{width:42px;height:25px}.cfg-option-line .cfg-choice{flex:none;font-size:12px}.cfg-service>.cfg-details p:empty{display:none}
